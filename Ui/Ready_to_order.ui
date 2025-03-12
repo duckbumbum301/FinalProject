@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1085</width>
+    <height>784</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(245, 245, 220);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label_logo">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>-10</y>
+      <width>181</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Mongolian Baiti</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../images/image-removebg-preview (24).png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_takeaway">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>160</y>
+      <width>291</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: rgb(230, 215, 185);
+    color: rgb(71, 71, 71);
+    border-radius: 20px; 
+  	border:2px solid #FFFFFF;
+    padding: 10px;
+	padding-bottom: 100px;
+    font-size: 18px;
+	
+}
+
+QPushButton:hover {
+    background-color: #D9C9A7; 
+}
+
+
+QPushButton:checked {
+    background-color: #C5A673; 
+    color: white;
+    border: 2px solid #A67C52;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>TAKE AWAY</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_eatin">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>160</y>
+      <width>291</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    border: 2px solid rgb(230, 215, 185);
+	background-color: rgb(255, 255, 255);
+    color: #4A4A4A;
+    border-radius: 20px; 
+  	font-size: 18px;
+    padding: 10px;
+	padding-bottom: 100px;
+}
+
+QPushButton:hover {
+    background-color: #D9C9A7; 
+}
+
+
+QPushButton:checked {
+    background-color: #C5A673; 
+    color: white;
+    border: 2px solid #A67C52;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>EAT IN</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_take">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>310</y>
+      <width>111</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../images/img_4.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_eatin">
+    <property name="geometry">
+     <rect>
+      <x>587</x>
+      <y>278</y>
+      <width>181</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../images/image-removebg-preview (55).png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1085</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
