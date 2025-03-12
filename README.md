@@ -1,2 +1,2 @@
 # FinalProject
-Software of cinema
+Software of Cadty Bakery
