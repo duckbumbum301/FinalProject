@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ProductDetailDialog</class>
+ <widget class="QDialog" name="ProductDetailDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>450</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string/>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QDialog {
+    background-color: #fdfae6;
+    border-radius: 16px;
+}
+QLabel#label_title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #5b4c2b;
+}
+QLabel#label_size {
+    font-size: 14px;
+    color: #7b9a79;
+}
+QLabel#label_price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #5b4c2b;
+}
+QTextEdit#note_input {
+    border: 1px solid #d8c49c;
+    border-radius: 8px;
+    padding: 6px;
+    font-size: 14px;
+}
+QPushButton#btn_add_to_cart, QPushButton#btn_prev_image, QPushButton#btn_next_image {
+    background-color: #fff9e9;
+    border: 2px solid #d8c49c;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 6px 12px;
+    color: #5b4c2b;
+}
+QPushButton#btn_add_to_cart:hover, QPushButton#btn_prev_image:hover, QPushButton#btn_next_image:hover {
+    background-color: #f6eec7;
+    border-color: #b89b6d;
+}
+   </string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label_title">
+     <property name="text">
+      <string>Product Title</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_size">
+     <property name="text">
+      <string>12cm / 18cm</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QStackedWidget" name="stack_images">
+     <widget class="QWidget" name="page_0">
+      <layout class="QVBoxLayout" name="layout_image_0">
+       <item>
+        <widget class="QLabel" name="label_image">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="layout_slider_btn">
+     <item>
+      <widget class="QPushButton" name="btn_prev_image">
+       <property name="text">
+        <string>&lt; Prev</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_next_image">
+       <property name="text">
+        <string>Next &gt;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_description">
+     <property name="text">
+      <string>Mô tả sản phẩm...</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_price">
+     <property name="text">
+      <string>480.000 VND</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="note_input">
+     <property name="placeholderText">
+      <string>Ghi chú thêm (tuỳ chọn)...</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btn_add_to_cart">
+     <property name="text">
+      <string>Add to Cart +</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
