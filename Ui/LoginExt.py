@@ -1,7 +1,7 @@
 from PyQt6.QtWidgets import QMainWindow
 
-from Ui_Cadty.Ui.Login import Ui_MainWindow
-from Ui_Cadty.Ui.self_orderExt import SelfOrderExt
+from Ui.Login import Ui_MainWindow
+from Ui.self_orderExt import SelfOrderExt
 
 
 class LoginMainWindowExt(Ui_MainWindow):
