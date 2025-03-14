@@ -7197,7 +7197,12 @@ QPushButton:hover {
        </row>
        <column>
         <property name="text">
-         <string>Item</string>
+         <string>Product ID</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Product Name</string>
         </property>
        </column>
        <column>
@@ -7208,6 +7213,11 @@ QPushButton:hover {
        <column>
         <property name="text">
          <string>Quantity</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Subtotal</string>
         </property>
        </column>
       </widget>
@@ -7301,7 +7311,7 @@ QPushButton:hover {
       <rect>
        <x>23</x>
        <y>495</y>
-       <width>71</width>
+       <width>51</width>
        <height>41</height>
       </rect>
      </property>
