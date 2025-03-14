@@ -11,7 +11,6 @@ cookies.append(Cookies("CB24","Oreo Chocolate",45000,0,"","D:/FinalProject/image
 print("List of cookies:")
 for c in cookies:
     print(c)
-
 filename="cookies.json"
 path=f"../dataset/{filename}"
 jff=JsonFileFactory()
