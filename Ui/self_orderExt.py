@@ -1,7 +1,11 @@
 from PyQt6.QtCore import Qt
-from PyQt6.QtWidgets import QTableWidgetItem, QHeaderView, QMessageBox
+from PyQt6.QtWidgets import QTableWidgetItem, QHeaderView, QMessageBox, QDialog
 
+from Ui.CheckoutExt import CheckoutExt
+from Ui.product_detail_with_sliderExt import ProductDetailDialog
 from Ui.self_order import Ui_MainWindow
+from libs.JsonFileFactory import JsonFileFactory
+from models.Product import Mousse, Tart, Croissant, Cookies, Drinks, Product
 
 
 class SelfOrderExt(Ui_MainWindow):
@@ -9,6 +13,9 @@ class SelfOrderExt(Ui_MainWindow):
         super().__init__()
         self.order_count = 0
         self.total_amount = 0.0
+        self.order_data = []
+        self.json_factory = JsonFileFactory()
+
     def setupUi(self, MainWindow):
         super().setupUi(MainWindow)
         self.MainWindow = MainWindow
@@ -20,6 +27,8 @@ class SelfOrderExt(Ui_MainWindow):
             # Không cho phép chỉnh sửa trực tiếp
             self.lineEdit_total.setReadOnly(True)
 
+        self.tableWidget_order.cellDoubleClicked.connect(self.showProductDetail)
+        self.pushButtonProceed.clicked.connect(self.openCheckout)
     def setupSignalsAndSlots(self):
         # Menu navigation
         self.pushButton_Mousse.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_Mousse))   #ấn vào cái nào thì hiện menu cái đó
@@ -68,6 +77,28 @@ class SelfOrderExt(Ui_MainWindow):
     def showWindow(self):
         self.MainWindow.show()
 
+    def showProductDetail(self, row, column):
+        if self.tableWidget_order.rowCount() == 0:
+            return
+
+            # Create and show the product detail dialog
+        dialog = ProductDetailDialog(
+            parent=self.MainWindow,
+            table_widget=self.tableWidget_order,
+            current_row=row,
+            order_data = self.order_data
+        )
+
+        result = dialog.exec()
+
+        # If the dialog was accepted (user clicked "Back to Cart +"), you could
+        # potentially update the quantity or add notes to the order here
+        if result == QDialog.DialogCode.Accepted:
+            notes = dialog.note_input.toPlainText()
+            if notes:
+                product_name = self.tableWidget_order.item(row, 1).text()
+                print(f"Notes for {product_name}: {notes}")
+
     def setupTableHeaders(self):
         self.tableWidget_order.setColumnCount(5)
         headers = ["Product ID", "Product Name", "Price", "Quantity", "Subtotal"]
@@ -95,7 +126,12 @@ class SelfOrderExt(Ui_MainWindow):
                 # Cập nhật tổng tiền
                 self.total_amount += product_price
                 self.updateTotalAmountDisplay()
-                
+
+                for item in self.order_data:
+                    if item.product_id == product_id:
+                        item.quantity = new_quantity
+                        break
+
                 # Đảm bảo cột số lượng không thể chỉnh sửa trực tiếp
                 self.disableOrderEditing()
                 return
@@ -127,6 +163,79 @@ class SelfOrderExt(Ui_MainWindow):
         # Đảm bảo tất cả các ô trong bảng đều không thể chỉnh sửa
         self.disableOrderEditing()
 
+        category = self.determine_product_category(product_id)
+
+        # Create appropriate Product subclass based on category
+        if category == "Mousse":
+            product = Mousse(product_id, product_name, product_price, product_quantity)
+        elif category == "Tart":
+            product = Tart(product_id, product_name, product_price, product_quantity)
+        elif category == "Croissant":
+            product = Croissant(product_id, product_name, product_price, product_quantity)
+        elif category == "Cookies":
+            product = Cookies(product_id, product_name, product_price, product_quantity)
+        elif category == "Drinks":
+            product = Drinks(product_id, product_name, product_price, product_quantity)
+        else:
+            product = Product(product_id, product_name, product_price, product_quantity)
+
+        # Add description and image path if available
+        product.description = self.get_product_description(product_id)
+        product.image_path = f"images/{product_id}.jpg"
+        product.notes = ""
+
+        # Add to order_data
+        self.order_data.append(product)
+
+    def determine_product_category(self, product_id):
+        """Determine product category based on product_id"""
+        # This is a simple implementation based on product_id patterns
+        # You might want to use a more robust method in a real application
+        if product_id in ["CB1", "CB2", "CB3", "CB4", "CB5", "CB6"]:
+            return "Mousse"
+        elif product_id in ["CB7", "CB8", "CB9", "CB10"]:
+            return "Tart"
+        elif product_id in ["CB11", "CB12", "CB13", "CB14", "CB15", "CB16"]:
+            return "Croissant"
+        elif product_id in ["CB17", "CB18", "CB19", "CB20", "CB21", "CB22", "CB23", "CB24"]:
+            return "Cookies"
+        elif product_id in ["CB25", "CB26", "CB27", "CB28", "CB29"]:
+            return "Drinks"
+        else:
+            return "Unknown"
+
+    def get_product_description(self, product_id):
+        """Get description for a product"""
+        descriptions = {
+            "CB1": "Romance Blossom - A delicate mousse cake with layers of rose-infused cream and raspberry compote.",
+            "CB2": "Royal Nut Harmony - A luxurious blend of premium nuts and caramel on a buttery base.",
+            # Add more descriptions as needed
+        }
+        return descriptions.get(product_id, "")
+
+    def openCheckout(self):
+        """Open the checkout window"""
+        if self.tableWidget_order.rowCount() == 0:
+            QMessageBox.information(self.MainWindow, "Empty Cart",
+                                    "Your cart is empty. Please add items before proceeding to checkout.")
+            return
+
+        # Create and show the checkout window
+        self.checkout_window = CheckoutExt(self.order_data, self.MainWindow)
+        self.checkout_window.show()
+
+    def checkoutOrder(self):
+        """Modified to open checkout window instead of showing message box"""
+        if self.tableWidget_order.rowCount() == 0:
+            QMessageBox.information(self.MainWindow, "Thông báo", "Giỏ hàng trống!")
+            return
+
+        # Ensure total is accurate
+        self.calculateTotalFromTable()
+
+        # Open checkout window
+        self.openCheckout()
+
     def updateTotalAmountDisplay(self):
         """Cập nhật hiển thị tổng tiền vào lineEdit_total"""
         if hasattr(self, "lineEdit_total"):
@@ -157,6 +266,8 @@ class SelfOrderExt(Ui_MainWindow):
         
         # Lấy thông tin sản phẩm để trừ khỏi tổng tiền
         subtotal_item = self.tableWidget_order.item(selected_row, 4)
+        product_id = self.tableWidget_order.item(selected_row, 0).text()
+
         if subtotal_item:
             subtotal = float(subtotal_item.text())
             self.total_amount -= subtotal
@@ -164,7 +275,9 @@ class SelfOrderExt(Ui_MainWindow):
         # Xóa dòng
         self.tableWidget_order.removeRow(selected_row)
         self.order_count -= 1
-        
+
+        self.order_data = [item for item in self.order_data if item.product_id != product_id]
+
         # Cập nhật hiển thị tổng tiền
         self.updateTotalAmountDisplay()
 
@@ -245,25 +358,15 @@ class SelfOrderExt(Ui_MainWindow):
                 self.updateSubtotalOnEdit(row, column)  # Gọi lại để cập nhật
 
     def clearCart(self):
-        self.tableWidget_order.clear()
-        self.tableWidget_order.setColumnCount(5)
-        headers = ["Product ID", "Product Name", "Price", "Quantity", "Subtotal"]
-        self.tableWidget_order.setHorizontalHeaderLabels(headers)
-
-        header_view = self.tableWidget_order.horizontalHeader()
-        header_view.setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
         self.tableWidget_order.setRowCount(0)
-        self.disableOrderEditing()
-        
-        # Đặt lại giá trị tổng tiền
         self.total_amount = 0
         self.order_count = 0
-        
-        # Cập nhật hiển thị tổng tiền về 0
-        if hasattr(self, "lineEdit_total"):
-            self.lineEdit_total.setText("0 VNĐ")
+        self.updateTotalAmountDisplay()
 
-    def checkoutOrder(self):
+        # Clear order_data
+        self.order_data = []
+
+    '''def checkoutOrder(self):
         """Thanh toán đơn hàng"""
         if self.tableWidget_order.rowCount() == 0:
             QMessageBox.information(self.MainWindow, "Thông báo", "Giỏ hàng trống!")
@@ -304,7 +407,7 @@ class SelfOrderExt(Ui_MainWindow):
             self.tableWidget_order.setRowCount(0)
             self.total_amount = 0
             self.order_count = 0
-            self.updateTotalAmountDisplay()
+            self.updateTotalAmountDisplay()'''
 
     def addMatchaToOrder(self):
         self.addProductToOrder("CB26", "Matcha S'more", 70000)
