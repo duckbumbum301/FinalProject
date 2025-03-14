@@ -38,7 +38,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../images/image-removebg-preview (24).png</pixmap>
+     <pixmap>../images/cadty_logo.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>

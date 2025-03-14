@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1085</width>
-    <height>751</height>
+    <width>1166</width>
+    <height>885</height>
    </rect>
   </property>
   <property name="styleSheet">
@@ -85,7 +85,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
 border-radius:15px</string>
       </property>
       <property name="currentIndex">
-       <number>4</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="page_Mousse">
        <widget class="QFrame" name="frame_Romance">
@@ -153,7 +153,7 @@ background-color: transparent</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (5).png</pixmap>
+          <pixmap>../images/romance_blossom.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -194,9 +194,9 @@ color:#5A5A42</string>
         <widget class="QLabel" name="label_romance_size">
          <property name="geometry">
           <rect>
-           <x>58</x>
-           <y>39</y>
-           <width>71</width>
+           <x>90</x>
+           <y>40</y>
+           <width>31</width>
            <height>16</height>
           </rect>
          </property>
@@ -211,7 +211,7 @@ color:#5A5A42</string>
 border:0px</string>
          </property>
          <property name="text">
-          <string>12cm/18cm</string>
+          <string>18cm</string>
          </property>
         </widget>
         <widget class="QLabel" name="label_romance_price">
@@ -240,7 +240,7 @@ color: rgb(98, 94, 92);
           <string>480.000</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_add_romance">
+        <widget class="QPushButton" name="pushButton_add1">
          <property name="geometry">
           <rect>
            <x>92</x>
@@ -352,36 +352,13 @@ background-color: transparent;</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (4).png</pixmap>
+          <pixmap>../images/royal_nut.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
          </property>
         </widget>
-        <widget class="QLabel" name="label_royal_size">
-         <property name="geometry">
-          <rect>
-           <x>62</x>
-           <y>37</y>
-           <width>71</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Mongolian Baiti</family>
-           <pointsize>9</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #A7C7A7;
-border:0px</string>
-         </property>
-         <property name="text">
-          <string>12cm/18cm</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="pushButton_add_royal">
+        <widget class="QPushButton" name="pushButton_add2">
          <property name="geometry">
           <rect>
            <x>95</x>
@@ -450,11 +427,34 @@ color: rgb(98, 94, 92);
           <string>480.000</string>
          </property>
         </widget>
+        <widget class="QLabel" name="label_romance_size_2">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>31</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Mongolian Baiti</family>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #A7C7A7;
+border:0px</string>
+         </property>
+         <property name="text">
+          <string>18cm</string>
+         </property>
+        </widget>
         <zorder>label_cake_royal</zorder>
         <zorder>label_royal</zorder>
-        <zorder>label_royal_size</zorder>
-        <zorder>pushButton_add_royal</zorder>
+        <zorder>pushButton_add2</zorder>
         <zorder>label_royal_price</zorder>
+        <zorder>label_romance_size_2</zorder>
        </widget>
        <widget class="QFrame" name="frame_Berry">
         <property name="geometry">
@@ -502,29 +502,6 @@ color:#5A5A42</string>
           <string>Berry Symphony</string>
          </property>
         </widget>
-        <widget class="QLabel" name="label_berry_size">
-         <property name="geometry">
-          <rect>
-           <x>53</x>
-           <y>37</y>
-           <width>71</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Mongolian Baiti</family>
-           <pointsize>9</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #A7C7A7;
-border:0px</string>
-         </property>
-         <property name="text">
-          <string>12cm/18cm</string>
-         </property>
-        </widget>
         <widget class="QLabel" name="label_cake_berry">
          <property name="geometry">
           <rect>
@@ -548,13 +525,13 @@ background-color: transparent;</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (6).png</pixmap>
+          <pixmap>../images/berry_symphony.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_add_berry">
+        <widget class="QPushButton" name="pushButton_add3">
          <property name="geometry">
           <rect>
            <x>90</x>
@@ -623,11 +600,34 @@ color: rgb(98, 94, 92);
           <string>480.000</string>
          </property>
         </widget>
+        <widget class="QLabel" name="label_romance_size_3">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>31</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Mongolian Baiti</family>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #A7C7A7;
+border:0px</string>
+         </property>
+         <property name="text">
+          <string>18cm</string>
+         </property>
+        </widget>
         <zorder>label_cake_berry</zorder>
         <zorder>label_berry_symphony</zorder>
-        <zorder>label_berry_size</zorder>
-        <zorder>pushButton_add_berry</zorder>
+        <zorder>pushButton_add3</zorder>
         <zorder>label_berry_price</zorder>
+        <zorder>label_romance_size_3</zorder>
        </widget>
        <widget class="QFrame" name="frame_Pandora">
         <property name="geometry">
@@ -694,7 +694,7 @@ background-color: transparent</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (7).png</pixmap>
+          <pixmap>../images/pandora_delight.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -735,9 +735,9 @@ color:#5A5A42</string>
         <widget class="QLabel" name="label_pandora_size">
          <property name="geometry">
           <rect>
-           <x>58</x>
-           <y>39</y>
-           <width>71</width>
+           <x>90</x>
+           <y>40</y>
+           <width>31</width>
            <height>16</height>
           </rect>
          </property>
@@ -752,7 +752,7 @@ color:#5A5A42</string>
 border:0px</string>
          </property>
          <property name="text">
-          <string>12cm/18cm</string>
+          <string>18cm</string>
          </property>
         </widget>
         <widget class="QLabel" name="label_pandora_price">
@@ -781,7 +781,7 @@ color: rgb(98, 94, 92);
           <string>480.000</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_add_pandora">
+        <widget class="QPushButton" name="pushButton_add4">
          <property name="geometry">
           <rect>
            <x>92</x>
@@ -890,7 +890,7 @@ background-color: transparent</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (9).png</pixmap>
+          <pixmap>../images/amber_kiss.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -928,29 +928,6 @@ color:#5A5A42</string>
           <string>Amber Kiss</string>
          </property>
         </widget>
-        <widget class="QLabel" name="label_amber_size">
-         <property name="geometry">
-          <rect>
-           <x>58</x>
-           <y>39</y>
-           <width>71</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Mongolian Baiti</family>
-           <pointsize>9</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #A7C7A7;
-border:0px</string>
-         </property>
-         <property name="text">
-          <string>12cm/18cm</string>
-         </property>
-        </widget>
         <widget class="QLabel" name="label_amber_price">
          <property name="geometry">
           <rect>
@@ -977,7 +954,7 @@ color: rgb(98, 94, 92);
           <string>480.000</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_add_amber">
+        <widget class="QPushButton" name="pushButton_add5">
          <property name="geometry">
           <rect>
            <x>92</x>
@@ -1018,6 +995,29 @@ QPushButton:pressed {
          </property>
          <property name="text">
           <string>Add to Cart +</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_pandora_size_2">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>31</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Mongolian Baiti</family>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #A7C7A7;
+border:0px</string>
+         </property>
+         <property name="text">
+          <string>18cm</string>
          </property>
         </widget>
        </widget>
@@ -1086,7 +1086,7 @@ background-color: transparent</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (10).png</pixmap>
+          <pixmap>../images/mocha.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -1303,7 +1303,7 @@ background-color: transparent;</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (13).png</pixmap>
+          <pixmap>../images/romance_blossom.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -1442,7 +1442,7 @@ background-color: transparent;</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (11).png</pixmap>
+          <pixmap>../images/cookies_cream.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -1592,29 +1592,6 @@ color:#5A5A42</string>
           <string> Imperial Oolong</string>
          </property>
         </widget>
-        <widget class="QLabel" name="label_imperial_size">
-         <property name="geometry">
-          <rect>
-           <x>53</x>
-           <y>37</y>
-           <width>71</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Mongolian Baiti</family>
-           <pointsize>9</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #A7C7A7;
-border:0px</string>
-         </property>
-         <property name="text">
-          <string>12cm/18cm</string>
-         </property>
-        </widget>
         <widget class="QLabel" name="label_cake_imperial">
          <property name="geometry">
           <rect>
@@ -1632,13 +1609,13 @@ background-color: transparent;</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (12).png</pixmap>
+          <pixmap>../images/imperial_oolong.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_add_imperial">
+        <widget class="QPushButton" name="pushButton_add6">
          <property name="geometry">
           <rect>
            <x>90</x>
@@ -1707,11 +1684,34 @@ color: rgb(98, 94, 92);
           <string>480.000</string>
          </property>
         </widget>
+        <widget class="QLabel" name="label_pandora_size_3">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>31</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Mongolian Baiti</family>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #A7C7A7;
+border:0px</string>
+         </property>
+         <property name="text">
+          <string>18cm</string>
+         </property>
+        </widget>
         <zorder>label_cake_imperial</zorder>
         <zorder>label_imperial</zorder>
-        <zorder>label_imperial_size</zorder>
-        <zorder>pushButton_add_imperial</zorder>
+        <zorder>pushButton_add6</zorder>
         <zorder>label_imperial_price</zorder>
+        <zorder>label_pandora_size_3</zorder>
        </widget>
       </widget>
       <widget class="QWidget" name="page_Tart">
@@ -1780,7 +1780,7 @@ background-color: transparent</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (20).png</pixmap>
+          <pixmap>../images/pink_velvet.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -1818,29 +1818,6 @@ color:#5A5A42</string>
           <string>Pink Velvet</string>
          </property>
         </widget>
-        <widget class="QLabel" name="label_pink_size">
-         <property name="geometry">
-          <rect>
-           <x>71</x>
-           <y>39</y>
-           <width>51</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Mongolian Baiti</family>
-           <pointsize>9</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #A7C7A7;
-border:0px</string>
-         </property>
-         <property name="text">
-          <string>2 pieces</string>
-         </property>
-        </widget>
         <widget class="QLabel" name="label_pink_price">
          <property name="geometry">
           <rect>
@@ -1867,7 +1844,7 @@ color: rgb(98, 94, 92);
           <string>120.000</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_add_pink">
+        <widget class="QPushButton" name="pushButton_add11">
          <property name="geometry">
           <rect>
            <x>92</x>
@@ -1977,36 +1954,13 @@ background-color: transparent;</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (16).png</pixmap>
+          <pixmap>../images/banana_cloud.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
          </property>
         </widget>
-        <widget class="QLabel" name="label_banana_size">
-         <property name="geometry">
-          <rect>
-           <x>62</x>
-           <y>37</y>
-           <width>71</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Mongolian Baiti</family>
-           <pointsize>9</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #A7C7A7;
-border:0px</string>
-         </property>
-         <property name="text">
-          <string>Slice/Whole</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="pushButton_add_banana">
+        <widget class="QPushButton" name="pushButton_add8">
          <property name="geometry">
           <rect>
            <x>95</x>
@@ -2076,8 +2030,7 @@ color: rgb(98, 94, 92);
          </property>
         </widget>
         <zorder>label_tart_banana</zorder>
-        <zorder>label_banana_size</zorder>
-        <zorder>pushButton_add_banana</zorder>
+        <zorder>pushButton_add8</zorder>
         <zorder>label_banana_price</zorder>
         <zorder>label_banana</zorder>
        </widget>
@@ -2146,7 +2099,7 @@ background-color: transparent</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (14).png</pixmap>
+          <pixmap>../images/crimson_melody.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -2184,29 +2137,6 @@ color:#5A5A42</string>
           <string>Crimson Melody</string>
          </property>
         </widget>
-        <widget class="QLabel" name="label_crimson_size">
-         <property name="geometry">
-          <rect>
-           <x>58</x>
-           <y>39</y>
-           <width>71</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Mongolian Baiti</family>
-           <pointsize>9</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #A7C7A7;
-border:0px</string>
-         </property>
-         <property name="text">
-          <string>Slice/Whole</string>
-         </property>
-        </widget>
         <widget class="QLabel" name="label_crimson_price">
          <property name="geometry">
           <rect>
@@ -2233,7 +2163,7 @@ color: rgb(98, 94, 92);
           <string>55.000</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_add_crimson">
+        <widget class="QPushButton" name="pushButton_add7">
          <property name="geometry">
           <rect>
            <x>92</x>
@@ -2323,29 +2253,6 @@ color:#5A5A42</string>
           <string>Sunny Kernel</string>
          </property>
         </widget>
-        <widget class="QLabel" name="label_sunny_size">
-         <property name="geometry">
-          <rect>
-           <x>71</x>
-           <y>37</y>
-           <width>51</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Mongolian Baiti</family>
-           <pointsize>9</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #A7C7A7;
-border:0px</string>
-         </property>
-         <property name="text">
-          <string>2 pieces</string>
-         </property>
-        </widget>
         <widget class="QLabel" name="label_tart_sunny">
          <property name="geometry">
           <rect>
@@ -2363,13 +2270,13 @@ background-color: transparent;</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (22).png</pixmap>
+          <pixmap>../images/sunny_kernel.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_add_sunny">
+        <widget class="QPushButton" name="pushButton_add12">
          <property name="geometry">
           <rect>
            <x>90</x>
@@ -2439,10 +2346,9 @@ color: rgb(98, 94, 92);
          </property>
         </widget>
         <zorder>label_tart_sunny</zorder>
-        <zorder>pushButton_add_sunny</zorder>
+        <zorder>pushButton_add12</zorder>
         <zorder>label_sunny_price</zorder>
         <zorder>label_sunny</zorder>
-        <zorder>label_sunny_size</zorder>
        </widget>
        <widget class="QFrame" name="frame_tartvery">
         <property name="geometry">
@@ -2490,29 +2396,6 @@ color:#5A5A42</string>
           <string>Very Merry</string>
          </property>
         </widget>
-        <widget class="QLabel" name="label_very_size">
-         <property name="geometry">
-          <rect>
-           <x>57</x>
-           <y>37</y>
-           <width>71</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Mongolian Baiti</family>
-           <pointsize>9</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #A7C7A7;
-border:0px</string>
-         </property>
-         <property name="text">
-          <string>Slice/Whole</string>
-         </property>
-        </widget>
         <widget class="QLabel" name="label_tart_very">
          <property name="geometry">
           <rect>
@@ -2536,13 +2419,13 @@ background-color: transparent;</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (19).png</pixmap>
+          <pixmap>../images/very_merry.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_add_very">
+        <widget class="QPushButton" name="pushButton_add9">
          <property name="geometry">
           <rect>
            <x>90</x>
@@ -2612,10 +2495,9 @@ color: rgb(98, 94, 92);
          </property>
         </widget>
         <zorder>label_tart_very</zorder>
-        <zorder>pushButton_add_very</zorder>
+        <zorder>pushButton_add9</zorder>
         <zorder>label_very_price</zorder>
         <zorder>label_very</zorder>
-        <zorder>label_very_size</zorder>
        </widget>
        <widget class="QFrame" name="frame_tartcheese">
         <property name="geometry">
@@ -2682,7 +2564,7 @@ background-color: transparent</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (17).png</pixmap>
+          <pixmap>../images/cheese_crust.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -2720,29 +2602,6 @@ color:#5A5A42</string>
           <string>Cheese Crust</string>
          </property>
         </widget>
-        <widget class="QLabel" name="label_cheese_size">
-         <property name="geometry">
-          <rect>
-           <x>61</x>
-           <y>40</y>
-           <width>71</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Mongolian Baiti</family>
-           <pointsize>9</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #A7C7A7;
-border:0px</string>
-         </property>
-         <property name="text">
-          <string>Slice/Whole</string>
-         </property>
-        </widget>
         <widget class="QLabel" name="label_cheese_price">
          <property name="geometry">
           <rect>
@@ -2769,7 +2628,7 @@ color: rgb(98, 94, 92);
           <string>65.000</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_add_cheese">
+        <widget class="QPushButton" name="pushButton_add10">
          <property name="geometry">
           <rect>
            <x>92</x>
@@ -2901,13 +2760,13 @@ background-color: transparent;</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (32).png</pixmap>
+          <pixmap>../images/earl_grey_almond.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_add_earlgrey">
+        <widget class="QPushButton" name="pushButton_add18">
          <property name="geometry">
           <rect>
            <x>90</x>
@@ -2973,12 +2832,12 @@ color: rgb(98, 94, 92);
 </string>
          </property>
          <property name="text">
-          <string>110.000</string>
+          <string>100.000</string>
          </property>
         </widget>
         <zorder>label_earlgrey</zorder>
         <zorder>label_crois_earlgrey</zorder>
-        <zorder>pushButton_add_earlgrey</zorder>
+        <zorder>pushButton_add18</zorder>
         <zorder>label_earlgrey_price</zorder>
         <zorder>label_earlgrey_size</zorder>
        </widget>
@@ -3074,13 +2933,13 @@ background-color: transparent;</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (25).png</pixmap>
+          <pixmap>../images/classic.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_add_classic">
+        <widget class="QPushButton" name="pushButton_add15">
          <property name="geometry">
           <rect>
            <x>90</x>
@@ -3146,7 +3005,7 @@ color: rgb(98, 94, 92);
 </string>
          </property>
          <property name="text">
-          <string>60.000</string>
+          <string>50.000</string>
          </property>
         </widget>
        </widget>
@@ -3215,7 +3074,7 @@ background-color: transparent</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (31).png</pixmap>
+          <pixmap>../images/tiramisu_cake.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -3299,10 +3158,10 @@ color: rgb(98, 94, 92);
 </string>
          </property>
          <property name="text">
-          <string>120.000</string>
+          <string>100.000</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_add_tiramisu">
+        <widget class="QPushButton" name="pushButton_add17">
          <property name="geometry">
           <rect>
            <x>92</x>
@@ -3411,7 +3270,7 @@ background-color: transparent</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (26).png</pixmap>
+          <pixmap>../images/honey_glaze.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -3495,10 +3354,10 @@ color: rgb(98, 94, 92);
 </string>
          </property>
          <property name="text">
-          <string>55.000</string>
+          <string>65.000</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_add_honey">
+        <widget class="QPushButton" name="pushButton_add13">
          <property name="geometry">
           <rect>
            <x>92</x>
@@ -3607,7 +3466,7 @@ background-color: transparent</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (30).png</pixmap>
+          <pixmap>../images/blush_crust.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -3691,10 +3550,10 @@ color: rgb(98, 94, 92);
 </string>
          </property>
          <property name="text">
-          <string>65.000</string>
+          <string>100.000</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_add_blush">
+        <widget class="QPushButton" name="pushButton_add16">
          <property name="geometry">
           <rect>
            <x>92</x>
@@ -3804,7 +3663,7 @@ background-color: transparent;</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (27).png</pixmap>
+          <pixmap>../images/strawberry_breeze.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -3833,7 +3692,7 @@ border:0px</string>
           <string>1 piece</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_add_strawberry">
+        <widget class="QPushButton" name="pushButton_add14">
          <property name="geometry">
           <rect>
            <x>95</x>
@@ -3968,7 +3827,7 @@ background-color: transparent</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (29).png</pixmap>
+          <pixmap>../images/cookies_cream.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -4190,7 +4049,7 @@ background-color: transparent;</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (28).png</pixmap>
+          <pixmap>../images/cookies_cream.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -4331,7 +4190,7 @@ background-color: transparent</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (33).png</pixmap>
+          <pixmap>../images/cookies_cream.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -4529,7 +4388,7 @@ background-color: transparent</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (44).png</pixmap>
+          <pixmap>../images/twisted_love.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -4731,7 +4590,7 @@ background-color: transparent;</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (43).png</pixmap>
+          <pixmap>../images/dark_mix.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -4760,7 +4619,7 @@ border:0px</string>
           <string>1 piece</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_add_dark">
+        <widget class="QPushButton" name="pushButton_add20">
          <property name="geometry">
           <rect>
            <x>95</x>
@@ -4832,7 +4691,7 @@ color: rgb(98, 94, 92);
         <zorder>label_cookies_dark</zorder>
         <zorder>label_dark</zorder>
         <zorder>label_darl_size</zorder>
-        <zorder>pushButton_add_dark</zorder>
+        <zorder>pushButton_add20</zorder>
         <zorder>label_dark_price</zorder>
        </widget>
        <widget class="QFrame" name="frame_cookcreamy">
@@ -4905,7 +4764,7 @@ background-color: transparent</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (47).png</pixmap>
+          <pixmap>../images/creamy_matcha.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -4992,7 +4851,7 @@ color: rgb(98, 94, 92);
           <string>45.000</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_add_creamy">
+        <widget class="QPushButton" name="pushButton_add22">
          <property name="geometry">
           <rect>
            <x>92</x>
@@ -5127,13 +4986,13 @@ background-color: transparent;</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (41).png</pixmap>
+          <pixmap>../images/oreo_chocolate.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_add_oreo">
+        <widget class="QPushButton" name="pushButton_add24">
          <property name="geometry">
           <rect>
            <x>90</x>
@@ -5205,7 +5064,7 @@ color: rgb(98, 94, 92);
         <zorder>label_cookies_oreo</zorder>
         <zorder>label_oreo</zorder>
         <zorder>label_oreo_size</zorder>
-        <zorder>pushButton_add_oreo</zorder>
+        <zorder>pushButton_add24</zorder>
         <zorder>label_oreo_price</zorder>
        </widget>
        <widget class="QFrame" name="frame_cookblueberry">
@@ -5273,7 +5132,7 @@ background-color: transparent</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (42).png</pixmap>
+          <pixmap>../images/twisted_love.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -5501,13 +5360,13 @@ background-color: transparent;</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (34).png</pixmap>
+          <pixmap>../images/cookies_cream.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_add_candc">
+        <widget class="QPushButton" name="pushButton_add21">
          <property name="geometry">
           <rect>
            <x>90</x>
@@ -5579,7 +5438,7 @@ color: rgb(98, 94, 92);
         <zorder>label_cookies_candc</zorder>
         <zorder>label_candc</zorder>
         <zorder>label_candc_size</zorder>
-        <zorder>pushButton_add_candc</zorder>
+        <zorder>pushButton_add21</zorder>
         <zorder>label_candc_price</zorder>
        </widget>
        <widget class="QFrame" name="frame_cooktwisted">
@@ -5652,7 +5511,7 @@ background-color: transparent</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (45).png</pixmap>
+          <pixmap>../images/twisted_love.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -5739,7 +5598,7 @@ color: rgb(98, 94, 92);
           <string>45.000</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_add_twisted">
+        <widget class="QPushButton" name="pushButton_add23">
          <property name="geometry">
           <rect>
            <x>92</x>
@@ -5853,7 +5712,7 @@ background-color: transparent</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (46).png</pixmap>
+          <pixmap>../images/classic_choco_chip.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -5940,7 +5799,7 @@ color: rgb(98, 94, 92);
           <string>35.000</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_add_classic_choco">
+        <widget class="QPushButton" name="pushButton_add19">
          <property name="geometry">
           <rect>
            <x>92</x>
@@ -6061,7 +5920,7 @@ background-color: transparent</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (53).png</pixmap>
+          <pixmap>../images/lush_pear.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -6148,7 +6007,7 @@ color: rgb(98, 94, 92);
           <string>60.000</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_add_pear">
+        <widget class="QPushButton" name="pushButton_add28">
          <property name="geometry">
           <rect>
            <x>92</x>
@@ -6267,7 +6126,7 @@ background-color: transparent</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (50).png</pixmap>
+          <pixmap>../images/tira_miss_u.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -6354,7 +6213,7 @@ color: rgb(98, 94, 92);
           <string>55.000</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_add_tira">
+        <widget class="QPushButton" name="pushButton_add25">
          <property name="geometry">
           <rect>
            <x>92</x>
@@ -6474,7 +6333,7 @@ background-color: transparent;</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (51).png</pixmap>
+          <pixmap>../images/matcha_smore.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -6503,7 +6362,7 @@ border:0px</string>
           <string>500 ml</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_add_matcha">
+        <widget class="QPushButton" name="pushButton_add26">
          <property name="geometry">
           <rect>
            <x>95</x>
@@ -6675,13 +6534,13 @@ background-color: transparent;</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (52).png</pixmap>
+          <pixmap>../images/choco_smore.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_add_choco_smore">
+        <widget class="QPushButton" name="pushButton_add27">
          <property name="geometry">
           <rect>
            <x>90</x>
@@ -6753,7 +6612,7 @@ color: rgb(98, 94, 92);
         <zorder>label_drink_choco</zorder>
         <zorder>label_choco_smore</zorder>
         <zorder>label_choco_smore_size</zorder>
-        <zorder>pushButton_add_choco_smore</zorder>
+        <zorder>pushButton_add27</zorder>
         <zorder>label_choco_smore_price</zorder>
        </widget>
        <widget class="QFrame" name="frame_drink_brew">
@@ -6831,7 +6690,7 @@ background-color: transparent</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (54).png</pixmap>
+          <pixmap>../images/bergamot_brew.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -6918,7 +6777,7 @@ color: rgb(98, 94, 92);
           <string>60.000</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_add_brew">
+        <widget class="QPushButton" name="pushButton_add29">
          <property name="geometry">
           <rect>
            <x>92</x>
@@ -7248,7 +7107,7 @@ QPushButton:hover {
      <rect>
       <x>770</x>
       <y>90</y>
-      <width>291</width>
+      <width>381</width>
       <height>611</height>
      </rect>
     </property>
@@ -7269,18 +7128,18 @@ QPushButton:hover {
     <widget class="QLabel" name="label_order">
      <property name="geometry">
       <rect>
-       <x>110</x>
-       <y>30</y>
-       <width>91</width>
-       <height>16</height>
+       <x>140</x>
+       <y>20</y>
+       <width>121</width>
+       <height>41</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <family>Mongolian Baiti</family>
-       <pointsize>10</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
+       <pointsize>16</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
       </font>
      </property>
      <property name="styleSheet">
@@ -7301,8 +7160,8 @@ QPushButton:hover {
       <rect>
        <x>20</x>
        <y>70</y>
-       <width>251</width>
-       <height>401</height>
+       <width>341</width>
+       <height>471</height>
       </rect>
      </property>
      <property name="widgetResizable">
@@ -7313,17 +7172,17 @@ QPushButton:hover {
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>251</width>
-        <height>401</height>
+        <width>341</width>
+        <height>471</height>
        </rect>
       </property>
       <widget class="QTableWidget" name="tableWidget_order">
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>-10</y>
-         <width>251</width>
-         <height>321</height>
+         <y>0</y>
+         <width>341</width>
+         <height>341</height>
         </rect>
        </property>
        <row>
@@ -7348,17 +7207,7 @@ QPushButton:hover {
        </column>
        <column>
         <property name="text">
-         <string>Size</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
          <string>Quantity</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Subtotal</string>
         </property>
        </column>
       </widget>
@@ -7366,14 +7215,15 @@ QPushButton:hover {
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>340</y>
-         <width>251</width>
-         <height>61</height>
+         <y>350</y>
+         <width>341</width>
+         <height>71</height>
         </rect>
        </property>
        <property name="font">
         <font>
          <family>Mongolian Baiti</family>
+         <pointsize>12</pointsize>
         </font>
        </property>
        <property name="title">
@@ -7383,10 +7233,24 @@ QPushButton:hover {
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout">
           <item>
+           <widget class="QPushButton" name="pushButtonEdit">
+            <property name="font">
+             <font>
+              <family>Mongolian Baiti</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Edit</string>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QPushButton" name="pushButtonNewOrder">
             <property name="font">
              <font>
               <family>Mongolian Baiti</family>
+              <pointsize>12</pointsize>
              </font>
             </property>
             <property name="text">
@@ -7399,6 +7263,7 @@ QPushButton:hover {
             <property name="font">
              <font>
               <family>Mongolian Baiti</family>
+              <pointsize>12</pointsize>
              </font>
             </property>
             <property name="text">
@@ -7406,21 +7271,28 @@ QPushButton:hover {
             </property>
            </widget>
           </item>
-          <item>
-           <widget class="QPushButton" name="pushButtonEdit">
-            <property name="font">
-             <font>
-              <family>Mongolian Baiti</family>
-             </font>
-            </property>
-            <property name="text">
-             <string>Edit</string>
-            </property>
-           </widget>
-          </item>
          </layout>
         </item>
        </layout>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_total">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>430</y>
+         <width>271</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Mongolian Baiti</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">bakground-color:transparent</string>
+       </property>
       </widget>
      </widget>
     </widget>
@@ -7428,44 +7300,25 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>23</x>
-       <y>520</y>
-       <width>41</width>
-       <height>16</height>
+       <y>495</y>
+       <width>71</width>
+       <height>41</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <family>Mongolian Baiti</family>
-       <pointsize>10</pointsize>
+       <pointsize>16</pointsize>
       </font>
      </property>
      <property name="text">
       <string>Total:</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_total">
-     <property name="geometry">
-      <rect>
-       <x>70</x>
-       <y>511</y>
-       <width>191</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Mongolian Baiti</family>
-       <pointsize>9</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">bakground-color:transparent</string>
-     </property>
-    </widget>
     <widget class="QPushButton" name="pushButtonProceed">
      <property name="geometry">
       <rect>
-       <x>21</x>
+       <x>70</x>
        <y>550</y>
        <width>251</width>
        <height>41</height>
@@ -7505,7 +7358,6 @@ QPushButton:checked {
     <zorder>scrollArea_order</zorder>
     <zorder>label_order</zorder>
     <zorder>label_total</zorder>
-    <zorder>lineEdit_total</zorder>
     <zorder>pushButtonProceed</zorder>
    </widget>
    <widget class="QLabel" name="label_logo">
@@ -7529,7 +7381,7 @@ QPushButton:checked {
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>C:/Users/hong nhung/.designer/images/image-removebg-preview (24).png</pixmap>
+     <pixmap>../images/cadty_logo.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>

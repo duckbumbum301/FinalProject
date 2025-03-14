@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'E:\Git_TDLT\FinalProject\Ui\Login.ui'
+# Form implementation generated from reading ui file 'D:\FinalProject\Ui\Login.ui'
 #
 # Created by: PyQt6 UI code generator 6.7.1
 #
@@ -23,7 +23,7 @@ class Ui_MainWindow(object):
         self.label_logo.setFont(font)
         self.label_logo.setStyleSheet("background-color:transparent;")
         self.label_logo.setText("")
-        self.label_logo.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/image-removebg-preview (24).png"))
+        self.label_logo.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/cadty_logo.png"))
         self.label_logo.setScaledContents(True)
         self.label_logo.setObjectName("label_logo")
         self.pushButtoOrder = QtWidgets.QPushButton(parent=self.centralwidget)
