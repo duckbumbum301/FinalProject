@@ -27,8 +27,8 @@
     <rect>
      <x>340</x>
      <y>10</y>
-     <width>391</width>
-     <height>171</height>
+     <width>401</width>
+     <height>191</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -98,14 +98,14 @@ background-color:transparent;</string>
 QRadioButton::indicator {
     width: 16px;
     height: 16px;
-    border-radius: 8px; 
-    border: 2px solid rgb(195, 182, 157);     
-    background-color: rgb(230, 215, 185);    
+    border-radius: 8px;
+    border: 2px solid rgb(195, 182, 157);
+    background-color: rgb(230, 215, 185);
 }
 
 QRadioButton::indicator:hover {
-    border: 2px solid #c5a673;    
-    background-color: #f6ebd3;     
+    border: 2px solid #c5a673;
+    background-color: #f6ebd3;
 }
 
 QRadioButton::indicator:checked {
@@ -183,14 +183,14 @@ background-color:transparent;</string>
 QRadioButton::indicator {
     width: 16px;
     height: 16px;
-    border-radius: 8px; 
-    border: 2px solid rgb(195, 182, 157);     
-    background-color: rgb(230, 215, 185);    
+    border-radius: 8px;
+    border: 2px solid rgb(195, 182, 157);
+    background-color: rgb(230, 215, 185);
 }
 
 QRadioButton::indicator:hover {
-    border: 2px solid #c5a673;    
-    background-color: #f6ebd3;     
+    border: 2px solid #c5a673;
+    background-color: #f6ebd3;
 }
 
 QRadioButton::indicator:checked {
@@ -234,7 +234,7 @@ QRadioButton::indicator:checked {
     min-height: 25px;
     max-width: 25px;
     max-height: 25px;
-    border-radius: 10px; 
+    border-radius: 10px;
     background-color: transparent;
 	color: rgb(173, 162, 139);
     border: none;
@@ -248,7 +248,7 @@ QPushButton:hover {
     max-width: 25px;
     max-height: 25px;
     border-radius: 10px;
-	qproperty-alignment: 'AlignCenter'; 
+	qproperty-alignment: 'AlignCenter';
 }
 </string>
    </property>
@@ -376,8 +376,8 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1001</width>
-             <height>422</height>
+             <width>1009</width>
+             <height>368</height>
             </rect>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout">
@@ -396,19 +396,6 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
             </item>
            </layout>
           </widget>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_discount">
-          <property name="font">
-           <font>
-            <family>Mongolian Baiti</family>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>Discount coupon:</string>
-          </property>
          </widget>
         </item>
         <item>

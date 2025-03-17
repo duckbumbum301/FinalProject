@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'E:\Git_TDLT\FinalProject\Ui\Checkout.ui'
+# Form implementation generated from reading ui file 'D:\FinalProject\Ui\Checkout.ui'
 #
 # Created by: PyQt6 UI code generator 6.7.1
 #
@@ -12,11 +12,11 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_CheckoutWindow(object):
     def setupUi(self, CheckoutWindow):
         CheckoutWindow.setObjectName("CheckoutWindow")
-        CheckoutWindow.resize(1127, 924)
+        CheckoutWindow.resize(1127, 1013)
         CheckoutWindow.setMinimumSize(QtCore.QSize(1085, 784))
         CheckoutWindow.setStyleSheet("background-color: rgb(253, 253, 234);")
         self.checkout_area = QtWidgets.QWidget(parent=CheckoutWindow)
-        self.checkout_area.setGeometry(QtCore.QRect(340, 10, 391, 171))
+        self.checkout_area.setGeometry(QtCore.QRect(340, 10, 401, 191))
         self.checkout_area.setStyleSheet("background-color:rgb(253, 253, 234)")
         self.checkout_area.setObjectName("checkout_area")
         self.frame = QtWidgets.QFrame(parent=self.checkout_area)
@@ -32,7 +32,7 @@ class Ui_CheckoutWindow(object):
         self.label.setStyleSheet("border:0px;\n"
 "background-color:transparent;")
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/image-removebg-preview (56).png"))
+        self.label.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/image-removebg-preview (56).png"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.radioButton_cash = QtWidgets.QRadioButton(parent=self.frame)
@@ -78,7 +78,7 @@ class Ui_CheckoutWindow(object):
         self.label_4.setStyleSheet("border:0px;\n"
 "background-color:transparent;")
         self.label_4.setText("")
-        self.label_4.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/img_6.png"))
+        self.label_4.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/img_6.png"))
         self.label_4.setScaledContents(True)
         self.label_4.setObjectName("label_4")
         self.radioButtonOnlinePay = QtWidgets.QRadioButton(parent=self.frame_3)
@@ -111,102 +111,6 @@ class Ui_CheckoutWindow(object):
 "")
         self.radioButtonOnlinePay.setText("")
         self.radioButtonOnlinePay.setObjectName("radioButtonOnlinePay")
-        self.order_detail_area = QtWidgets.QWidget(parent=CheckoutWindow)
-        self.order_detail_area.setGeometry(QtCore.QRect(30, 180, 1031, 731))
-        self.order_detail_area.setStyleSheet("background-color:rgb(230, 215, 185); \n"
-"border-radius:20px;")
-        self.order_detail_area.setObjectName("order_detail_area")
-        self.label_order_summary = QtWidgets.QLabel(parent=self.order_detail_area)
-        self.label_order_summary.setGeometry(QtCore.QRect(20, 20, 121, 30))
-        self.label_order_summary.setObjectName("label_order_summary")
-        self.order_summary_content = QtWidgets.QTextEdit(parent=self.order_detail_area)
-        self.order_summary_content.setGeometry(QtCore.QRect(20, 60, 991, 261))
-        self.order_summary_content.setReadOnly(True)
-        self.order_summary_content.setObjectName("order_summary_content")
-        self.label_total = QtWidgets.QLabel(parent=self.order_detail_area)
-        self.label_total.setGeometry(QtCore.QRect(20, 350, 61, 21))
-        font = QtGui.QFont()
-        font.setFamily("Mongolian Baiti")
-        font.setPointSize(12)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_total.setFont(font)
-        self.label_total.setObjectName("label_total")
-        self.label_discount = QtWidgets.QLabel(parent=self.order_detail_area)
-        self.label_discount.setGeometry(QtCore.QRect(20, 325, 111, 21))
-        font = QtGui.QFont()
-        font.setFamily("Mongolian Baiti")
-        font.setPointSize(10)
-        self.label_discount.setFont(font)
-        self.label_discount.setObjectName("label_discount")
-        self.pushButtonDone = QtWidgets.QPushButton(parent=self.order_detail_area)
-        self.pushButtonDone.setGeometry(QtCore.QRect(400, 670, 251, 41))
-        font = QtGui.QFont()
-        font.setPointSize(-1)
-        self.pushButtonDone.setFont(font)
-        self.pushButtonDone.setStyleSheet("\n"
-"\n"
-"QPushButton {\n"
-"            background-color:rgb(253, 253, 234);\n"
-"            color: rgb(91, 76, 43);\n"
-"            \n"
-"            border-radius: 20px;\n"
-"            padding: 10px;\n"
-"            font-size: 16px;\n"
-"        }\n"
-"        QPushButton:hover {\n"
-"            background-color: rgb(216, 203, 164);\n"
-"        }")
-        self.pushButtonDone.setObjectName("pushButtonDone")
-        self.lineEditDiscount = QtWidgets.QLineEdit(parent=self.order_detail_area)
-        self.lineEditDiscount.setGeometry(QtCore.QRect(140, 329, 621, 21))
-        self.lineEditDiscount.setObjectName("lineEditDiscount")
-        self.lineEditTotal = QtWidgets.QLineEdit(parent=self.order_detail_area)
-        self.lineEditTotal.setGeometry(QtCore.QRect(90, 350, 491, 20))
-        self.lineEditTotal.setObjectName("lineEditTotal")
-        self.groupBox = QtWidgets.QGroupBox(parent=self.order_detail_area)
-        self.groupBox.setGeometry(QtCore.QRect(10, 380, 981, 221))
-        font = QtGui.QFont()
-        font.setFamily("Mongolian Baiti")
-        font.setPointSize(16)
-        self.groupBox.setFont(font)
-        self.groupBox.setObjectName("groupBox")
-        self.label_2 = QtWidgets.QLabel(parent=self.groupBox)
-        self.label_2.setGeometry(QtCore.QRect(10, 40, 161, 31))
-        font = QtGui.QFont()
-        font.setFamily("Mongolian Baiti")
-        self.label_2.setFont(font)
-        self.label_2.setObjectName("label_2")
-        self.lineEditName = QtWidgets.QLineEdit(parent=self.groupBox)
-        self.lineEditName.setGeometry(QtCore.QRect(170, 39, 781, 31))
-        self.lineEditName.setObjectName("lineEditName")
-        self.label_3 = QtWidgets.QLabel(parent=self.groupBox)
-        self.label_3.setGeometry(QtCore.QRect(10, 100, 161, 31))
-        font = QtGui.QFont()
-        font.setFamily("Mongolian Baiti")
-        self.label_3.setFont(font)
-        self.label_3.setObjectName("label_3")
-        self.lineEditPhone = QtWidgets.QLineEdit(parent=self.groupBox)
-        self.lineEditPhone.setGeometry(QtCore.QRect(170, 99, 781, 31))
-        self.lineEditPhone.setObjectName("lineEditPhone")
-        self.label_5 = QtWidgets.QLabel(parent=self.groupBox)
-        self.label_5.setGeometry(QtCore.QRect(10, 160, 161, 31))
-        font = QtGui.QFont()
-        font.setFamily("Mongolian Baiti")
-        self.label_5.setFont(font)
-        self.label_5.setObjectName("label_5")
-        self.lineEditEmail = QtWidgets.QLineEdit(parent=self.groupBox)
-        self.lineEditEmail.setGeometry(QtCore.QRect(170, 159, 781, 31))
-        self.lineEditEmail.setObjectName("lineEditEmail")
-        self.label_6 = QtWidgets.QLabel(parent=self.order_detail_area)
-        self.label_6.setGeometry(QtCore.QRect(20, 600, 161, 31))
-        font = QtGui.QFont()
-        font.setFamily("Mongolian Baiti")
-        self.label_6.setFont(font)
-        self.label_6.setObjectName("label_6")
-        self.lineEditAddress = QtWidgets.QLineEdit(parent=self.order_detail_area)
-        self.lineEditAddress.setGeometry(QtCore.QRect(180, 599, 781, 31))
-        self.lineEditAddress.setObjectName("lineEditAddress")
         self.pushButton_Back = QtWidgets.QPushButton(parent=CheckoutWindow)
         self.pushButton_Back.setGeometry(QtCore.QRect(20, 10, 25, 25))
         font = QtGui.QFont()
@@ -244,6 +148,132 @@ class Ui_CheckoutWindow(object):
         self.label_payment_method = QtWidgets.QLabel(parent=CheckoutWindow)
         self.label_payment_method.setGeometry(QtCore.QRect(50, 10, 171, 30))
         self.label_payment_method.setObjectName("label_payment_method")
+        self.scrollArea = QtWidgets.QScrollArea(parent=CheckoutWindow)
+        self.scrollArea.setGeometry(QtCore.QRect(40, 190, 1051, 631))
+        self.scrollArea.setWidgetResizable(True)
+        self.scrollArea.setObjectName("scrollArea")
+        self.scrollAreaWidgetContents = QtWidgets.QWidget()
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 1049, 629))
+        self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
+        self.scrollLayout = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents)
+        self.scrollLayout.setContentsMargins(10, 10, 10, 10)
+        self.scrollLayout.setSpacing(10)
+        self.scrollLayout.setObjectName("scrollLayout")
+        self.order_detail_area = QtWidgets.QWidget(parent=self.scrollAreaWidgetContents)
+        self.order_detail_area.setStyleSheet("background-color:rgb(230, 215, 185);\n"
+"border-radius:20px;")
+        self.order_detail_area.setObjectName("order_detail_area")
+        self.orderDetailLayout = QtWidgets.QVBoxLayout(self.order_detail_area)
+        self.orderDetailLayout.setContentsMargins(10, 10, 10, 10)
+        self.orderDetailLayout.setSpacing(10)
+        self.orderDetailLayout.setObjectName("orderDetailLayout")
+        self.label_order_summary = QtWidgets.QLabel(parent=self.order_detail_area)
+        self.label_order_summary.setObjectName("label_order_summary")
+        self.orderDetailLayout.addWidget(self.label_order_summary)
+        self.scrollArea_OrderDetail = QtWidgets.QScrollArea(parent=self.order_detail_area)
+        self.scrollArea_OrderDetail.setStyleSheet("QScrollBar:vertical {\n"
+"    background: transparent;\n"
+"    width: 8px;\n"
+"    margin: 0px;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical {\n"
+"    background: transparent; /* xám nhạt */\n"
+"    border-radius: 4px;\n"
+"    min-height: 20px;\n"
+"}\n"
+"\n"
+"QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {\n"
+"    background: none;\n"
+"    height: 0px;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {\n"
+"    background: transparent;\n"
+"}\n"
+"")
+        self.scrollArea_OrderDetail.setWidgetResizable(True)
+        self.scrollArea_OrderDetail.setObjectName("scrollArea_OrderDetail")
+        self.scrollAreaWidgetContents_OrderDetail = QtWidgets.QWidget()
+        self.scrollAreaWidgetContents_OrderDetail.setGeometry(QtCore.QRect(0, 0, 1009, 368))
+        self.scrollAreaWidgetContents_OrderDetail.setObjectName("scrollAreaWidgetContents_OrderDetail")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.scrollAreaWidgetContents_OrderDetail)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.order_summary_content = QtWidgets.QTextEdit(parent=self.scrollAreaWidgetContents_OrderDetail)
+        self.order_summary_content.setReadOnly(True)
+        self.order_summary_content.setObjectName("order_summary_content")
+        self.horizontalLayout.addWidget(self.order_summary_content)
+        self.verticalLayout = QtWidgets.QVBoxLayout()
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.horizontalLayout.addLayout(self.verticalLayout)
+        self.scrollArea_OrderDetail.setWidget(self.scrollAreaWidgetContents_OrderDetail)
+        self.orderDetailLayout.addWidget(self.scrollArea_OrderDetail)
+        self.label_total = QtWidgets.QLabel(parent=self.order_detail_area)
+        font = QtGui.QFont()
+        font.setFamily("Mongolian Baiti")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_total.setFont(font)
+        self.label_total.setObjectName("label_total")
+        self.orderDetailLayout.addWidget(self.label_total)
+        self.label_2 = QtWidgets.QLabel(parent=self.order_detail_area)
+        font = QtGui.QFont()
+        font.setFamily("Mongolian Baiti")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_2.setFont(font)
+        self.label_2.setObjectName("label_2")
+        self.orderDetailLayout.addWidget(self.label_2)
+        self.label_3 = QtWidgets.QLabel(parent=self.order_detail_area)
+        font = QtGui.QFont()
+        font.setFamily("Mongolian Baiti")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_3.setFont(font)
+        self.label_3.setObjectName("label_3")
+        self.orderDetailLayout.addWidget(self.label_3)
+        self.label_5 = QtWidgets.QLabel(parent=self.order_detail_area)
+        font = QtGui.QFont()
+        font.setFamily("Mongolian Baiti")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_5.setFont(font)
+        self.label_5.setObjectName("label_5")
+        self.orderDetailLayout.addWidget(self.label_5)
+        self.label_6 = QtWidgets.QLabel(parent=self.order_detail_area)
+        font = QtGui.QFont()
+        font.setFamily("Mongolian Baiti")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_6.setFont(font)
+        self.label_6.setObjectName("label_6")
+        self.orderDetailLayout.addWidget(self.label_6)
+        self.lineEditTotal = QtWidgets.QLineEdit(parent=self.order_detail_area)
+        self.lineEditTotal.setObjectName("lineEditTotal")
+        self.orderDetailLayout.addWidget(self.lineEditTotal)
+        self.pushButtonDone = QtWidgets.QPushButton(parent=self.order_detail_area)
+        self.pushButtonDone.setStyleSheet("\n"
+"QPushButton {\n"
+"            background-color:rgb(253, 253, 234);\n"
+"            color: rgb(91, 76, 43);\n"
+"            border-radius: 20px;\n"
+"            padding: 10px;\n"
+"            font-size: 16px;\n"
+"        }\n"
+"        QPushButton:hover {\n"
+"            background-color: rgb(216, 203, 164);\n"
+"        }")
+        self.pushButtonDone.setObjectName("pushButtonDone")
+        self.orderDetailLayout.addWidget(self.pushButtonDone)
+        self.scrollLayout.addWidget(self.order_detail_area)
+        self.scrollArea.setWidget(self.scrollAreaWidgetContents)
 
         self.retranslateUi(CheckoutWindow)
         QtCore.QMetaObject.connectSlotsByName(CheckoutWindow)
@@ -251,16 +281,14 @@ class Ui_CheckoutWindow(object):
     def retranslateUi(self, CheckoutWindow):
         _translate = QtCore.QCoreApplication.translate
         CheckoutWindow.setWindowTitle(_translate("CheckoutWindow", "Checkout"))
+        self.label_payment_method.setStyleSheet(_translate("CheckoutWindow", "font-size: 16px; font-weight: bold; color: #5b4c2b;"))
+        self.label_payment_method.setText(_translate("CheckoutWindow", "PAYMENT METHOD"))
         self.label_order_summary.setStyleSheet(_translate("CheckoutWindow", "font-size: 16px; font-weight: bold; color: #5b4c2b;"))
         self.label_order_summary.setText(_translate("CheckoutWindow", "Order Details:"))
         self.order_summary_content.setStyleSheet(_translate("CheckoutWindow", "background-color: #fdfae6; border: 1px solid #d8c49c; border-radius: 8px; padding: 6px; font-size: 13px; color: #5b4c2b;"))
         self.label_total.setText(_translate("CheckoutWindow", "Total:"))
-        self.label_discount.setText(_translate("CheckoutWindow", "Discount coupon:"))
+        self.label_2.setText(_translate("CheckoutWindow", "Customer Name:"))
+        self.label_3.setText(_translate("CheckoutWindow", "Customer Phone Numbers:"))
+        self.label_5.setText(_translate("CheckoutWindow", "Customer Email:"))
+        self.label_6.setText(_translate("CheckoutWindow", "Customer Address:"))
         self.pushButtonDone.setText(_translate("CheckoutWindow", "Done"))
-        self.groupBox.setTitle(_translate("CheckoutWindow", "Customer Details:"))
-        self.label_2.setText(_translate("CheckoutWindow", "<html><head/><body><p><span style=\" font-size:14pt; font-weight:600;\">Customer Name:</span></p></body></html>"))
-        self.label_3.setText(_translate("CheckoutWindow", "<html><head/><body><p><span style=\" font-size:14pt; font-weight:600;\">Customer Phone:</span></p></body></html>"))
-        self.label_5.setText(_translate("CheckoutWindow", "<html><head/><body><p><span style=\" font-size:14pt; font-weight:600;\">Customer email:</span></p></body></html>"))
-        self.label_6.setText(_translate("CheckoutWindow", "<html><head/><body><p><span style=\" font-size:14pt; font-weight:600;\">Customer address:</span></p><p><br/></p></body></html>"))
-        self.label_payment_method.setStyleSheet(_translate("CheckoutWindow", "font-size: 16px; font-weight: bold; color: #5b4c2b;"))
-        self.label_payment_method.setText(_translate("CheckoutWindow", "PAYMENT METHOD"))
