@@ -5,7 +5,7 @@ from Ui.CheckoutExt import CheckoutExt
 from Ui.product_detail_with_sliderExt import ProductDetailDialog
 from Ui.self_order import Ui_MainWindow
 from libs.JsonFileFactory import JsonFileFactory
-from models.Product import Mousse, Tart, Croissant, Cookies, Drinks, Product
+from models.product import Croissant, Tart, Mousse, Cookies, Drinks, Product
 
 
 class SelfOrderExt(Ui_MainWindow):
@@ -220,9 +220,17 @@ class SelfOrderExt(Ui_MainWindow):
                                     "Your cart is empty. Please add items before proceeding to checkout.")
             return
 
-        # Create and show the checkout window
-        self.checkout_window = CheckoutExt(self.order_data, self.MainWindow)
-        self.checkout_window.show()
+        # Đảm bảo tính toán tổng tiền chính xác
+        self.calculateTotalFromTable()
+        
+        try:
+            # Create and show the checkout window
+            self.checkout_window = CheckoutExt(self.order_data, self.MainWindow)
+            self.checkout_window.show()
+        except Exception as e:
+            QMessageBox.critical(self.MainWindow, "Lỗi", f"Không thể mở cửa sổ thanh toán: {str(e)}")
+            # In ra log để gỡ lỗi
+            print(f"Error opening checkout: {str(e)}")
 
     def checkoutOrder(self):
         """Modified to open checkout window instead of showing message box"""
