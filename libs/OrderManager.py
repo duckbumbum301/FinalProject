@@ -61,6 +61,9 @@ class OrderManager:
                     # Tạo danh sách OrderDetail
                     items = []
                     for item_dict in order_items:
+                        # Loại bỏ trường subtotal nếu có, vì nó được tính toán tự động trong constructor
+                        if 'subtotal' in item_dict:
+                            item_dict.pop('subtotal')
                         detail = OrderDetail(**item_dict)
                         items.append(detail)
                         
@@ -91,35 +94,35 @@ class OrderManager:
         # Gán items cho order
         order.items = order_details
         
-        # Đảm bảo đơn hàng có ID
-        if not order.order_id:
-            # Tạo ID từ thời gian hiện tại để đảm bảo duy nhất
-            current_time = datetime.datetime.now()
-            order.order_id = f"CD{current_time.strftime('%Y%m%d%H%M%S')}"
+        # Lấy tất cả đơn hàng để kiểm tra và tìm ID lớn nhất
+        orders = self.get_all_orders()
+        print(f"Current orders before save: {len(orders)}")
+        
+        # Tìm số thứ tự lớn nhất trong các ID đơn hàng hiện tại
+        max_order_num = 0
+        for existing_order in orders:
+            if existing_order.order_id and existing_order.order_id.startswith("CD"):
+                try:
+                    # Lấy phần số sau "CD"
+                    order_num = int(existing_order.order_id[2:])
+                    max_order_num = max(max_order_num, order_num)
+                except ValueError:
+                    # Bỏ qua nếu ID không đúng định dạng "CD" + số
+                    pass
+        
+        # Tạo ID mới bằng cách tăng số thứ tự lên 1
+        new_order_num = max_order_num + 1
+        order.order_id = f"CD{new_order_num}"
             
         print(f"Saving order with ID: {order.order_id}")
         
         # Cập nhật order_id trong items
         for detail in order_details:
             detail.order_id = order.order_id
-            
-        # Lấy tất cả đơn hàng
-        orders = self.get_all_orders()
-        print(f"Current orders: {len(orders)}")
         
-        # Kiểm tra đơn hàng đã tồn tại chưa
-        order_exists = False
-        for i, existing_order in enumerate(orders):
-            if existing_order.order_id == order.order_id:
-                orders[i] = order
-                order_exists = True
-                print(f"Updated existing order at index {i}")
-                break
-                
-        # Thêm đơn hàng mới nếu chưa tồn tại
-        if not order_exists:
-            orders.append(order)
-            print(f"Added new order")
+        # Thêm đơn hàng mới vào danh sách
+        orders.append(order)
+        print(f"Added new order, total orders: {len(orders)}")
             
         # Chuẩn bị dữ liệu để lưu
         json_data = []

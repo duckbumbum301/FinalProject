@@ -87,18 +87,31 @@ class DataConnector:
 
     def save_customer(self, customer):
         customers = self.get_all_customers()
-        # Tạo ID nếu chưa có
-        if not customer.customer_id:
+        
+        # Nếu đã có customer_id hợp lệ (từ find_customer_by_phone), giữ nguyên ID
+        # Ngược lại, tạo ID mới
+        if not customer.customer_id or not customer.customer_id.startswith("VA"):
             customer.customer_id = self.generate_customer_id()
+            print(f"Generated new customer ID: {customer.customer_id}")
 
-        # Kiểm tra nếu khách hàng đã tồn tại thì cập nhật
-        index = self.find_customer_index(customer.customer_id)
-        if index != -1:
-            customers[index] = customer
-        else:
+        # Kiểm tra xem customer có tồn tại trong danh sách hiện tại không
+        # dựa trên ID
+        customer_exists = False
+        for i, existing_customer in enumerate(customers):
+            if existing_customer.customer_id == customer.customer_id:
+                customers[i] = customer
+                customer_exists = True
+                print(f"Updating existing customer with ID: {customer.customer_id}")
+                break
+        
+        # Nếu không tìm thấy khách hàng, thêm mới
+        if not customer_exists:
             customers.append(customer)
+            print(f"Adding new customer with ID: {customer.customer_id}")
 
+        # Lưu danh sách khách hàng
         filename = os.path.join(self.base_path, "customers.json")
+        print(f"Saving {len(customers)} customers to {filename}")
         self.jff.write_data(customers, filename)
         return customer
 
@@ -184,12 +197,12 @@ class DataConnector:
         # Đảm bảo order có ID
         if not order.order_id:
             order.order_id = self.generate_order_id()
-            
+
         print(f"=== Starting order save process for ID {order.order_id} ===")
 
         # Gán chi tiết đơn hàng vào đơn hàng
         order.items = order_details
-        
+
         # Cập nhật order_id trong chi tiết đơn hàng
         for detail in order_details:
             detail.order_id = order.order_id
@@ -199,7 +212,7 @@ class DataConnector:
         print(f"Current orders count before save: {len(orders)}")
         if orders:
             print(f"Existing order IDs: {[order.order_id for order in orders]}")
-        
+
         # Kiểm tra nếu đơn hàng đã tồn tại thì cập nhật
         order_exists = False
         for i, existing_order in enumerate(orders):
@@ -209,19 +222,19 @@ class DataConnector:
                 order_exists = True
                 print(f"Updating existing order: {order.order_id}")
                 break
-                
+
         # Nếu không tồn tại thì thêm mới
         if not order_exists:
             print(f"Adding new order with ID {order.order_id} to the list")
             orders.append(order)
             print(f"New orders list length: {len(orders)}")
-            
+
         # Kiểm tra lại danh sách orders sau khi thêm
         check_ids = [o.order_id for o in orders]
         print(f"All order IDs before saving: {check_ids}")
         if check_ids.count(order.order_id) > 1:
             print(f"WARNING: Duplicate order ID {order.order_id} found in list!")
-        
+
         # Lưu danh sách vào file
         filename = os.path.join(self.base_path, "orders.json")
         print(f"Saving {len(orders)} orders to {filename}")
@@ -339,15 +352,15 @@ class DataConnector:
         # Tạo ID mới bằng cách tăng số thứ tự lên 1
         new_customer_num = max_customer_num + 1
         return f"VA{new_customer_num}"
-        
+
     def generate_order_id(self):
         """Tạo Order ID theo định dạng CD{i} với i tăng dần"""
         orders = self.get_all_orders()
-        
+
         # Nếu không có đơn hàng, bắt đầu từ CD1
         if not orders:
             return "CD1"
-            
+
         # Tìm số thứ tự lớn nhất hiện tại
         max_order_num = 0
         for order in orders:
@@ -358,7 +371,7 @@ class DataConnector:
                 except ValueError:
                     # Bỏ qua nếu không phải định dạng CD+số
                     pass
-                    
+
         # Tạo ID mới bằng cách tăng số thứ tự lên 1
         new_order_num = max_order_num + 1
         return f"CD{new_order_num}"

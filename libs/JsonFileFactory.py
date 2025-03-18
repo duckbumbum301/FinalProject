@@ -32,11 +32,53 @@ class JsonFileFactory:
                 except Exception as e:
                     print(f"Failed to create backup: {e}")
                     
+            # Kiểm tra xem file đã tồn tại chưa và đọc dữ liệu hiện có
+            existing_items = []
+            try:
+                if os.path.exists(filename) and os.path.getsize(filename) > 0:
+                    with open(filename, 'r', encoding='utf-8') as f:
+                        raw_content = f.read().strip()
+                    if raw_content and raw_content != "[]":
+                        existing_data = json.loads(raw_content)
+                        print(f"Read {len(existing_data)} existing items from {filename}")
+                        
+                        # Lấy ID của các item mới
+                        new_item_ids = []
+                        id_attr = None
+                        
+                        # Xác định thuộc tính ID dựa vào loại đối tượng
+                        for item in arr_data:
+                            if hasattr(item, 'order_id'):
+                                id_attr = 'order_id'
+                                if item.order_id:
+                                    new_item_ids.append(item.order_id)
+                            elif hasattr(item, 'customer_id'):
+                                id_attr = 'customer_id'
+                                if item.customer_id:
+                                    new_item_ids.append(item.customer_id)
+                            elif hasattr(item, 'product_id'):
+                                id_attr = 'product_id'
+                                if item.product_id:
+                                    new_item_ids.append(item.product_id)
+                        
+                        # Nếu xác định được thuộc tính ID, lọc các item không trùng ID
+                        if id_attr:
+                            for item_dict in existing_data:
+                                if id_attr in item_dict and item_dict[id_attr] not in new_item_ids:
+                                    existing_items.append(item_dict)
+                            print(f"Keeping {len(existing_items)} non-duplicate existing items")
+                        else:
+                            existing_items = existing_data
+            except Exception as e:
+                print(f"Error reading existing data: {str(e)}")
+                # Nếu có lỗi, tiếp tục với danh sách trống
+                existing_items = []
+                    
             # Ghi log số lượng item trước khi lưu
-            print(f"Writing {len(arr_data)} items to {filename}")
+            print(f"Preparing to write total of {len(arr_data) + len(existing_items)} items to {filename}")
                 
-            # Chuyển đổi dữ liệu sang JSON - xử lý đặc biệt với đối tượng có thuộc tính items
-            json_array = []
+            # Chuyển đổi dữ liệu mới sang JSON - xử lý đặc biệt với đối tượng có thuộc tính items
+            new_items = []
             for item in arr_data:
                 obj_dict = item.__dict__.copy()
                 
@@ -48,10 +90,14 @@ class JsonFileFactory:
                         items_list.append(detail_item.__dict__)
                     obj_dict['items'] = items_list
                 
-                json_array.append(obj_dict)
+                new_items.append(obj_dict)
+            
+            # Kết hợp dữ liệu cũ và mới
+            combined_items = existing_items + new_items
+            print(f"Combined data contains {len(combined_items)} items")
                 
             # Chuyển đổi sang JSON string
-            json_string = json.dumps(json_array, default=str, indent=4, ensure_ascii=False)
+            json_string = json.dumps(combined_items, default=str, indent=4, ensure_ascii=False)
             
             # Ghi file
             with open(filename, 'w', encoding='utf-8') as json_file:
