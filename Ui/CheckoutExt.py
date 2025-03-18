@@ -12,11 +12,15 @@ from models.order_detail import OrderDetail
 
 
 class CheckoutExt(QMainWindow, Ui_CheckoutWindow):
+    # Thêm tín hiệu để thông báo đơn hàng đã được xử lý thành công
+    orderProcessed = QtCore.pyqtSignal()
+
     def __init__(self, order_data, parent=None):
         super().__init__(parent)
         self.setupUi(self)
         self.order_data = order_data
         self.data_connector = DataConnector()
+        self.parent = parent
 
         # Chuyển đổi bố cục từ dọc sang ngang
         self.setupCustomLayout()
@@ -261,11 +265,19 @@ class CheckoutExt(QMainWindow, Ui_CheckoutWindow):
                 return
 
         # Kiểm tra định dạng email (phải có @.com)
-        if self.current_input_step == 2 and field_text:
+        if self.current_input_step == 2:
+            if not field_text:
+                QMessageBox.warning(self, "Thông tin thiếu", "Vui lòng nhập email!")
+                return
             email_pattern = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.com$'
             if not re.match(email_pattern, field_text):
                 QMessageBox.warning(self, "Sai định dạng", "Email phải đúng định dạng có '@.com'!")
                 return
+
+        # Kiểm tra địa chỉ
+        if self.current_input_step == 3 and not field_text:
+            QMessageBox.warning(self, "Thông tin thiếu", "Vui lòng nhập địa chỉ!")
+            return
 
         # Ẩn trường hiện tại - sử dụng logic tương tự như trong hide_all_input_fields
         current = self.input_fields[self.current_input_step]
@@ -355,8 +367,19 @@ class CheckoutExt(QMainWindow, Ui_CheckoutWindow):
         self.show_current_input_field()
 
     def go_back(self):
-        """Thoát khỏi cửa sổ Checkout khi nhấn nút Back góc trên bên trái"""
-        self.close()
+        """Ẩn cửa sổ Checkout khi nhấn nút Back góc trên bên trái"""
+        # Ẩn cửa sổ checkout thay vì đóng hẳn
+        self.hide()
+        
+        # Reset lại trạng thái nhập liệu
+        self.current_input_step = 0
+        self.hide_all_input_fields()
+        self.show_current_input_field()
+        self.pushButtonNext.setVisible(True)
+        self.pushButtonDone.setVisible(False)
+        
+        # Đảm bảo nút Previous được ẩn khi quay lại bước đầu tiên
+        self.pushButtonPrevious.setVisible(False)
 
     def display_order_summary(self):
         """Display the order summary in the text edit"""
@@ -404,9 +427,18 @@ class CheckoutExt(QMainWindow, Ui_CheckoutWindow):
             email = self.lineEditEmail.text().strip()
             address = self.lineEditAddress.text().strip()
             
-            # Kiểm tra thông tin bắt buộc
-            if not name or not phone:
-                QMessageBox.warning(self, "Thiếu thông tin", "Vui lòng nhập đầy đủ họ tên và số điện thoại!")
+            # Kiểm tra tất cả các trường thông tin
+            if not name:
+                QMessageBox.warning(self, "Thiếu thông tin", "Vui lòng nhập họ tên khách hàng!")
+                return
+            if not phone:
+                QMessageBox.warning(self, "Thiếu thông tin", "Vui lòng nhập số điện thoại khách hàng!")
+                return
+            if not email:
+                QMessageBox.warning(self, "Thiếu thông tin", "Vui lòng nhập email khách hàng!")
+                return
+            if not address:
+                QMessageBox.warning(self, "Thiếu thông tin", "Vui lòng nhập địa chỉ khách hàng!")
                 return
                 
             print(f"Customer info - Name: {name}, Phone: {phone}, Email: {email}, Address: {address}")
@@ -501,6 +533,11 @@ class CheckoutExt(QMainWindow, Ui_CheckoutWindow):
                     print(f"Error reading orders.json: {str(e)}")
 
             QMessageBox.information(self, "Thành công", "Đơn hàng đã được xử lý thành công!")
+            
+            # Phát tín hiệu để thông báo đơn hàng đã được xử lý
+            self.orderProcessed.emit()
+            
+            # Đóng cửa sổ
             self.close()
 
         except Exception as e:

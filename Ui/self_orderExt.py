@@ -223,9 +223,17 @@ class SelfOrderExt(Ui_MainWindow):
         self.calculateTotalFromTable()
         
         try:
-            # Create and show the checkout window
-            self.checkout_window = CheckoutExt(self.order_data, self.MainWindow)
-            self.checkout_window.show()
+            # Nếu cửa sổ checkout đã tồn tại, cập nhật dữ liệu và hiển thị lại
+            if hasattr(self, 'checkout_window'):
+                self.checkout_window.order_data = self.order_data
+                self.checkout_window.display_order_summary()
+                self.checkout_window.show()
+            else:
+                # Tạo cửa sổ checkout mới nếu chưa tồn tại
+                self.checkout_window = CheckoutExt(self.order_data, self.MainWindow)
+                # Kết nối tín hiệu orderProcessed với việc làm mới giỏ hàng
+                self.checkout_window.orderProcessed.connect(self.reset_cart)
+                self.checkout_window.show()
         except Exception as e:
             QMessageBox.critical(self.MainWindow, "Lỗi", f"Không thể mở cửa sổ thanh toán: {str(e)}")
             # In ra log để gỡ lỗi
@@ -373,48 +381,23 @@ class SelfOrderExt(Ui_MainWindow):
         # Clear order_data
         self.order_data = []
 
-    '''def checkoutOrder(self):
-        """Thanh toán đơn hàng"""
-        if self.tableWidget_order.rowCount() == 0:
-            QMessageBox.information(self.MainWindow, "Thông báo", "Giỏ hàng trống!")
-            return
+    def reset_cart(self):
+        """Reset giỏ hàng và làm mới giao diện sau khi đơn hàng được xử lý thành công"""
+        # Xóa tất cả dữ liệu trong bảng
+        self.tableWidget_order.setRowCount(0)
         
-        # Đảm bảo tổng tiền chính xác
-        self.calculateTotalFromTable()
-            
-        # Tạo nội dung hóa đơn
-        invoice = "=== HÓA ĐƠN THANH TOÁN ===\n\n"
+        # Reset các biến theo dõi
+        self.total_amount = 0
+        self.order_count = 0
+        self.order_data = []
         
-        for row in range(self.tableWidget_order.rowCount()):
-            product_id = self.tableWidget_order.item(row, 0).text()
-            name = self.tableWidget_order.item(row, 1).text()
-            price = self.tableWidget_order.item(row, 2).text()
-            quantity = self.tableWidget_order.item(row, 3).text()
-            subtotal = self.tableWidget_order.item(row, 4).text()
-            
-            invoice += f"{product_id} - {name}\n"
-            invoice += f"Đơn giá: {int(price):,} VNĐ x {quantity} = {int(subtotal):,} VNĐ\n\n"
-            
-        invoice += f"Tổng cộng: {self.total_amount:,.0f} VNĐ"
+        # Cập nhật hiển thị tổng tiền
+        self.updateTotalAmountDisplay()
         
-        QMessageBox.information(self.MainWindow, "Thông tin đơn hàng", invoice)
+        # Đảm bảo các nút và trạng thái được reset
+        self.disableOrderEditing()
         
-        # Xác nhận thanh toán
-        reply = QMessageBox.question(
-            self.MainWindow,
-            "Xác nhận thanh toán",
-            "Bạn có muốn thanh toán đơn hàng này?",
-            QMessageBox.Yes | QMessageBox.No,
-            QMessageBox.Yes
-        )
-        
-        if reply == QMessageBox.Yes:
-            QMessageBox.information(self.MainWindow, "Thành công", "Đơn hàng đã được thanh toán thành công!")
-            # Xóa giỏ hàng sau khi thanh toán
-            self.tableWidget_order.setRowCount(0)
-            self.total_amount = 0
-            self.order_count = 0
-            self.updateTotalAmountDisplay()'''
+        print("Giỏ hàng đã được làm mới")
 
     def addMatchaToOrder(self):
         self.addProductToOrder("CB26", "Matcha S'more", 70000)
