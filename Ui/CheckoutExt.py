@@ -9,6 +9,7 @@ from libs.OrderManager import OrderManager
 from models.customer import Customer
 from models.order import Order
 from models.order_detail import OrderDetail
+from Ui.qr_payment_dialog import QRPaymentDialog
 
 
 class CheckoutExt(QMainWindow, Ui_CheckoutWindow):
@@ -469,19 +470,13 @@ class CheckoutExt(QMainWindow, Ui_CheckoutWindow):
             saved_customer = self.data_connector.save_customer(customer)
             print(f"Customer saved with ID: {saved_customer.customer_id}")
             
-            # DEBUG - Kiểm tra file customers.json
-            customer_file = os.path.join(self.data_connector.base_path, "customers.json")
-            print(f"Customers file path: {customer_file}")
-            print(f"Customers file exists after save: {os.path.exists(customer_file)}")
-
             # Tính tổng tiền đơn hàng
             total_amount = 0
             for item in self.order_data:
                 total_amount += item.price * item.quantity
             print(f"Total order amount: {total_amount}")
 
-            # Tạo đơn hàng mới - LUÔN tạo mới, không bao giờ cập nhật đơn hàng cũ
-            # OrderManager sẽ tạo ID mới dựa trên thời gian hiện tại
+            # Tạo đơn hàng mới
             order = Order(
                 order_id="",  # Để trống để OrderManager tạo ID mới
                 customer_id=saved_customer.customer_id,
@@ -494,10 +489,7 @@ class CheckoutExt(QMainWindow, Ui_CheckoutWindow):
             # Tạo chi tiết đơn hàng
             order_details = []
             for item in self.order_data:
-                # Lấy notes an toàn
                 notes = item.notes if hasattr(item, 'notes') else None
-
-                # Tạo chi tiết đơn hàng
                 detail = OrderDetail(
                     order_id="",  # OrderManager sẽ cập nhật sau
                     product_id=item.product_id,
@@ -511,28 +503,21 @@ class CheckoutExt(QMainWindow, Ui_CheckoutWindow):
 
             # Lưu đơn hàng và chi tiết đơn hàng  
             print("Saving order using OrderManager...")
-            
-            # Tạo OrderManager và lưu đơn hàng
             order_manager = OrderManager(self.data_connector.base_path)
             saved_order = order_manager.save_order(order, order_details)
             print(f"Order saved with ID: {saved_order.order_id}")
-            
-            # Kiểm tra kết quả
-            order_file = os.path.join(self.data_connector.base_path, "orders.json")
-            print(f"Orders file exists after save: {os.path.exists(order_file)}")
-            
-            # Kiểm tra nội dung file orders.json
-            if os.path.exists(order_file):
-                try:
-                    with open(order_file, 'r', encoding='utf-8') as f:
-                        content = f.read()
-                        print(f"Orders file content length: {len(content)}")
-                        if len(content) < 100:  # Nếu nội dung ngắn, in ra để kiểm tra
-                            print(f"Orders file content: {content}")
-                except Exception as e:
-                    print(f"Error reading orders.json: {str(e)}")
 
-            QMessageBox.information(self, "Thành công", "Đơn hàng đã được xử lý thành công!")
+            # Xử lý thanh toán online
+            if payment_method == "online":
+                # Hiển thị cửa sổ QR code
+                qr_dialog = QRPaymentDialog(saved_order.order_id, total_amount, self)
+                qr_dialog.exec()
+                
+                # Cập nhật trạng thái đơn hàng thành "paid"
+                self.data_connector.update_order_status(saved_order.order_id, "paid")
+                QMessageBox.information(self, "Thành công", "Đơn hàng đã được thanh toán thành công!")
+            else:
+                QMessageBox.information(self, "Thành công", "Đơn hàng đã được xử lý thành công!")
             
             # Phát tín hiệu để thông báo đơn hàng đã được xử lý
             self.orderProcessed.emit()

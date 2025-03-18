@@ -8,6 +8,7 @@ from libs.JsonFileFactory import JsonFileFactory
 from models.product import Croissant, Tart, Mousse, Cookies, Drinks, Product
 
 
+
 class SelfOrderExt(Ui_MainWindow):
     def __init__(self):
         super().__init__()
@@ -15,6 +16,7 @@ class SelfOrderExt(Ui_MainWindow):
         self.total_amount = 0.0
         self.order_data = []
         self.json_factory = JsonFileFactory()
+        self.login_window = None
 
     def setupUi(self, MainWindow):
         super().setupUi(MainWindow)
@@ -29,13 +31,14 @@ class SelfOrderExt(Ui_MainWindow):
 
         self.tableWidget_order.cellDoubleClicked.connect(self.showProductDetail)
         self.pushButtonProceed.clicked.connect(self.openCheckout)
+
     def setupSignalsAndSlots(self):
         # Menu navigation
-        self.pushButton_Mousse.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_Mousse))   #ấn vào cái nào thì hiện menu cái đó
-        self.pushButton_Tart.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_Tart))
-        self.pushButton_Croissant.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_Croissant))
-        self.pushButton_Cookies.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_Cookies))
-        self.pushButton_Drinks.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_Drinks))
+        self.pushButton_Mousse.clicked.connect(lambda: self.switchMenu(self.page_Mousse, self.pushButton_Mousse))
+        self.pushButton_Tart.clicked.connect(lambda: self.switchMenu(self.page_Tart, self.pushButton_Tart))
+        self.pushButton_Croissant.clicked.connect(lambda: self.switchMenu(self.page_Croissant, self.pushButton_Croissant))
+        self.pushButton_Cookies.clicked.connect(lambda: self.switchMenu(self.page_Cookies, self.pushButton_Cookies))
+        self.pushButton_Drinks.clicked.connect(lambda: self.switchMenu(self.page_Drinks, self.pushButton_Drinks))
         
         # Product buttons
         self.pushButton_add1.clicked.connect(self.addRomanceToOrder)
@@ -485,3 +488,55 @@ class SelfOrderExt(Ui_MainWindow):
         
     def addBergamotToOrder(self):
         self.addProductToOrder("CB29", "Bergamot Brew", 60000)
+
+    def switchMenu(self, page, active_button):
+        """Chuyển đổi menu và cập nhật màu sắc nút"""
+        # Đặt lại màu cho tất cả các nút về màu mặc định
+        self.resetButtonColors()
+        
+        # Đặt màu tối hơn cho nút được chọn
+        active_button.setStyleSheet("""
+            QPushButton {
+                background-color: rgb(216, 203, 164);
+                color: rgb(91, 76, 43);
+                border-radius: 15px;
+                padding: 8px;
+                font-size: 14px;
+                min-width: 100px;
+            }
+            QPushButton:hover {
+                background-color: rgb(200, 185, 150);
+            }
+        """)
+        
+        # Chuyển đến trang tương ứng
+        self.stackedWidget.setCurrentWidget(page)
+
+    def resetButtonColors(self):
+        """Đặt lại màu mặc định cho tất cả các nút menu"""
+        default_style = """
+            QPushButton {
+                background-color: rgb(251, 236, 207);
+                color: rgb(91, 76, 43);
+                border-radius: 15px;
+                padding: 8px;
+                font-size: 14px;
+                min-width: 100px;
+            }
+            QPushButton:hover {
+                background-color: rgb(216, 203, 164);
+            }
+        """
+        
+        # Danh sách các nút menu
+        menu_buttons = [
+            self.pushButton_Mousse,
+            self.pushButton_Tart,
+            self.pushButton_Croissant,
+            self.pushButton_Cookies,
+            self.pushButton_Drinks
+        ]
+        
+        # Đặt lại màu mặc định cho tất cả các nút
+        for button in menu_buttons:
+            button.setStyleSheet(default_style)

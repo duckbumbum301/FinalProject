@@ -1,5 +1,8 @@
+from PyQt6.QtGui import QPixmap
 from PyQt6.QtWidgets import QDialog
 from Ui.product_detail_with_slider import Ui_ProductDetailDialog
+import os
+from PyQt6.QtCore import Qt
 
 
 class ProductDetailDialog(QDialog, Ui_ProductDetailDialog):
@@ -95,14 +98,94 @@ class ProductDetailDialog(QDialog, Ui_ProductDetailDialog):
             except:
                 pass  # Fall back to default handling
 
-        # Default image handling
-        image_path = f"images/{product_id}.jpg"
+        # Default image handling from full_images directory
         try:
-            pixmap = QPixmap(image_path)
-            self.label_image.setPixmap(pixmap)
-            self.label_image.setScaledContents(True)
-        except:
-            self.label_image.setText(f"Image for {product_id}")
+            # Xác định đường dẫn hình ảnh dựa trên product_id
+            if product_id == 'CB1':
+                image_path = "../full_images/CB1.jpg"
+            elif product_id == 'CB2':
+                image_path = "../full_images/CB2.jpg"
+            elif product_id == 'CB3':
+                image_path = "../full_images/CB3.jpg"
+            elif product_id == 'CB4':
+                image_path = "full_images/CB4.jpg"
+            elif product_id == 'CB5':
+                image_path = "full_images/CB5.jpg"
+            elif product_id == 'CB6':
+                image_path = "full_images/CB6.jpg"
+            elif product_id == 'CB7':
+                image_path = "full_images/CB7.jpg"
+            elif product_id == 'CB8':
+                image_path = "full_images/CB8.jpg"
+            elif product_id == 'CB9':
+                image_path = "full_images/CB9.jpg"
+            elif product_id == 'CB10':
+                image_path = "full_images/CB10.jpg"
+            elif product_id == 'CB11':
+                image_path = "full_images/CB11.jpg"
+            elif product_id == 'CB12':
+                image_path = "full_images/CB12.jpg"
+            elif product_id == 'CB13':
+                image_path = "full_images/CB13.png"
+            elif product_id == 'CB14':
+                image_path = "full_images/CB14.png"
+            elif product_id == 'CB15':
+                image_path = "full_images/CB15.png"
+            elif product_id == 'CB16':
+                image_path = "full_images/CB16.png"
+            elif product_id == 'CB17':
+                image_path = "full_images/CB17.png"
+            elif product_id == 'CB18':
+                image_path = "full_images/CB18.png"
+            elif product_id == 'CB19':
+                image_path = "full_images/CB19.jpg"
+            elif product_id == 'CB20':
+                image_path = "full_images/CB20.jpg"
+            elif product_id == 'CB21':
+                image_path = "full_images/CB21.jpg"
+            elif product_id == 'CB22':
+                image_path = "full_images/CB22.jpg"
+            elif product_id == 'CB23':
+                image_path = "full_images/CB23.jpg"
+            elif product_id == 'CB24':
+                image_path = "full_images/CB24.jpg"
+            elif product_id == 'CB25':
+                image_path = "full_images/CB25.png"
+            elif product_id == 'CB26':
+                image_path = "full_images/CB26.png"
+            elif product_id == 'CB27':
+                image_path = "full_images/CB27.png"
+            elif product_id == 'CB28':
+                image_path = "full_images/CB28.jpg"
+            elif product_id == 'CB29':
+                image_path = "full_images/CB29.jpg"
+            else:
+                # Nếu không tìm thấy product_id phù hợp
+                self.label_image.setText(f"Không có hình ảnh cho {product_id}")
+                self.label_image.setStyleSheet("background-color: #f0f0f0; border: 1px solid #ccc; border-radius: 8px;")
+                return
+            
+            if os.path.exists(image_path):
+                pixmap = QPixmap(image_path)
+                if not pixmap.isNull():
+                    # Tính toán kích thước để giữ tỷ lệ khung hình
+                    label_size = self.label_image.size()
+                    scaled_pixmap = pixmap.scaled(
+                        label_size, 
+                        Qt.AspectRatioMode.KeepAspectRatio,
+                        Qt.TransformationMode.SmoothTransformation
+                    )
+                    self.label_image.setPixmap(scaled_pixmap)
+                    self.label_image.setScaledContents(False)  # Tắt scaled contents để giữ tỷ lệ
+                    return
+                
+            # Nếu không tìm thấy hình ảnh hoặc không thể load
+            self.label_image.setText(f"Không có hình ảnh cho {product_id}")
+            self.label_image.setStyleSheet("background-color: #f0f0f0; border: 1px solid #ccc; border-radius: 8px;")
+            
+        except Exception as e:
+            print(f"Lỗi khi tải hình ảnh cho {product_id}: {str(e)}")
+            self.label_image.setText(f"Không thể tải hình ảnh cho {product_id}")
             self.label_image.setStyleSheet("background-color: #f0f0f0; border: 1px solid #ccc; border-radius: 8px;")
 
     def show_prev_product(self):
