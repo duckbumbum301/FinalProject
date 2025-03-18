@@ -5,5 +5,33 @@
         "phone": "0912345678",
         "email": "tuhaolapmg@yahoo.com",
         "address": "cali"
+    },
+    {
+        "customer_id": "VA1",
+        "name": "gay",
+        "phone": "0912345678",
+        "email": "tuhaolagay@gmail.com",
+        "address": "ben tre"
+    },
+    {
+        "customer_id": "VA1",
+        "name": "le bien",
+        "phone": "0912345678",
+        "email": "tuhaolalebien@yahoo.com",
+        "address": "phu quy"
+    },
+    {
+        "customer_id": "VA2",
+        "name": "lgbt",
+        "phone": "0912345666",
+        "email": "toilalgbt@gmail.com",
+        "address": "saigon"
+    },
+    {
+        "customer_id": "VA3",
+        "name": "cho gia",
+        "phone": "0912345777",
+        "email": "chogia@gmail.com",
+        "address": "saigon"
     }
 ]

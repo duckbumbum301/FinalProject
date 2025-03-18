@@ -203,5 +203,117 @@
                 "subtotal": 60000
             }
         ]
+    },
+    {
+        "order_id": "CD8",
+        "customer_id": "VA1",
+        "order_date": "2025-03-19T02:11:34.083129",
+        "total_amount": 1440000,
+        "payment_method": "online",
+        "status": "pending",
+        "items": [
+            {
+                "order_id": "CD8",
+                "product_id": "CB1",
+                "name": "Romance Blossom",
+                "price": 480000,
+                "quantity": 1,
+                "notes": "",
+                "subtotal": 480000
+            },
+            {
+                "order_id": "CD8",
+                "product_id": "CB4",
+                "name": "Pandora Delight",
+                "price": 480000,
+                "quantity": 2,
+                "notes": "",
+                "subtotal": 960000
+            }
+        ]
+    },
+    {
+        "order_id": "CD9",
+        "customer_id": "VA1",
+        "order_date": "2025-03-19T02:12:30.709794",
+        "total_amount": 160000,
+        "payment_method": "cash",
+        "status": "pending",
+        "items": [
+            {
+                "order_id": "CD9",
+                "product_id": "CB14",
+                "name": "Strawberry Breeze",
+                "price": 60000,
+                "quantity": 1,
+                "notes": "",
+                "subtotal": 60000
+            },
+            {
+                "order_id": "CD9",
+                "product_id": "CB17",
+                "name": "Tiramisiu Cake",
+                "price": 100000,
+                "quantity": 1,
+                "notes": "",
+                "subtotal": 100000
+            }
+        ]
+    },
+    {
+        "order_id": "CD10",
+        "customer_id": "VA2",
+        "order_date": "2025-03-19T02:16:16.057253",
+        "total_amount": 115000,
+        "payment_method": "cash",
+        "status": "pending",
+        "items": [
+            {
+                "order_id": "CD10",
+                "product_id": "CB13",
+                "name": "Honey Glaze",
+                "price": 65000,
+                "quantity": 1,
+                "notes": "",
+                "subtotal": 65000
+            },
+            {
+                "order_id": "CD10",
+                "product_id": "CB15",
+                "name": "Classic",
+                "price": 50000,
+                "quantity": 1,
+                "notes": "",
+                "subtotal": 50000
+            }
+        ]
+    },
+    {
+        "order_id": "CD11",
+        "customer_id": "VA3",
+        "order_date": "2025-03-19T02:17:06.720149",
+        "total_amount": 85000,
+        "payment_method": "cash",
+        "status": "pending",
+        "items": [
+            {
+                "order_id": "CD11",
+                "product_id": "CB20",
+                "name": "Dark Mix",
+                "price": 40000,
+                "quantity": 1,
+                "notes": "",
+                "subtotal": 40000
+            },
+            {
+                "order_id": "CD11",
+                "product_id": "CB22",
+                "name": "Creamy Matcha",
+                "price": 45000,
+                "quantity": 1,
+                "notes": "",
+                "subtotal": 45000
+            }
+        ]
     }
 ]
