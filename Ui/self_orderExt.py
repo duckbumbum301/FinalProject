@@ -71,7 +71,6 @@ class SelfOrderExt(Ui_MainWindow):
 
         self.pushButtonDelete.clicked.connect(self.removeSelectedItem)
         self.pushButtonNewOrder.clicked.connect(self.clearCart)
-        self.pushButtonProceed.clicked.connect(self.checkoutOrder)
         self.pushButtonEdit.clicked.connect(self.enableOrderEditing)
 
     def showWindow(self):

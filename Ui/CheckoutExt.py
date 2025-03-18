@@ -1,12 +1,7 @@
-from PyQt6.QtWidgets import QMainWindow, QMessageBox, QPushButton, QHBoxLayout, QLabel, QLineEdit, QButtonGroup, QDialog, QVBoxLayout
+from PyQt6.QtWidgets import QMainWindow, QMessageBox, QPushButton, QHBoxLayout, QLabel, QLineEdit, QButtonGroup
 from PyQt6 import QtCore
 import os
 import re
-import qrcode
-from PIL import Image
-from io import BytesIO
-from PyQt6.QtGui import QPixmap
-from PyQt6.QtCore import Qt
 
 from Ui.Checkout import Ui_CheckoutWindow
 from libs.DataConnector import DataConnector
@@ -15,75 +10,6 @@ from models.customer import Customer
 from models.order import Order
 from models.order_detail import OrderDetail
 
-class QRCodeDialog(QDialog):
-    def __init__(self, parent=None):
-        super().__init__(parent)
-        self.setWindowTitle("Thanh toán Online")
-        self.setFixedSize(400, 500)
-        self.setStyleSheet("background-color: rgb(253, 253, 234);")
-        
-        # Tạo layout chính
-        layout = QVBoxLayout()
-        
-        # Label hướng dẫn
-        instruction_label = QLabel("Vui lòng quét mã QR để thanh toán")
-        instruction_label.setStyleSheet("font-size: 16px; color: #5b4c2b; font-weight: bold;")
-        instruction_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        layout.addWidget(instruction_label)
-        
-        # Tạo mã QR
-        qr = qrcode.QRCode(
-            version=1,
-            error_correction=qrcode.constants.ERROR_CORRECT_L,
-            box_size=10,
-            border=4,
-        )
-        
-        # Tạo nội dung cho mã QR (có thể thay đổi theo yêu cầu)
-        qr_data = "https://example.com/payment"  # Thay thế bằng URL thanh toán thực tế
-        qr.add_data(qr_data)
-        qr.make(fit=True)
-        
-        # Tạo ảnh QR
-        qr_image = qr.make_image(fill_color="black", back_color="white")
-        
-        # Chuyển đổi ảnh PIL sang QPixmap
-        buffer = BytesIO()
-        qr_image.save(buffer, format='PNG')
-        qr_pixmap = QPixmap()
-        qr_pixmap.loadFromData(buffer.getvalue())
-        
-        # Hiển thị mã QR
-        qr_label = QLabel()
-        qr_label.setPixmap(qr_pixmap.scaled(300, 300, Qt.AspectRatioMode.KeepAspectRatio))
-        qr_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        layout.addWidget(qr_label)
-        
-        # Label thông báo
-        message_label = QLabel("Sau khi thanh toán xong, vui lòng nhấn nút 'Xác nhận'")
-        message_label.setStyleSheet("font-size: 14px; color: #5b4c2b;")
-        message_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        layout.addWidget(message_label)
-        
-        # Nút xác nhận
-        confirm_button = QPushButton("Xác nhận")
-        confirm_button.setStyleSheet("""
-            QPushButton {
-                background-color: rgb(245, 245, 220);
-                color: #4A4A4A;
-                border-radius: 20px;
-                padding: 10px;
-                font-size: 14px;
-                min-width: 150px;
-            }
-            QPushButton:hover {
-                background-color: #D9C9A7;
-            }
-        """)
-        confirm_button.clicked.connect(self.accept)
-        layout.addWidget(confirm_button, alignment=Qt.AlignmentFlag.AlignCenter)
-        
-        self.setLayout(layout)
 
 class CheckoutExt(QMainWindow, Ui_CheckoutWindow):
     def __init__(self, order_data, parent=None):
@@ -464,80 +390,123 @@ class CheckoutExt(QMainWindow, Ui_CheckoutWindow):
             # Kiểm tra hình thức thanh toán
             if self.radioButton_cash.isChecked():
                 payment_method = "cash"
-                self.process_cash_payment()
             elif self.radioButtonOnlinePay.isChecked():
                 payment_method = "online"
-                self.process_online_payment()
             else:
                 QMessageBox.warning(self, "Thiếu thông tin", "Vui lòng chọn hình thức thanh toán!")
                 return
                 
             print(f"Payment method selected: {payment_method}")
 
-        except Exception as e:
-            QMessageBox.critical(self, "Lỗi", f"Có lỗi xảy ra: {str(e)}")
-            print(f"Error processing order: {str(e)}")
+            # Lấy thông tin khách hàng từ form
+            name = self.lineEditName.text().strip()
+            phone = self.lineEditPhone.text().strip()
+            email = self.lineEditEmail.text().strip()
+            address = self.lineEditAddress.text().strip()
+            
+            # Kiểm tra thông tin bắt buộc
+            if not name or not phone:
+                QMessageBox.warning(self, "Thiếu thông tin", "Vui lòng nhập đầy đủ họ tên và số điện thoại!")
+                return
+                
+            print(f"Customer info - Name: {name}, Phone: {phone}, Email: {email}, Address: {address}")
 
-    def process_cash_payment(self):
-        """Xử lý thanh toán tiền mặt"""
-        # Lấy thông tin khách hàng từ form
-        name = self.lineEditName.text().strip()
-        phone = self.lineEditPhone.text().strip()
-        email = self.lineEditEmail.text().strip()
-        address = self.lineEditAddress.text().strip()
-        
-        # Kiểm tra thông tin bắt buộc
-        if not name or not phone:
-            QMessageBox.warning(self, "Thiếu thông tin", "Vui lòng nhập đầy đủ họ tên và số điện thoại!")
-            return
+            # Tìm kiếm khách hàng theo số điện thoại
+            existing_customer = self.data_connector.find_customer_by_phone(phone)
+            
+            # Khởi tạo đối tượng khách hàng
+            if existing_customer:
+                # Cập nhật thông tin khách hàng nếu đã tồn tại
+                customer = existing_customer
+                customer.name = name
+                customer.email = email
+                customer.address = address
+                print(f"Using existing customer: {customer.customer_id}")
+            else:
+                # Tạo khách hàng mới với ID trống để hàm save_customer tạo ID mới
+                customer = Customer(
+                    customer_id="",  # Để trống để tạo ID mới
+                    name=name,
+                    phone=phone,
+                    email=email,
+                    address=address
+                )
+                print(f"Created new customer object")
+                
+            # Lưu thông tin khách hàng - luôn cập nhật thông tin mới nhất
+            saved_customer = self.data_connector.save_customer(customer)
+            print(f"Customer saved with ID: {saved_customer.customer_id}")
+            
+            # DEBUG - Kiểm tra file customers.json
+            customer_file = os.path.join(self.data_connector.base_path, "customers.json")
+            print(f"Customers file path: {customer_file}")
+            print(f"Customers file exists after save: {os.path.exists(customer_file)}")
 
-        # Xử lý đơn hàng
-        self.save_order(name, phone, email, address, "cash")
-        QMessageBox.information(self, "Thành công", "Đơn hàng đã được xử lý thành công!")
-        self.close()
+            # Tính tổng tiền đơn hàng
+            total_amount = 0
+            for item in self.order_data:
+                total_amount += item.price * item.quantity
+            print(f"Total order amount: {total_amount}")
 
-    def process_online_payment(self):
-        """Xử lý thanh toán online"""
-        # Lấy thông tin khách hàng từ form
-        name = self.lineEditName.text().strip()
-        phone = self.lineEditPhone.text().strip()
-        email = self.lineEditEmail.text().strip()
-        address = self.lineEditAddress.text().strip()
-        
-        # Kiểm tra thông tin bắt buộc
-        if not name or not phone:
-            QMessageBox.warning(self, "Thiếu thông tin", "Vui lòng nhập đầy đủ họ tên và số điện thoại!")
-            return
+            # Tạo đơn hàng mới - LUÔN tạo mới, không bao giờ cập nhật đơn hàng cũ
+            # OrderManager sẽ tạo ID mới dựa trên thời gian hiện tại
+            order = Order(
+                order_id="",  # Để trống để OrderManager tạo ID mới
+                customer_id=saved_customer.customer_id,
+                payment_method=payment_method,
+                total_amount=total_amount,
+                status="pending"
+            )
+            print(f"Created new order object for customer {saved_customer.customer_id}")
+            
+            # Tạo chi tiết đơn hàng
+            order_details = []
+            for item in self.order_data:
+                # Lấy notes an toàn
+                notes = item.notes if hasattr(item, 'notes') else None
 
-        # Hiển thị cửa sổ mã QR
-        qr_dialog = QRCodeDialog(self)
-        if qr_dialog.exec() == QDialog.DialogCode.Accepted:
-            # Khi người dùng xác nhận đã thanh toán
-            self.save_order(name, phone, email, address, "online")
+                # Tạo chi tiết đơn hàng
+                detail = OrderDetail(
+                    order_id="",  # OrderManager sẽ cập nhật sau
+                    product_id=item.product_id,
+                    name=item.name,
+                    price=item.price,
+                    quantity=item.quantity,
+                    notes=notes
+                )
+                order_details.append(detail)
+            print(f"Added {len(order_details)} order details")
+
+            # Lưu đơn hàng và chi tiết đơn hàng  
+            print("Saving order using OrderManager...")
+            
+            # Tạo OrderManager và lưu đơn hàng
+            order_manager = OrderManager(self.data_connector.base_path)
+            saved_order = order_manager.save_order(order, order_details)
+            print(f"Order saved with ID: {saved_order.order_id}")
+            
+            # Kiểm tra kết quả
+            order_file = os.path.join(self.data_connector.base_path, "orders.json")
+            print(f"Orders file exists after save: {os.path.exists(order_file)}")
+            
+            # Kiểm tra nội dung file orders.json
+            if os.path.exists(order_file):
+                try:
+                    with open(order_file, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                        print(f"Orders file content length: {len(content)}")
+                        if len(content) < 100:  # Nếu nội dung ngắn, in ra để kiểm tra
+                            print(f"Orders file content: {content}")
+                except Exception as e:
+                    print(f"Error reading orders.json: {str(e)}")
+
             QMessageBox.information(self, "Thành công", "Đơn hàng đã được xử lý thành công!")
             self.close()
 
-    def save_order(self, name, phone, email, address, payment_method):
-        """Lưu thông tin đơn hàng"""
-        try:
-            # Tạo khách hàng mới
-            customer = Customer(name=name, phone=phone, email=email, address=address)
-            customer_id = self.data_connector.insert_customer(customer)
-            
-            # Tạo đơn hàng mới
-            order = Order(customer_id=customer_id, payment_method=payment_method)
-            order_id = self.data_connector.insert_order(order)
-            
-            # Lưu chi tiết đơn hàng
-            for item in self.order_data:
-                order_detail = OrderDetail(
-                    order_id=order_id,
-                    product_id=item.product_id,
-                    quantity=item.quantity,
-                    price=item.price
-                )
-                self.data_connector.insert_order_detail(order_detail)
-                
         except Exception as e:
+            QMessageBox.warning(self, "Lỗi", f"Không thể lưu đơn hàng: {str(e)}")
             print(f"Error saving order: {str(e)}")
-            raise
+            
+            # Debug thêm chi tiết lỗi
+            import traceback
+            traceback.print_exc()
