@@ -95,23 +95,17 @@ class DataConnector:
             print(f"Generated new customer ID: {customer.customer_id}")
 
         # Kiểm tra xem customer có tồn tại trong danh sách hiện tại không
-        # dựa trên tên hoặc email
+        # dựa trên ID
         customer_exists = False
         for i, existing_customer in enumerate(customers):
-            if existing_customer.name == customer.name or existing_customer.email == customer.email:
-                # Cập nhật thông tin khách hàng hiện có
-                existing_customer.phone = customer.phone
-                existing_customer.email = customer.email
-                existing_customer.address = customer.address
-                customer = existing_customer  # Sử dụng khách hàng đã cập nhật
-                customer_exists = True  # Đánh dấu đã tìm thấy khách hàng
-                print(f"Updating existing customer with name: {customer.name} or email: {customer.email}")
+            if existing_customer.customer_id == customer.customer_id:
+                customers[i] = customer
+                customer_exists = True
+                print(f"Updating existing customer with ID: {customer.customer_id}")
                 break
         
         # Nếu không tìm thấy khách hàng, thêm mới
         if not customer_exists:
-            # Đảm bảo tạo ID mới cho khách hàng mới
-            customer.customer_id = self.generate_customer_id()
             customers.append(customer)
             print(f"Adding new customer with ID: {customer.customer_id}")
 

@@ -180,3 +180,52 @@ class OrderManager:
             import traceback
             traceback.print_exc()
             return order
+
+    def get_order_details(self, order_id):
+        """
+        Lấy chi tiết đơn hàng từ một order_id
+        :param order_id: Mã đơn hàng cần lấy chi tiết
+        :return: Danh sách các OrderDetail hoặc None nếu không tìm thấy
+        """
+        if not os.path.exists(self.orders_file):
+            print(f"File {self.orders_file} does not exist")
+            return None
+            
+        try:
+            with open(self.orders_file, 'r', encoding='utf-8') as f:
+                raw_data = f.read().strip()
+                
+            if not raw_data:
+                print(f"File {self.orders_file} is empty")
+                return None
+                
+            orders_data = json.loads(raw_data)
+            
+            # Tìm đơn hàng theo order_id
+            for order_data in orders_data:
+                if order_data.get('order_id') == order_id:
+                    # Nếu có trường items, chuyển đổi từng item thành OrderDetail
+                    if 'items' in order_data:
+                        details = []
+                        for item_data in order_data['items']:
+                            detail = OrderDetail(
+                                order_id=order_id,
+                                product_id=item_data.get('product_id'),
+                                name=item_data.get('name'),
+                                price=item_data.get('price', 0),
+                                quantity=item_data.get('quantity', 0),
+                                notes=item_data.get('notes')
+                            )
+                            details.append(detail)
+                        return details
+                    else:
+                        print(f"No items found in order {order_id}")
+                        return []
+            
+            # Không tìm thấy đơn hàng
+            print(f"Order {order_id} not found")
+            return None
+            
+        except Exception as e:
+            print(f"Error reading order details: {str(e)}")
+            return None
