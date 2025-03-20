@@ -1,10 +1,10 @@
 [
     {
         "customer_id": "VA1",
-        "name": "pick me girl",
+        "name": "dai bang",
         "phone": "0912345678",
-        "email": "tuhaolapmg@yahoo.com",
-        "address": "cali"
+        "email": "daibang@gmail.com",
+        "address": "thai binh"
     },
     {
         "customer_id": "VA1",
@@ -28,10 +28,37 @@
         "address": "saigon"
     },
     {
-        "customer_id": "VA3",
-        "name": "cho gia",
-        "phone": "0912345777",
-        "email": "chogia@gmail.com",
+        "customer_id": "VA4",
+        "name": "quan que",
+        "phone": "0912121212",
+        "email": "quan@gmail.com",
         "address": "saigon"
+    },
+    {
+        "customer_id": "VA5",
+        "name": "gau meo",
+        "phone": "0923232323",
+        "email": "gaumeo@yahoo.com",
+        "address": "ba ria vung tau"
+    },
+    {
+        "customer_id": "VA6",
+        "name": "ca voi",
+        "phone": "0934343434",
+        "email": "cavoi@gmail.com",
+        "address": "ocean"
+    },
+    {
+        "customer_id": "VA7",
+        "name": "dangrangto",
+        "phone": "0912312312",
+        "email": "drt@yahoo.com",
+        "address": "ha noi"
+    },
+    {
+        "customer_id": "VA8",
+        "name": "chim se",
+        "phone": "0936363636",
+        "address": "khanh hoa"
     }
 ]

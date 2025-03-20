@@ -2,6 +2,7 @@ from PyQt6.QtWidgets import QTableWidgetItem, QMessageBox
 from PyQt6.QtCore import Qt
 from Ui.WarehouseManagement import Ui_WarehouseManagementMainWindow
 from libs.DataConnector import DataConnector
+from Ui.invoice_report_dialog import InvoiceReportDialog
 import json
 import os
 
@@ -336,7 +337,29 @@ class WarehouseManagementExt(Ui_WarehouseManagementMainWindow):
             self.displayCustomerOrders(customer_id)
 
     def generateInvoice(self):
-        QMessageBox.information(self.MainWindow, "Information", "This feature is not available.")
+        # Lấy khách hàng được chọn
+        current_item = self.listWidgetWarehouse.currentItem()
+        if not current_item:
+            QMessageBox.warning(self.MainWindow, "Lỗi", "Vui lòng chọn khách hàng để xem báo cáo!")
+            return
+            
+        customer_id = current_item.text().split(" - ")[0]
+        
+        # Lấy thông tin khách hàng
+        customer = self.data_connector.find_customer_by_id(customer_id)
+        if not customer:
+            QMessageBox.warning(self.MainWindow, "Lỗi", "Không tìm thấy thông tin khách hàng!")
+            return
+            
+        # Lấy đơn hàng của khách hàng
+        customer_orders = [order for order in self.orders if order['customer_id'] == customer_id]
+        if not customer_orders:
+            QMessageBox.warning(self.MainWindow, "Lỗi", "Không tìm thấy đơn hàng của khách hàng này!")
+            return
+            
+        # Hiển thị cửa sổ báo cáo với đơn hàng đầu tiên
+        dialog = InvoiceReportDialog(customer, customer_orders[0], self.MainWindow)
+        dialog.exec()
 
     def onCellChanged(self, row, column):
         try:

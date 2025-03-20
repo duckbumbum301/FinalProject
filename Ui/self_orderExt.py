@@ -29,6 +29,7 @@ class SelfOrderExt(Ui_MainWindow):
 
         self.tableWidget_order.cellDoubleClicked.connect(self.showProductDetail)
         self.pushButtonProceed.clicked.connect(self.openCheckout)
+
     def setupSignalsAndSlots(self):
         # Menu navigation
         self.pushButton_Mousse.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_Mousse))   #ấn vào cái nào thì hiện menu cái đó
@@ -485,3 +486,4 @@ class SelfOrderExt(Ui_MainWindow):
         
     def addBergamotToOrder(self):
         self.addProductToOrder("CB29", "Bergamot Brew", 60000)
+       

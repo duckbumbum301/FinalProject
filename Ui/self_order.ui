@@ -7253,6 +7253,16 @@ QPushButton:hover {
             <property name="text">
              <string>Edit</string>
             </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../images/ic_meoshock.webp</normaloff>../images/ic_meoshock.webp</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
            </widget>
           </item>
           <item>
@@ -7266,6 +7276,16 @@ QPushButton:hover {
             <property name="text">
              <string>New Order</string>
             </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../images/ic_meochanhcho.webp</normaloff>../images/ic_meochanhcho.webp</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
            </widget>
           </item>
           <item>
@@ -7278,6 +7298,16 @@ QPushButton:hover {
             </property>
             <property name="text">
              <string>Delete</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../images/ic_meokhoc.webp</normaloff>../images/ic_meokhoc.webp</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
             </property>
            </widget>
           </item>
@@ -7363,6 +7393,16 @@ QPushButton:checked {
      </property>
      <property name="text">
       <string>Proceed</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../images/ic_meoheart.webp</normaloff>../images/ic_meoheart.webp</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>35</width>
+       <height>35</height>
+      </size>
      </property>
     </widget>
     <zorder>scrollArea_order</zorder>

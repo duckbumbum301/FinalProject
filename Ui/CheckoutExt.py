@@ -9,7 +9,7 @@ from libs.OrderManager import OrderManager
 from models.customer import Customer
 from models.order import Order
 from models.order_detail import OrderDetail
-
+from Ui.qr_payment_dialog import QRPaymentDialog
 
 class CheckoutExt(QMainWindow, Ui_CheckoutWindow):
     # Thêm tín hiệu để thông báo đơn hàng đã được xử lý thành công
@@ -531,7 +531,19 @@ class CheckoutExt(QMainWindow, Ui_CheckoutWindow):
             order_manager = OrderManager(self.data_connector.base_path)
             saved_order = order_manager.save_order(order, order_details)
             print(f"Order saved with ID: {saved_order.order_id}")
-            
+
+            # Xử lý thanh toán online
+            if payment_method == "online":
+                # Hiển thị cửa sổ QR code
+                qr_dialog = QRPaymentDialog(saved_order.order_id, total_amount, self)
+                qr_dialog.exec()
+
+                # Cập nhật trạng thái đơn hàng thành "paid"
+                self.data_connector.update_order_status(saved_order.order_id, "paid")
+                QMessageBox.information(self, "Thành công", "Đơn hàng đã được thanh toán thành công!")
+            else:
+                QMessageBox.information(self, "Thành công", "Đơn hàng đã được xử lý thành công!")
+
             # Kiểm tra kết quả
             order_file = os.path.join(self.data_connector.base_path, "orders.json")
             print(f"Orders file exists after save: {os.path.exists(order_file)}")
@@ -547,7 +559,7 @@ class CheckoutExt(QMainWindow, Ui_CheckoutWindow):
                 except Exception as e:
                     print(f"Error reading orders.json: {str(e)}")
 
-            QMessageBox.information(self, "Thành công", "Đơn hàng đã được xử lý thành công!")
+            #QMessageBox.information(self, "Thành công", "Đơn hàng đã được xử lý thành công!")
             
             # Phát tín hiệu để thông báo đơn hàng đã được xử lý
             self.orderProcessed.emit()

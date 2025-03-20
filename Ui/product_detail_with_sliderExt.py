@@ -59,9 +59,6 @@ class ProductDetailDialog(QDialog, Ui_ProductDetailDialog):
         if product and hasattr(product, 'notes'):
             self.note_input.setText(product.notes)
 
-        # Load product image
-        self.load_product_image(product_id, product)
-
         # Set window title
         self.setWindowTitle(f"Product Details - {product_name}")
 
@@ -83,27 +80,7 @@ class ProductDetailDialog(QDialog, Ui_ProductDetailDialog):
         }
         return descriptions.get(product_id, "No description available for this product.")
 
-    def load_product_image(self, product_id, product=None):
-        """Load the image for a product"""
-        # Try to load image from product object first
-        if product and hasattr(product, 'image_path') and product.image_path:
-            try:
-                pixmap = QPixmap(product.image_path)
-                self.label_image.setPixmap(pixmap)
-                self.label_image.setScaledContents(True)
-                return
-            except:
-                pass  # Fall back to default handling
 
-        # Default image handling
-        image_path = f"images/{product_id}.jpg"
-        try:
-            pixmap = QPixmap(image_path)
-            self.label_image.setPixmap(pixmap)
-            self.label_image.setScaledContents(True)
-        except:
-            self.label_image.setText(f"Image for {product_id}")
-            self.label_image.setStyleSheet("background-color: #f0f0f0; border: 1px solid #ccc; border-radius: 8px;")
 
     def show_prev_product(self):
         """Show the previous product in the table"""

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>450</width>
-    <height>650</height>
+    <height>405</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -72,24 +72,6 @@ QPushButton#btn_add_to_cart:hover, QPushButton#btn_prev_image:hover, QPushButton
      <property name="alignment">
       <set>Qt::AlignCenter</set>
      </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QStackedWidget" name="stack_images">
-     <widget class="QWidget" name="page_0">
-      <layout class="QVBoxLayout" name="layout_image_0">
-       <item>
-        <widget class="QLabel" name="label_image">
-         <property name="text">
-          <string/>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
     </widget>
    </item>
    <item>

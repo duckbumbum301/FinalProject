@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_ProductDetailDialog(object):
     def setupUi(self, ProductDetailDialog):
         ProductDetailDialog.setObjectName("ProductDetailDialog")
-        ProductDetailDialog.resize(450, 650)
+        ProductDetailDialog.resize(450, 405)
         ProductDetailDialog.setWindowTitle("")
         ProductDetailDialog.setStyleSheet("\n"
 "QDialog {\n"
@@ -62,19 +62,6 @@ class Ui_ProductDetailDialog(object):
         self.label_size.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_size.setObjectName("label_size")
         self.verticalLayout.addWidget(self.label_size)
-        self.stack_images = QtWidgets.QStackedWidget(parent=ProductDetailDialog)
-        self.stack_images.setObjectName("stack_images")
-        self.page_0 = QtWidgets.QWidget()
-        self.page_0.setObjectName("page_0")
-        self.layout_image_0 = QtWidgets.QVBoxLayout(self.page_0)
-        self.layout_image_0.setObjectName("layout_image_0")
-        self.label_image = QtWidgets.QLabel(parent=self.page_0)
-        self.label_image.setText("")
-        self.label_image.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.label_image.setObjectName("label_image")
-        self.layout_image_0.addWidget(self.label_image)
-        self.stack_images.addWidget(self.page_0)
-        self.verticalLayout.addWidget(self.stack_images)
         self.layout_slider_btn = QtWidgets.QHBoxLayout()
         self.layout_slider_btn.setObjectName("layout_slider_btn")
         self.btn_prev_image = QtWidgets.QPushButton(parent=ProductDetailDialog)

@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'D:\FinalProject\Ui\Checkout.ui'
+# Form implementation generated from reading ui file 'E:\Git_TDLT\FinalProject\Ui\Checkout.ui'
 #
 # Created by: PyQt6 UI code generator 6.7.1
 #
@@ -32,7 +32,7 @@ class Ui_CheckoutWindow(object):
         self.label.setStyleSheet("border:0px;\n"
 "background-color:transparent;")
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/image-removebg-preview (56).png"))
+        self.label.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/image-removebg-preview (56).png"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.radioButton_cash = QtWidgets.QRadioButton(parent=self.frame)
@@ -78,7 +78,7 @@ class Ui_CheckoutWindow(object):
         self.label_4.setStyleSheet("border:0px;\n"
 "background-color:transparent;")
         self.label_4.setText("")
-        self.label_4.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/img_6.png"))
+        self.label_4.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/img_6.png"))
         self.label_4.setScaledContents(True)
         self.label_4.setObjectName("label_4")
         self.radioButtonOnlinePay = QtWidgets.QRadioButton(parent=self.frame_3)
@@ -197,7 +197,7 @@ class Ui_CheckoutWindow(object):
         self.scrollArea_OrderDetail.setWidgetResizable(True)
         self.scrollArea_OrderDetail.setObjectName("scrollArea_OrderDetail")
         self.scrollAreaWidgetContents_OrderDetail = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_OrderDetail.setGeometry(QtCore.QRect(0, 0, 1009, 368))
+        self.scrollAreaWidgetContents_OrderDetail.setGeometry(QtCore.QRect(0, 0, 1009, 312))
         self.scrollAreaWidgetContents_OrderDetail.setObjectName("scrollAreaWidgetContents_OrderDetail")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.scrollAreaWidgetContents_OrderDetail)
         self.horizontalLayout.setObjectName("horizontalLayout")
@@ -270,6 +270,10 @@ class Ui_CheckoutWindow(object):
 "        QPushButton:hover {\n"
 "            background-color: rgb(216, 203, 164);\n"
 "        }")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/ic_meochumo.webp"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButtonDone.setIcon(icon)
+        self.pushButtonDone.setIconSize(QtCore.QSize(35, 35))
         self.pushButtonDone.setObjectName("pushButtonDone")
         self.orderDetailLayout.addWidget(self.pushButtonDone)
         self.scrollLayout.addWidget(self.order_detail_area)

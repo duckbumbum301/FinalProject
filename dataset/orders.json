@@ -24,15 +24,6 @@
                 "quantity": 1,
                 "notes": "",
                 "subtotal": 480000
-            },
-            {
-                "order_id": "CD1",
-                "product_id": "CB26",
-                "name": "Matcha S'more",
-                "price": 70000,
-                "quantity": 1,
-                "notes": "",
-                "subtotal": 70000
             }
         ]
     },
@@ -289,30 +280,233 @@
         ]
     },
     {
-        "order_id": "CD11",
-        "customer_id": "VA3",
-        "order_date": "2025-03-19T02:17:06.720149",
-        "total_amount": 85000,
-        "payment_method": "cash",
+        "order_id": "CD12",
+        "customer_id": "VA4",
+        "order_date": "2025-03-20T21:46:23.617532",
+        "total_amount": 160000,
+        "payment_method": "online",
         "status": "pending",
         "items": [
             {
-                "order_id": "CD11",
-                "product_id": "CB20",
-                "name": "Dark Mix",
-                "price": 40000,
+                "order_id": "CD12",
+                "product_id": "CB14",
+                "name": "Strawberry Breeze",
+                "price": 60000,
                 "quantity": 1,
                 "notes": "",
-                "subtotal": 40000
+                "subtotal": 60000
             },
             {
-                "order_id": "CD11",
-                "product_id": "CB22",
-                "name": "Creamy Matcha",
+                "order_id": "CD12",
+                "product_id": "CB17",
+                "name": "Tiramisiu Cake",
+                "price": 100000,
+                "quantity": 1,
+                "notes": "",
+                "subtotal": 100000
+            }
+        ]
+    },
+    {
+        "order_id": "CD13",
+        "customer_id": "VA5",
+        "order_date": "2025-03-20T22:05:35.292794",
+        "total_amount": 835000,
+        "payment_method": "online",
+        "status": "pending",
+        "items": [
+            {
+                "order_id": "CD13",
+                "product_id": "CB1",
+                "name": "Romance Blossom",
+                "price": 480000,
+                "quantity": 1,
+                "notes": "",
+                "subtotal": 480000
+            },
+            {
+                "order_id": "CD13",
+                "product_id": "CB29",
+                "name": "Bergamot Brew",
+                "price": 60000,
+                "quantity": 1,
+                "notes": "",
+                "subtotal": 60000
+            },
+            {
+                "order_id": "CD13",
+                "product_id": "CB25",
+                "name": "Tira-Miss-U",
+                "price": 55000,
+                "quantity": 2,
+                "notes": "",
+                "subtotal": 110000
+            },
+            {
+                "order_id": "CD13",
+                "product_id": "CB28",
+                "name": "Lush Pear",
+                "price": 60000,
+                "quantity": 2,
+                "notes": "",
+                "subtotal": 120000
+            },
+            {
+                "order_id": "CD13",
+                "product_id": "CB27",
+                "name": "Choco S'more",
+                "price": 65000,
+                "quantity": 1,
+                "notes": "",
+                "subtotal": 65000
+            }
+        ]
+    },
+    {
+        "order_id": "CD14",
+        "customer_id": "VA6",
+        "order_date": "2025-03-20T22:43:15.573738",
+        "total_amount": 425000,
+        "payment_method": "online",
+        "status": "pending",
+        "items": [
+            {
+                "order_id": "CD14",
+                "product_id": "CB13",
+                "name": "Honey Glaze",
+                "price": 65000,
+                "quantity": 2,
+                "notes": "",
+                "subtotal": 130000
+            },
+            {
+                "order_id": "CD14",
+                "product_id": "CB8",
+                "name": "Banana Cloud",
+                "price": 60000,
+                "quantity": 2,
+                "notes": "",
+                "subtotal": 120000
+            },
+            {
+                "order_id": "CD14",
+                "product_id": "CB23",
+                "name": "Twisted Love",
                 "price": 45000,
                 "quantity": 1,
                 "notes": "",
                 "subtotal": 45000
+            },
+            {
+                "order_id": "CD14",
+                "product_id": "CB26",
+                "name": "Matcha S'more",
+                "price": 70000,
+                "quantity": 1,
+                "notes": "",
+                "subtotal": 70000
+            },
+            {
+                "order_id": "CD14",
+                "product_id": "CB29",
+                "name": "Bergamot Brew",
+                "price": 60000,
+                "quantity": 1,
+                "notes": "",
+                "subtotal": 60000
+            }
+        ]
+    },
+    {
+        "order_id": "CD15",
+        "customer_id": "VA1",
+        "order_date": "2025-03-20T22:46:34.859985",
+        "total_amount": 245000,
+        "payment_method": "cash",
+        "status": "pending",
+        "items": [
+            {
+                "order_id": "CD15",
+                "product_id": "CB21",
+                "name": "Cookies&Cream",
+                "price": 45000,
+                "quantity": 1,
+                "notes": "",
+                "subtotal": 45000
+            },
+            {
+                "order_id": "CD15",
+                "product_id": "CB20",
+                "name": "Dark Mix",
+                "price": 40000,
+                "quantity": 2,
+                "notes": "",
+                "subtotal": 80000
+            },
+            {
+                "order_id": "CD15",
+                "product_id": "CB29",
+                "name": "Bergamot Brew",
+                "price": 60000,
+                "quantity": 2,
+                "notes": "",
+                "subtotal": 120000
+            }
+        ]
+    },
+    {
+        "order_id": "CD16",
+        "customer_id": "VA7",
+        "order_date": "2025-03-20T22:49:44.416227",
+        "total_amount": 960000,
+        "payment_method": "online",
+        "status": "pending",
+        "items": [
+            {
+                "order_id": "CD16",
+                "product_id": "CB1",
+                "name": "Romance Blossom",
+                "price": 480000,
+                "quantity": 1,
+                "notes": "",
+                "subtotal": 480000
+            },
+            {
+                "order_id": "CD16",
+                "product_id": "CB5",
+                "name": "Amber Kiss",
+                "price": 480000,
+                "quantity": 1,
+                "notes": "",
+                "subtotal": 480000
+            }
+        ]
+    },
+    {
+        "order_id": "CD17",
+        "customer_id": "VA8",
+        "order_date": "2025-03-20T23:39:15.100196",
+        "total_amount": 160000,
+        "payment_method": "cash",
+        "status": "pending",
+        "items": [
+            {
+                "order_id": "CD17",
+                "product_id": "CB14",
+                "name": "Strawberry Breeze",
+                "price": 60000,
+                "quantity": 1,
+                "notes": "",
+                "subtotal": 60000
+            },
+            {
+                "order_id": "CD17",
+                "product_id": "CB16",
+                "name": "Blush Crust",
+                "price": 100000,
+                "quantity": 1,
+                "notes": "",
+                "subtotal": 100000
             }
         ]
     }
