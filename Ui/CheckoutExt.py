@@ -407,6 +407,21 @@ class CheckoutExt(QMainWindow, Ui_CheckoutWindow):
         self.lineEditTotal.setText(f"{total:,} VNĐ")
         self.lineEditTotal.setReadOnly(True)
 
+    def reset_customer_info(self):
+        """Reset all customer information fields"""
+        self.lineEditName.clear()
+        self.lineEditPhone.clear() 
+        self.lineEditEmail.clear()
+        self.lineEditAddress.clear()
+        
+        # Reset về bước nhập liệu đầu tiên
+        self.current_input_step = 0
+        self.hide_all_input_fields()
+        self.show_current_input_field()
+        
+        # Reset payment method về mặc định (cash)
+        self.radioButton_cash.setChecked(True)
+
     def process_order(self):
         """Xử lý đơn hàng khi nhấn nút Done"""
         try:
@@ -536,6 +551,9 @@ class CheckoutExt(QMainWindow, Ui_CheckoutWindow):
             
             # Phát tín hiệu để thông báo đơn hàng đã được xử lý
             self.orderProcessed.emit()
+            
+            # Reset customer info
+            self.reset_customer_info()
             
             # Đóng cửa sổ
             self.close()
