@@ -1,5 +1,5 @@
 from PyQt6.QtCore import Qt
-from PyQt6.QtWidgets import QTableWidgetItem, QHeaderView, QMessageBox, QDialog
+from PyQt6.QtWidgets import QTableWidgetItem, QHeaderView, QMessageBox, QDialog, QMainWindow
 
 from Ui.CheckoutExt import CheckoutExt
 from Ui.product_detail_with_sliderExt import ProductDetailDialog
@@ -38,6 +38,9 @@ class SelfOrderExt(Ui_MainWindow):
         self.pushButton_Croissant.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_Croissant))
         self.pushButton_Cookies.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_Cookies))
         self.pushButton_Drinks.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_Drinks))
+        
+        # Thêm kết nối cho nút Back để quay lại màn hình Login
+        self.pushButton_Back.clicked.connect(self.backToLogin)
         
         # Product buttons
         self.pushButton_add1.clicked.connect(self.addRomanceToOrder)
@@ -500,6 +503,39 @@ class SelfOrderExt(Ui_MainWindow):
             self.showProductDetail(row, column)
         except Exception as e:
             print(f"Error handling double click: {str(e)}")
+            import traceback
+            traceback.print_exc()
+
+    def backToLogin(self):
+        """Quay lại màn hình Login khi bấm nút Back"""
+        try:
+            # Kiểm tra xem có giỏ hàng hay không
+            if self.tableWidget_order.rowCount() > 0:
+                # Nếu có sản phẩm trong giỏ hàng, hỏi người dùng có muốn quay lại không
+                reply = QMessageBox.question(
+                    self.MainWindow, 
+                    "Xác nhận quay lại", 
+                    "Bạn có các sản phẩm trong giỏ hàng. Bạn có chắc muốn quay lại không?",
+                    QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
+                    QMessageBox.StandardButton.No
+                )
+                if reply == QMessageBox.StandardButton.No:
+                    return
+            
+            # Tạo và hiển thị màn hình Login
+            from Ui.LoginExt import LoginExt
+            
+            self.login_window = QMainWindow()
+            self.login_ui = LoginExt()
+            self.login_ui.setupUi(self.login_window)
+            self.login_window.show()
+            
+            # Đóng màn hình hiện tại
+            self.MainWindow.close()
+            
+            print("Đã quay lại màn hình Login")
+        except Exception as e:
+            print(f"Lỗi khi quay lại màn hình Login: {str(e)}")
             import traceback
             traceback.print_exc()
        
