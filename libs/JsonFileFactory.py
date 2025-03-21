@@ -87,7 +87,8 @@ class JsonFileFactory:
                     # Chuyển đổi items thành danh sách dictionary
                     items_list = []
                     for detail_item in obj_dict['items']:
-                        items_list.append(detail_item.__dict__)
+                        detail_dict = detail_item.__dict__.copy()
+                        items_list.append(detail_dict)
                     obj_dict['items'] = items_list
                 
                 new_items.append(obj_dict)

@@ -61,9 +61,6 @@ class OrderManager:
                     # Tạo danh sách OrderDetail
                     items = []
                     for item_dict in order_items:
-                        # Loại bỏ trường subtotal nếu có, vì nó được tính toán tự động trong constructor
-                        if 'subtotal' in item_dict:
-                            item_dict.pop('subtotal')
                         detail = OrderDetail(**item_dict)
                         items.append(detail)
                         
