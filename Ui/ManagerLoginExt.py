@@ -24,8 +24,7 @@ class ManagerLoginExt(Ui_LoginMainWindow):
         
         # Danh sách manager (trong thực tế nên lưu trong database hoặc file riêng)
         managers = [
-            {"username": "admin", "password": "admin123"},
-            {"username": "manager", "password": "manager123"}
+            {"username": "ilovetranduythanh", "password": "10diem10diem"},
         ]
         
         # Kiểm tra thông tin đăng nhập

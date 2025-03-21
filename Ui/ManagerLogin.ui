@@ -7,56 +7,160 @@
     <x>0</x>
     <y>0</y>
     <width>439</width>
-    <height>208</height>
+    <height>291</height>
    </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Georgia</family>
+    <pointsize>12</pointsize>
+   </font>
   </property>
   <property name="windowTitle">
    <string>Login System</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: #FFF8E7; 
+    font-size: 12pt;
+    color: #4E342E; 
+}</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayoutMain">
     <item>
-     <widget class="QLabel" name="labelTitle">
-      <property name="styleSheet">
-       <string>font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
-      </property>
-      <property name="text">
-       <string>Manager Login System</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item>
      <widget class="QGroupBox" name="groupBoxLoginInfo">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777205</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Georgia</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QGroupBox {
+    border: 2px solid #E6B89C; /* Soft brown */
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    font-weight: bold;
+    color: #4E342E;
+    background-color: #FFF3EB; 
+}
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 4px 12px;
+    background-color: #FFE5B4; 
+    border-radius: 5px;
+    font-size: 13pt;
+    color: #4E342E;
+}</string>
+      </property>
       <property name="title">
-       <string>Login Information</string>
+       <string>Manager Login Information</string>
       </property>
       <layout class="QFormLayout" name="formLayoutLogin">
-       <item row="0" column="0">
+       <item row="1" column="0">
         <widget class="QLabel" name="labelUsername">
+         <property name="font">
+          <font>
+           <family>Georgia</family>
+           <pointsize>12</pointsize>
+           <weight>62</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+    font-weight: 500;
+    color: #5E3C28;
+	background-color:transparent;
+}</string>
+         </property>
          <property name="text">
           <string>Username:</string>
          </property>
         </widget>
        </item>
-       <item row="0" column="1">
-        <widget class="QLineEdit" name="lineEditUsername"/>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="lineEditUsername">
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+    background-color: #FFFDEB;
+    border: 1px solid #D7A86E;
+    border-radius: 6px;
+    padding: 4px;
+    min-height: 24px; 
+    max-height: 28px; 
+}</string>
+         </property>
+        </widget>
        </item>
-       <item row="1" column="0">
+       <item row="3" column="0">
         <widget class="QLabel" name="labelPassword">
+         <property name="font">
+          <font>
+           <family>Georgia</family>
+           <pointsize>12</pointsize>
+           <weight>62</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+    font-weight: 500;
+    color: #5E3C28;
+	background-color:transparent;
+}</string>
+         </property>
          <property name="text">
           <string>Password:</string>
          </property>
         </widget>
        </item>
-       <item row="1" column="1">
+       <item row="3" column="1">
         <widget class="QLineEdit" name="lineEditPassword">
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+    background-color: #FFFDEB;
+    border: 1px solid #D7A86E;
+    border-radius: 6px;
+    padding: 4px;
+    min-height: 24px; 
+    max-height: 28px; 
+}</string>
+         </property>
          <property name="echoMode">
           <enum>QLineEdit::Password</enum>
          </property>
         </widget>
+       </item>
+       <item row="0" column="0">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
        </item>
       </layout>
      </widget>
@@ -65,6 +169,33 @@
      <layout class="QHBoxLayout" name="horizontalLayoutButtons">
       <item>
        <widget class="QPushButton" name="pushButtonLogin">
+        <property name="font">
+         <font>
+          <family>Mongolian Baiti</family>
+          <pointsize>11</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    border: none;
+    padding: 8px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #4E342E;
+    font-size: 11pt;
+}
+
+QPushButton{
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #FFD1BA, stop:1 #FFB085);
+    border: 2px solid #E6B89C;
+}
+QPushButton:hover {
+    background-color: #FBAF90;
+    color: white;
+}</string>
+        </property>
         <property name="text">
          <string>Login</string>
         </property>
@@ -72,6 +203,33 @@
       </item>
       <item>
        <widget class="QPushButton" name="pushButtonExit">
+        <property name="font">
+         <font>
+          <family>Mongolian Baiti</family>
+          <pointsize>11</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    border: none;
+    padding: 8px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #4E342E;
+    font-size: 11pt;
+}
+QPushButton {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                                      stop:0 #FAD6A5, stop:1 #EAC084);
+    border: 2px solid #D7A86E;
+}
+QPushButton:hover {
+    background-color: #EAB676;
+    color: white;
+}</string>
+        </property>
         <property name="text">
          <string>Exit</string>
         </property>
@@ -87,7 +245,7 @@
      <x>0</x>
      <y>0</y>
      <width>439</width>
-     <height>21</height>
+     <height>24</height>
     </rect>
    </property>
   </widget>

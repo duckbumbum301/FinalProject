@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'E:\Git_TDLT\FinalProject\Ui\self_order.ui'
+# Form implementation generated from reading ui file 'D:\FinalProject\Ui\self_order.ui'
 #
 # Created by: PyQt6 UI code generator 6.7.1
 #
@@ -83,11 +83,11 @@ class Ui_MainWindow(object):
 "background-color: transparent")
         self.label_cake_romance.setFrameShape(QtWidgets.QFrame.Shape.WinPanel)
         self.label_cake_romance.setText("")
-        self.label_cake_romance.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/romance_blossom.png"))
+        self.label_cake_romance.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/romance_blossom.png"))
         self.label_cake_romance.setScaledContents(True)
         self.label_cake_romance.setObjectName("label_cake_romance")
         self.label_3_romance = QtWidgets.QLabel(parent=self.frame_Romance)
-        self.label_3_romance.setGeometry(QtCore.QRect(15, 16, 161, 20))
+        self.label_3_romance.setGeometry(QtCore.QRect(37, 16, 139, 20))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -104,7 +104,7 @@ class Ui_MainWindow(object):
 "color:#5A5A42")
         self.label_3_romance.setObjectName("label_3_romance")
         self.label_romance_size = QtWidgets.QLabel(parent=self.frame_Romance)
-        self.label_romance_size.setGeometry(QtCore.QRect(90, 40, 31, 16))
+        self.label_romance_size.setGeometry(QtCore.QRect(79, 40, 31, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
         font.setPointSize(9)
@@ -160,7 +160,7 @@ class Ui_MainWindow(object):
         self.frame_Royal.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_Royal.setObjectName("frame_Royal")
         self.label_royal = QtWidgets.QLabel(parent=self.frame_Royal)
-        self.label_royal.setGeometry(QtCore.QRect(11, 15, 171, 20))
+        self.label_royal.setGeometry(QtCore.QRect(35, 15, 147, 20))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
         font.setPointSize(10)
@@ -176,7 +176,7 @@ class Ui_MainWindow(object):
         self.label_cake_royal.setStyleSheet("border:0px;\n"
 "background-color: transparent;")
         self.label_cake_royal.setText("")
-        self.label_cake_royal.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/royal_nut.png"))
+        self.label_cake_royal.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/royal_nut.png"))
         self.label_cake_royal.setScaledContents(True)
         self.label_cake_royal.setObjectName("label_cake_royal")
         self.pushButton_add2 = QtWidgets.QPushButton(parent=self.frame_Royal)
@@ -216,7 +216,7 @@ class Ui_MainWindow(object):
 "")
         self.label_royal_price.setObjectName("label_royal_price")
         self.label_romance_size_2 = QtWidgets.QLabel(parent=self.frame_Royal)
-        self.label_romance_size_2.setGeometry(QtCore.QRect(90, 40, 31, 16))
+        self.label_romance_size_2.setGeometry(QtCore.QRect(77, 40, 31, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
         font.setPointSize(9)
@@ -238,7 +238,7 @@ class Ui_MainWindow(object):
         self.frame_Berry.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_Berry.setObjectName("frame_Berry")
         self.label_berry_symphony = QtWidgets.QLabel(parent=self.frame_Berry)
-        self.label_berry_symphony.setGeometry(QtCore.QRect(20, 14, 151, 20))
+        self.label_berry_symphony.setGeometry(QtCore.QRect(45, 14, 132, 20))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
         font.setPointSize(10)
@@ -259,7 +259,7 @@ class Ui_MainWindow(object):
         self.label_cake_berry.setStyleSheet("border:0px;\n"
 "background-color: transparent;")
         self.label_cake_berry.setText("")
-        self.label_cake_berry.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/berry_symphony.png"))
+        self.label_cake_berry.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/berry_symphony.png"))
         self.label_cake_berry.setScaledContents(True)
         self.label_cake_berry.setObjectName("label_cake_berry")
         self.pushButton_add3 = QtWidgets.QPushButton(parent=self.frame_Berry)
@@ -299,7 +299,7 @@ class Ui_MainWindow(object):
 "")
         self.label_berry_price.setObjectName("label_berry_price")
         self.label_romance_size_3 = QtWidgets.QLabel(parent=self.frame_Berry)
-        self.label_romance_size_3.setGeometry(QtCore.QRect(90, 40, 31, 16))
+        self.label_romance_size_3.setGeometry(QtCore.QRect(77, 40, 31, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
         font.setPointSize(9)
@@ -335,11 +335,11 @@ class Ui_MainWindow(object):
 "background-color: transparent")
         self.label_cake_pandora.setFrameShape(QtWidgets.QFrame.Shape.WinPanel)
         self.label_cake_pandora.setText("")
-        self.label_cake_pandora.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/pandora_delight.png"))
+        self.label_cake_pandora.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/pandora_delight.png"))
         self.label_cake_pandora.setScaledContents(True)
         self.label_cake_pandora.setObjectName("label_cake_pandora")
         self.label_pandora = QtWidgets.QLabel(parent=self.frame_Pandora)
-        self.label_pandora.setGeometry(QtCore.QRect(15, 16, 161, 20))
+        self.label_pandora.setGeometry(QtCore.QRect(43, 16, 129, 20))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -356,7 +356,7 @@ class Ui_MainWindow(object):
 "color:#5A5A42")
         self.label_pandora.setObjectName("label_pandora")
         self.label_pandora_size = QtWidgets.QLabel(parent=self.frame_Pandora)
-        self.label_pandora_size.setGeometry(QtCore.QRect(90, 40, 31, 16))
+        self.label_pandora_size.setGeometry(QtCore.QRect(81, 40, 31, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
         font.setPointSize(9)
@@ -423,11 +423,11 @@ class Ui_MainWindow(object):
 "background-color: transparent")
         self.label_cake_amber.setFrameShape(QtWidgets.QFrame.Shape.WinPanel)
         self.label_cake_amber.setText("")
-        self.label_cake_amber.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/amber_kiss.png"))
+        self.label_cake_amber.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/amber_kiss.png"))
         self.label_cake_amber.setScaledContents(True)
         self.label_cake_amber.setObjectName("label_cake_amber")
         self.label_amber_kiss = QtWidgets.QLabel(parent=self.frame_Amber)
-        self.label_amber_kiss.setGeometry(QtCore.QRect(46, 16, 111, 20))
+        self.label_amber_kiss.setGeometry(QtCore.QRect(61, 16, 111, 20))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -480,7 +480,7 @@ class Ui_MainWindow(object):
 "")
         self.pushButton_add5.setObjectName("pushButton_add5")
         self.label_pandora_size_2 = QtWidgets.QLabel(parent=self.frame_Amber)
-        self.label_pandora_size_2.setGeometry(QtCore.QRect(90, 40, 31, 16))
+        self.label_pandora_size_2.setGeometry(QtCore.QRect(79, 40, 31, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
         font.setPointSize(9)
@@ -511,7 +511,7 @@ class Ui_MainWindow(object):
 "background-color: transparent")
         self.label_cake_mocha.setFrameShape(QtWidgets.QFrame.Shape.WinPanel)
         self.label_cake_mocha.setText("")
-        self.label_cake_mocha.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/mocha.png"))
+        self.label_cake_mocha.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/mocha.png"))
         self.label_cake_mocha.setScaledContents(True)
         self.label_cake_mocha.setObjectName("label_cake_mocha")
         self.label_mocha = QtWidgets.QLabel(parent=self.frame_Mocha)
@@ -610,7 +610,7 @@ class Ui_MainWindow(object):
         self.label_cake_golden.setStyleSheet("border:0px;\n"
 "background-color: transparent;")
         self.label_cake_golden.setText("")
-        self.label_cake_golden.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/romance_blossom.png"))
+        self.label_cake_golden.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/romance_blossom.png"))
         self.label_cake_golden.setScaledContents(True)
         self.label_cake_golden.setObjectName("label_cake_golden")
         self.pushButton_add_golden = QtWidgets.QPushButton(parent=self.frame_Golden)
@@ -674,7 +674,7 @@ class Ui_MainWindow(object):
         self.label_cake_choco.setStyleSheet("border:0px;\n"
 "background-color: transparent;")
         self.label_cake_choco.setText("")
-        self.label_cake_choco.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/cookies_cream.png"))
+        self.label_cake_choco.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/cookies_cream.png"))
         self.label_cake_choco.setScaledContents(True)
         self.label_cake_choco.setObjectName("label_cake_choco")
         self.label_choco_size = QtWidgets.QLabel(parent=self.frame_Choco)
@@ -736,7 +736,7 @@ class Ui_MainWindow(object):
         self.frame_Imperial.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_Imperial.setObjectName("frame_Imperial")
         self.label_imperial = QtWidgets.QLabel(parent=self.frame_Imperial)
-        self.label_imperial.setGeometry(QtCore.QRect(20, 14, 151, 20))
+        self.label_imperial.setGeometry(QtCore.QRect(44, 14, 135, 20))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
         font.setPointSize(10)
@@ -752,7 +752,7 @@ class Ui_MainWindow(object):
         self.label_cake_imperial.setStyleSheet("border:0px;\n"
 "background-color: transparent;")
         self.label_cake_imperial.setText("")
-        self.label_cake_imperial.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/imperial_oolong.png"))
+        self.label_cake_imperial.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/imperial_oolong.png"))
         self.label_cake_imperial.setScaledContents(True)
         self.label_cake_imperial.setObjectName("label_cake_imperial")
         self.pushButton_add6 = QtWidgets.QPushButton(parent=self.frame_Imperial)
@@ -792,7 +792,7 @@ class Ui_MainWindow(object):
 "")
         self.label_imperial_price.setObjectName("label_imperial_price")
         self.label_pandora_size_3 = QtWidgets.QLabel(parent=self.frame_Imperial)
-        self.label_pandora_size_3.setGeometry(QtCore.QRect(90, 40, 31, 16))
+        self.label_pandora_size_3.setGeometry(QtCore.QRect(81, 40, 31, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
         font.setPointSize(9)
@@ -831,11 +831,11 @@ class Ui_MainWindow(object):
 "background-color: transparent")
         self.label_tart_pink.setFrameShape(QtWidgets.QFrame.Shape.WinPanel)
         self.label_tart_pink.setText("")
-        self.label_tart_pink.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/pink_velvet.png"))
+        self.label_tart_pink.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/pink_velvet.png"))
         self.label_tart_pink.setScaledContents(True)
         self.label_tart_pink.setObjectName("label_tart_pink")
         self.label_pink = QtWidgets.QLabel(parent=self.frame_tartpink)
-        self.label_pink.setGeometry(QtCore.QRect(49, 16, 121, 20))
+        self.label_pink.setGeometry(QtCore.QRect(53, 16, 121, 20))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -843,7 +843,7 @@ class Ui_MainWindow(object):
         self.label_pink.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(10)
+        font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
         self.label_pink.setFont(font)
@@ -855,7 +855,7 @@ class Ui_MainWindow(object):
         self.label_pink_price.setGeometry(QtCore.QRect(22, 219, 81, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(8)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.label_pink_price.setFont(font)
@@ -896,10 +896,10 @@ class Ui_MainWindow(object):
         self.frame_tartbanana.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_tartbanana.setObjectName("frame_tartbanana")
         self.label_banana = QtWidgets.QLabel(parent=self.frame_tartbanana)
-        self.label_banana.setGeometry(QtCore.QRect(36, 15, 131, 20))
+        self.label_banana.setGeometry(QtCore.QRect(40, 15, 131, 20))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(10)
+        font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
         self.label_banana.setFont(font)
@@ -913,7 +913,7 @@ class Ui_MainWindow(object):
         self.label_tart_banana.setStyleSheet("border:0px;\n"
 "background-color: transparent;")
         self.label_tart_banana.setText("")
-        self.label_tart_banana.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/banana_cloud.png"))
+        self.label_tart_banana.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/banana_cloud.png"))
         self.label_tart_banana.setScaledContents(True)
         self.label_tart_banana.setObjectName("label_tart_banana")
         self.pushButton_add8 = QtWidgets.QPushButton(parent=self.frame_tartbanana)
@@ -944,7 +944,7 @@ class Ui_MainWindow(object):
         self.label_banana_price.setGeometry(QtCore.QRect(26, 219, 61, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(8)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.label_banana_price.setFont(font)
@@ -979,11 +979,11 @@ class Ui_MainWindow(object):
 "background-color: transparent")
         self.label_tart_crimson.setFrameShape(QtWidgets.QFrame.Shape.WinPanel)
         self.label_tart_crimson.setText("")
-        self.label_tart_crimson.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/crimson_melody.png"))
+        self.label_tart_crimson.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/crimson_melody.png"))
         self.label_tart_crimson.setScaledContents(True)
         self.label_tart_crimson.setObjectName("label_tart_crimson")
         self.label_crimson = QtWidgets.QLabel(parent=self.frame_tartcrimson)
-        self.label_crimson.setGeometry(QtCore.QRect(28, 16, 141, 20))
+        self.label_crimson.setGeometry(QtCore.QRect(35, 16, 141, 20))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -991,19 +991,20 @@ class Ui_MainWindow(object):
         self.label_crimson.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(10)
+        font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
         self.label_crimson.setFont(font)
         self.label_crimson.setStyleSheet("border-radius: 0px;\n"
 "border:0px solid;\n"
-"color:#5A5A42")
+"color:#5A5A42;\n"
+"")
         self.label_crimson.setObjectName("label_crimson")
         self.label_crimson_price = QtWidgets.QLabel(parent=self.frame_tartcrimson)
         self.label_crimson_price.setGeometry(QtCore.QRect(28, 219, 81, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(8)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.label_crimson_price.setFont(font)
@@ -1044,10 +1045,10 @@ class Ui_MainWindow(object):
         self.frame_tartsunny.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_tartsunny.setObjectName("frame_tartsunny")
         self.label_sunny = QtWidgets.QLabel(parent=self.frame_tartsunny)
-        self.label_sunny.setGeometry(QtCore.QRect(37, 14, 121, 20))
+        self.label_sunny.setGeometry(QtCore.QRect(43, 14, 121, 20))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(10)
+        font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
         self.label_sunny.setFont(font)
@@ -1060,7 +1061,7 @@ class Ui_MainWindow(object):
         self.label_tart_sunny.setStyleSheet("border:0px;\n"
 "background-color: transparent;")
         self.label_tart_sunny.setText("")
-        self.label_tart_sunny.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/sunny_kernel.png"))
+        self.label_tart_sunny.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/sunny_kernel.png"))
         self.label_tart_sunny.setScaledContents(True)
         self.label_tart_sunny.setObjectName("label_tart_sunny")
         self.pushButton_add12 = QtWidgets.QPushButton(parent=self.frame_tartsunny)
@@ -1091,7 +1092,7 @@ class Ui_MainWindow(object):
         self.label_sunny_price.setGeometry(QtCore.QRect(21, 220, 61, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(8)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.label_sunny_price.setFont(font)
@@ -1112,10 +1113,10 @@ class Ui_MainWindow(object):
         self.frame_tartvery.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_tartvery.setObjectName("frame_tartvery")
         self.label_very = QtWidgets.QLabel(parent=self.frame_tartvery)
-        self.label_very.setGeometry(QtCore.QRect(47, 14, 101, 20))
+        self.label_very.setGeometry(QtCore.QRect(49, 14, 101, 20))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(10)
+        font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
         self.label_very.setFont(font)
@@ -1133,7 +1134,7 @@ class Ui_MainWindow(object):
         self.label_tart_very.setStyleSheet("border:0px;\n"
 "background-color: transparent;")
         self.label_tart_very.setText("")
-        self.label_tart_very.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/very_merry.png"))
+        self.label_tart_very.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/very_merry.png"))
         self.label_tart_very.setScaledContents(True)
         self.label_tart_very.setObjectName("label_tart_very")
         self.pushButton_add9 = QtWidgets.QPushButton(parent=self.frame_tartvery)
@@ -1164,7 +1165,7 @@ class Ui_MainWindow(object):
         self.label_very_price.setGeometry(QtCore.QRect(24, 220, 61, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(8)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.label_very_price.setFont(font)
@@ -1199,11 +1200,11 @@ class Ui_MainWindow(object):
 "background-color: transparent")
         self.label_tart_cheese.setFrameShape(QtWidgets.QFrame.Shape.WinPanel)
         self.label_tart_cheese.setText("")
-        self.label_tart_cheese.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/cheese_crust.png"))
+        self.label_tart_cheese.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/cheese_crust.png"))
         self.label_tart_cheese.setScaledContents(True)
         self.label_tart_cheese.setObjectName("label_tart_cheese")
         self.label_cheese = QtWidgets.QLabel(parent=self.frame_tartcheese)
-        self.label_cheese.setGeometry(QtCore.QRect(38, 16, 131, 20))
+        self.label_cheese.setGeometry(QtCore.QRect(46, 16, 131, 20))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -1211,7 +1212,7 @@ class Ui_MainWindow(object):
         self.label_cheese.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(10)
+        font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
         self.label_cheese.setFont(font)
@@ -1223,7 +1224,7 @@ class Ui_MainWindow(object):
         self.label_cheese_price.setGeometry(QtCore.QRect(27, 219, 81, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(8)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.label_cheese_price.setFont(font)
@@ -1267,10 +1268,15 @@ class Ui_MainWindow(object):
         self.frame_croisearlgrey.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_croisearlgrey.setObjectName("frame_croisearlgrey")
         self.label_earlgrey = QtWidgets.QLabel(parent=self.frame_croisearlgrey)
-        self.label_earlgrey.setGeometry(QtCore.QRect(12, 14, 171, 20))
+        self.label_earlgrey.setGeometry(QtCore.QRect(22, 14, 156, 20))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_earlgrey.sizePolicy().hasHeightForWidth())
+        self.label_earlgrey.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(10)
+        font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
         self.label_earlgrey.setFont(font)
@@ -1280,6 +1286,11 @@ class Ui_MainWindow(object):
         self.label_earlgrey.setObjectName("label_earlgrey")
         self.label_earlgrey_size = QtWidgets.QLabel(parent=self.frame_croisearlgrey)
         self.label_earlgrey_size.setGeometry(QtCore.QRect(73, 37, 51, 16))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_earlgrey_size.sizePolicy().hasHeightForWidth())
+        self.label_earlgrey_size.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
         font.setPointSize(9)
@@ -1292,7 +1303,7 @@ class Ui_MainWindow(object):
         self.label_crois_earlgrey.setStyleSheet("border:0px;\n"
 "background-color: transparent;")
         self.label_crois_earlgrey.setText("")
-        self.label_crois_earlgrey.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/earl_grey_almond.png"))
+        self.label_crois_earlgrey.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/earl_grey_almond.png"))
         self.label_crois_earlgrey.setScaledContents(True)
         self.label_crois_earlgrey.setObjectName("label_crois_earlgrey")
         self.pushButton_add18 = QtWidgets.QPushButton(parent=self.frame_croisearlgrey)
@@ -1323,7 +1334,7 @@ class Ui_MainWindow(object):
         self.label_earlgrey_price.setGeometry(QtCore.QRect(21, 220, 61, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(8)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.label_earlgrey_price.setFont(font)
@@ -1345,10 +1356,15 @@ class Ui_MainWindow(object):
         self.frame_croisclassic.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_croisclassic.setObjectName("frame_croisclassic")
         self.label_classic = QtWidgets.QLabel(parent=self.frame_croisclassic)
-        self.label_classic.setGeometry(QtCore.QRect(61, 14, 71, 20))
+        self.label_classic.setGeometry(QtCore.QRect(67, 14, 71, 20))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_classic.sizePolicy().hasHeightForWidth())
+        self.label_classic.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(10)
+        font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
         self.label_classic.setFont(font)
@@ -1357,7 +1373,12 @@ class Ui_MainWindow(object):
 "color:#5A5A42")
         self.label_classic.setObjectName("label_classic")
         self.label_classic_size = QtWidgets.QLabel(parent=self.frame_croisclassic)
-        self.label_classic_size.setGeometry(QtCore.QRect(70, 37, 51, 16))
+        self.label_classic_size.setGeometry(QtCore.QRect(75, 37, 51, 16))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_classic_size.sizePolicy().hasHeightForWidth())
+        self.label_classic_size.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
         font.setPointSize(9)
@@ -1375,7 +1396,7 @@ class Ui_MainWindow(object):
         self.label_crois_classic.setStyleSheet("border:0px;\n"
 "background-color: transparent;")
         self.label_crois_classic.setText("")
-        self.label_crois_classic.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/classic.png"))
+        self.label_crois_classic.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/classic.png"))
         self.label_crois_classic.setScaledContents(True)
         self.label_crois_classic.setObjectName("label_crois_classic")
         self.pushButton_add15 = QtWidgets.QPushButton(parent=self.frame_croisclassic)
@@ -1406,7 +1427,7 @@ class Ui_MainWindow(object):
         self.label_classic_price.setGeometry(QtCore.QRect(24, 220, 61, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(8)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.label_classic_price.setFont(font)
@@ -1437,11 +1458,11 @@ class Ui_MainWindow(object):
 "background-color: transparent")
         self.label_crois_tiramisu.setFrameShape(QtWidgets.QFrame.Shape.WinPanel)
         self.label_crois_tiramisu.setText("")
-        self.label_crois_tiramisu.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/tiramisu_cake.png"))
+        self.label_crois_tiramisu.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/tiramisu_cake.png"))
         self.label_crois_tiramisu.setScaledContents(True)
         self.label_crois_tiramisu.setObjectName("label_crois_tiramisu")
         self.label_tiramisu = QtWidgets.QLabel(parent=self.frame_croistiramisu)
-        self.label_tiramisu.setGeometry(QtCore.QRect(30, 16, 141, 20))
+        self.label_tiramisu.setGeometry(QtCore.QRect(44, 16, 121, 20))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -1449,7 +1470,7 @@ class Ui_MainWindow(object):
         self.label_tiramisu.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(10)
+        font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
         self.label_tiramisu.setFont(font)
@@ -1459,6 +1480,11 @@ class Ui_MainWindow(object):
         self.label_tiramisu.setObjectName("label_tiramisu")
         self.label_tiramisu_size = QtWidgets.QLabel(parent=self.frame_croistiramisu)
         self.label_tiramisu_size.setGeometry(QtCore.QRect(76, 39, 51, 16))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_tiramisu_size.sizePolicy().hasHeightForWidth())
+        self.label_tiramisu_size.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
         font.setPointSize(9)
@@ -1470,7 +1496,7 @@ class Ui_MainWindow(object):
         self.label_tiramisu_price.setGeometry(QtCore.QRect(22, 219, 81, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(8)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.label_tiramisu_price.setFont(font)
@@ -1525,11 +1551,11 @@ class Ui_MainWindow(object):
 "background-color: transparent")
         self.label_crois_honey.setFrameShape(QtWidgets.QFrame.Shape.WinPanel)
         self.label_crois_honey.setText("")
-        self.label_crois_honey.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/honey_glaze.png"))
+        self.label_crois_honey.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/honey_glaze.png"))
         self.label_crois_honey.setScaledContents(True)
         self.label_crois_honey.setObjectName("label_crois_honey")
         self.label_honey = QtWidgets.QLabel(parent=self.frame_croishoney)
-        self.label_honey.setGeometry(QtCore.QRect(45, 16, 121, 20))
+        self.label_honey.setGeometry(QtCore.QRect(51, 16, 96, 20))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -1537,7 +1563,7 @@ class Ui_MainWindow(object):
         self.label_honey.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(10)
+        font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
         self.label_honey.setFont(font)
@@ -1546,7 +1572,12 @@ class Ui_MainWindow(object):
 "color:#5A5A42")
         self.label_honey.setObjectName("label_honey")
         self.label_honey_size = QtWidgets.QLabel(parent=self.frame_croishoney)
-        self.label_honey_size.setGeometry(QtCore.QRect(70, 39, 51, 16))
+        self.label_honey_size.setGeometry(QtCore.QRect(74, 39, 51, 16))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_honey_size.sizePolicy().hasHeightForWidth())
+        self.label_honey_size.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
         font.setPointSize(9)
@@ -1558,7 +1589,7 @@ class Ui_MainWindow(object):
         self.label_honey_price.setGeometry(QtCore.QRect(28, 219, 81, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(8)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.label_honey_price.setFont(font)
@@ -1613,11 +1644,11 @@ class Ui_MainWindow(object):
 "background-color: transparent")
         self.label_crois_blush.setFrameShape(QtWidgets.QFrame.Shape.WinPanel)
         self.label_crois_blush.setText("")
-        self.label_crois_blush.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/blush_crust.png"))
+        self.label_crois_blush.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/blush_crust.png"))
         self.label_crois_blush.setScaledContents(True)
         self.label_crois_blush.setObjectName("label_crois_blush")
         self.label_blush = QtWidgets.QLabel(parent=self.frame_croisblush)
-        self.label_blush.setGeometry(QtCore.QRect(47, 16, 131, 20))
+        self.label_blush.setGeometry(QtCore.QRect(53, 16, 98, 20))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -1625,7 +1656,7 @@ class Ui_MainWindow(object):
         self.label_blush.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(10)
+        font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
         self.label_blush.setFont(font)
@@ -1634,7 +1665,12 @@ class Ui_MainWindow(object):
 "color:#5A5A42")
         self.label_blush.setObjectName("label_blush")
         self.label_blush_size = QtWidgets.QLabel(parent=self.frame_croisblush)
-        self.label_blush_size.setGeometry(QtCore.QRect(70, 40, 51, 16))
+        self.label_blush_size.setGeometry(QtCore.QRect(75, 38, 51, 16))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_blush_size.sizePolicy().hasHeightForWidth())
+        self.label_blush_size.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
         font.setPointSize(9)
@@ -1646,7 +1682,7 @@ class Ui_MainWindow(object):
         self.label_blush_price.setGeometry(QtCore.QRect(27, 219, 81, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(8)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.label_blush_price.setFont(font)
@@ -1687,10 +1723,15 @@ class Ui_MainWindow(object):
         self.frame_croisstrawberry.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_croisstrawberry.setObjectName("frame_croisstrawberry")
         self.label_strawberry = QtWidgets.QLabel(parent=self.frame_croisstrawberry)
-        self.label_strawberry.setGeometry(QtCore.QRect(17, 15, 161, 20))
+        self.label_strawberry.setGeometry(QtCore.QRect(35, 15, 135, 20))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_strawberry.sizePolicy().hasHeightForWidth())
+        self.label_strawberry.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(10)
+        font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
         self.label_strawberry.setFont(font)
@@ -1704,11 +1745,16 @@ class Ui_MainWindow(object):
         self.label_crois_strawberry.setStyleSheet("border:0px;\n"
 "background-color: transparent;")
         self.label_crois_strawberry.setText("")
-        self.label_crois_strawberry.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/strawberry_breeze.png"))
+        self.label_crois_strawberry.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/strawberry_breeze.png"))
         self.label_crois_strawberry.setScaledContents(True)
         self.label_crois_strawberry.setObjectName("label_crois_strawberry")
         self.label_strawberry_size = QtWidgets.QLabel(parent=self.frame_croisstrawberry)
-        self.label_strawberry_size.setGeometry(QtCore.QRect(70, 37, 51, 16))
+        self.label_strawberry_size.setGeometry(QtCore.QRect(75, 37, 51, 16))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_strawberry_size.sizePolicy().hasHeightForWidth())
+        self.label_strawberry_size.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
         font.setPointSize(9)
@@ -1744,7 +1790,7 @@ class Ui_MainWindow(object):
         self.label_strawberry_price.setGeometry(QtCore.QRect(26, 219, 61, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(8)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.label_strawberry_price.setFont(font)
@@ -1775,7 +1821,7 @@ class Ui_MainWindow(object):
 "background-color: transparent")
         self.label_crois_boba.setFrameShape(QtWidgets.QFrame.Shape.WinPanel)
         self.label_crois_boba.setText("")
-        self.label_crois_boba.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/cookies_cream.png"))
+        self.label_crois_boba.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/cookies_cream.png"))
         self.label_crois_boba.setScaledContents(True)
         self.label_crois_boba.setObjectName("label_crois_boba")
         self.label_boba = QtWidgets.QLabel(parent=self.frame_croisboba)
@@ -1877,7 +1923,7 @@ class Ui_MainWindow(object):
         self.label_crois_hazel.setStyleSheet("border:0px;\n"
 "background-color: transparent;")
         self.label_crois_hazel.setText("")
-        self.label_crois_hazel.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/cookies_cream.png"))
+        self.label_crois_hazel.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/cookies_cream.png"))
         self.label_crois_hazel.setScaledContents(True)
         self.label_crois_hazel.setObjectName("label_crois_hazel")
         self.pushButton_add_hazel = QtWidgets.QPushButton(parent=self.frame_croishazel)
@@ -1939,7 +1985,7 @@ class Ui_MainWindow(object):
 "background-color: transparent")
         self.label_crois_custard.setFrameShape(QtWidgets.QFrame.Shape.WinPanel)
         self.label_crois_custard.setText("")
-        self.label_crois_custard.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/cookies_cream.png"))
+        self.label_crois_custard.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/cookies_cream.png"))
         self.label_crois_custard.setScaledContents(True)
         self.label_crois_custard.setObjectName("label_crois_custard")
         self.label_custard = QtWidgets.QLabel(parent=self.frame_croiscustard)
@@ -2030,7 +2076,7 @@ class Ui_MainWindow(object):
 "background-color: transparent")
         self.label_cookies_box.setFrameShape(QtWidgets.QFrame.Shape.WinPanel)
         self.label_cookies_box.setText("")
-        self.label_cookies_box.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/twisted_love.png"))
+        self.label_cookies_box.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/twisted_love.png"))
         self.label_cookies_box.setScaledContents(True)
         self.label_cookies_box.setObjectName("label_cookies_box")
         self.label_box = QtWidgets.QLabel(parent=self.frame_cookbox)
@@ -2107,10 +2153,10 @@ class Ui_MainWindow(object):
         self.frame_cookdark.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_cookdark.setObjectName("frame_cookdark")
         self.label_dark = QtWidgets.QLabel(parent=self.frame_cookdark)
-        self.label_dark.setGeometry(QtCore.QRect(58, 15, 91, 20))
+        self.label_dark.setGeometry(QtCore.QRect(66, 15, 91, 20))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(10)
+        font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
         self.label_dark.setFont(font)
@@ -2124,11 +2170,11 @@ class Ui_MainWindow(object):
         self.label_cookies_dark.setStyleSheet("border:0px;\n"
 "background-color: transparent;")
         self.label_cookies_dark.setText("")
-        self.label_cookies_dark.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/dark_mix.png"))
+        self.label_cookies_dark.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/dark_mix.png"))
         self.label_cookies_dark.setScaledContents(True)
         self.label_cookies_dark.setObjectName("label_cookies_dark")
         self.label_darl_size = QtWidgets.QLabel(parent=self.frame_cookdark)
-        self.label_darl_size.setGeometry(QtCore.QRect(73, 37, 51, 16))
+        self.label_darl_size.setGeometry(QtCore.QRect(79, 37, 51, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
         font.setPointSize(9)
@@ -2164,7 +2210,7 @@ class Ui_MainWindow(object):
         self.label_dark_price.setGeometry(QtCore.QRect(26, 219, 61, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(8)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.label_dark_price.setFont(font)
@@ -2203,11 +2249,11 @@ class Ui_MainWindow(object):
 "background-color: transparent")
         self.label_cookies_creamy.setFrameShape(QtWidgets.QFrame.Shape.WinPanel)
         self.label_cookies_creamy.setText("")
-        self.label_cookies_creamy.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/creamy_matcha.png"))
+        self.label_cookies_creamy.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/creamy_matcha.png"))
         self.label_cookies_creamy.setScaledContents(True)
         self.label_cookies_creamy.setObjectName("label_cookies_creamy")
         self.label_creamy = QtWidgets.QLabel(parent=self.frame_cookcreamy)
-        self.label_creamy.setGeometry(QtCore.QRect(31, 16, 131, 20))
+        self.label_creamy.setGeometry(QtCore.QRect(44, 16, 131, 20))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -2215,7 +2261,7 @@ class Ui_MainWindow(object):
         self.label_creamy.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(10)
+        font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
         self.label_creamy.setFont(font)
@@ -2224,7 +2270,7 @@ class Ui_MainWindow(object):
 "color:#5A5A42")
         self.label_creamy.setObjectName("label_creamy")
         self.label_creamy_size = QtWidgets.QLabel(parent=self.frame_cookcreamy)
-        self.label_creamy_size.setGeometry(QtCore.QRect(70, 40, 51, 16))
+        self.label_creamy_size.setGeometry(QtCore.QRect(74, 40, 51, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
         font.setPointSize(9)
@@ -2236,7 +2282,7 @@ class Ui_MainWindow(object):
         self.label_creamy_price.setGeometry(QtCore.QRect(27, 219, 81, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(8)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.label_creamy_price.setFont(font)
@@ -2280,10 +2326,10 @@ class Ui_MainWindow(object):
         self.frame_cookoreo.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_cookoreo.setObjectName("frame_cookoreo")
         self.label_oreo = QtWidgets.QLabel(parent=self.frame_cookoreo)
-        self.label_oreo.setGeometry(QtCore.QRect(33, 14, 141, 20))
+        self.label_oreo.setGeometry(QtCore.QRect(40, 14, 126, 20))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(10)
+        font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
         self.label_oreo.setFont(font)
@@ -2292,7 +2338,7 @@ class Ui_MainWindow(object):
 "color:#5A5A42")
         self.label_oreo.setObjectName("label_oreo")
         self.label_oreo_size = QtWidgets.QLabel(parent=self.frame_cookoreo)
-        self.label_oreo_size.setGeometry(QtCore.QRect(73, 37, 51, 16))
+        self.label_oreo_size.setGeometry(QtCore.QRect(78, 37, 51, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
         font.setPointSize(9)
@@ -2305,7 +2351,7 @@ class Ui_MainWindow(object):
         self.label_cookies_oreo.setStyleSheet("border:0px;\n"
 "background-color: transparent;")
         self.label_cookies_oreo.setText("")
-        self.label_cookies_oreo.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/oreo_chocolate.png"))
+        self.label_cookies_oreo.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/oreo_chocolate.png"))
         self.label_cookies_oreo.setScaledContents(True)
         self.label_cookies_oreo.setObjectName("label_cookies_oreo")
         self.pushButton_add24 = QtWidgets.QPushButton(parent=self.frame_cookoreo)
@@ -2336,7 +2382,7 @@ class Ui_MainWindow(object):
         self.label_oreo_price.setGeometry(QtCore.QRect(21, 220, 61, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(8)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.label_oreo_price.setFont(font)
@@ -2372,7 +2418,7 @@ class Ui_MainWindow(object):
 "background-color: transparent")
         self.label_cookies_blueberry.setFrameShape(QtWidgets.QFrame.Shape.WinPanel)
         self.label_cookies_blueberry.setText("")
-        self.label_cookies_blueberry.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/twisted_love.png"))
+        self.label_cookies_blueberry.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/twisted_love.png"))
         self.label_cookies_blueberry.setScaledContents(True)
         self.label_cookies_blueberry.setObjectName("label_cookies_blueberry")
         self.label_blueberry = QtWidgets.QLabel(parent=self.frame_cookblueberry)
@@ -2449,10 +2495,10 @@ class Ui_MainWindow(object):
         self.frame_cookcandc.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_cookcandc.setObjectName("frame_cookcandc")
         self.label_candc = QtWidgets.QLabel(parent=self.frame_cookcandc)
-        self.label_candc.setGeometry(QtCore.QRect(31, 14, 141, 20))
+        self.label_candc.setGeometry(QtCore.QRect(39, 14, 127, 20))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(10)
+        font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
         self.label_candc.setFont(font)
@@ -2479,7 +2525,7 @@ class Ui_MainWindow(object):
         self.label_cookies_candc.setStyleSheet("border:0px;\n"
 "background-color: transparent;")
         self.label_cookies_candc.setText("")
-        self.label_cookies_candc.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/cookies_cream.png"))
+        self.label_cookies_candc.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/cookies_cream.png"))
         self.label_cookies_candc.setScaledContents(True)
         self.label_cookies_candc.setObjectName("label_cookies_candc")
         self.pushButton_add21 = QtWidgets.QPushButton(parent=self.frame_cookcandc)
@@ -2510,7 +2556,7 @@ class Ui_MainWindow(object):
         self.label_candc_price.setGeometry(QtCore.QRect(24, 220, 61, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(8)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.label_candc_price.setFont(font)
@@ -2549,11 +2595,11 @@ class Ui_MainWindow(object):
 "background-color: transparent")
         self.label_cookies_twisted.setFrameShape(QtWidgets.QFrame.Shape.WinPanel)
         self.label_cookies_twisted.setText("")
-        self.label_cookies_twisted.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/twisted_love.png"))
+        self.label_cookies_twisted.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/twisted_love.png"))
         self.label_cookies_twisted.setScaledContents(True)
         self.label_cookies_twisted.setObjectName("label_cookies_twisted")
         self.label_twisted = QtWidgets.QLabel(parent=self.frame_cooktwisted)
-        self.label_twisted.setGeometry(QtCore.QRect(39, 16, 141, 20))
+        self.label_twisted.setGeometry(QtCore.QRect(50, 16, 117, 20))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -2561,7 +2607,7 @@ class Ui_MainWindow(object):
         self.label_twisted.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(10)
+        font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
         self.label_twisted.setFont(font)
@@ -2582,7 +2628,7 @@ class Ui_MainWindow(object):
         self.label_twisted_price.setGeometry(QtCore.QRect(22, 219, 81, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(8)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.label_twisted_price.setFont(font)
@@ -2640,11 +2686,11 @@ class Ui_MainWindow(object):
 "background-color: transparent")
         self.label_cookies_classic_choco.setFrameShape(QtWidgets.QFrame.Shape.WinPanel)
         self.label_cookies_classic_choco.setText("")
-        self.label_cookies_classic_choco.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/classic_choco_chip.png"))
+        self.label_cookies_classic_choco.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/classic_choco_chip.png"))
         self.label_cookies_classic_choco.setScaledContents(True)
         self.label_cookies_classic_choco.setObjectName("label_cookies_classic_choco")
         self.label_classic_choco = QtWidgets.QLabel(parent=self.frame_cookclassicchoco)
-        self.label_classic_choco.setGeometry(QtCore.QRect(16, 16, 161, 20))
+        self.label_classic_choco.setGeometry(QtCore.QRect(26, 16, 145, 20))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -2652,7 +2698,7 @@ class Ui_MainWindow(object):
         self.label_classic_choco.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(10)
+        font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
         self.label_classic_choco.setFont(font)
@@ -2661,7 +2707,7 @@ class Ui_MainWindow(object):
 "color:#5A5A42")
         self.label_classic_choco.setObjectName("label_classic_choco")
         self.label_classic_choco_size = QtWidgets.QLabel(parent=self.frame_cookclassicchoco)
-        self.label_classic_choco_size.setGeometry(QtCore.QRect(70, 39, 51, 16))
+        self.label_classic_choco_size.setGeometry(QtCore.QRect(73, 39, 51, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
         font.setPointSize(9)
@@ -2673,7 +2719,7 @@ class Ui_MainWindow(object):
         self.label_classic_choco_price_2.setGeometry(QtCore.QRect(28, 219, 81, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(8)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.label_classic_choco_price_2.setFont(font)
@@ -2737,11 +2783,11 @@ class Ui_MainWindow(object):
 "background-color: transparent")
         self.label_drink_pear.setFrameShape(QtWidgets.QFrame.Shape.WinPanel)
         self.label_drink_pear.setText("")
-        self.label_drink_pear.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/lush_pear.png"))
+        self.label_drink_pear.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/lush_pear.png"))
         self.label_drink_pear.setScaledContents(True)
         self.label_drink_pear.setObjectName("label_drink_pear")
         self.label_pear = QtWidgets.QLabel(parent=self.frame_drink_pear)
-        self.label_pear.setGeometry(QtCore.QRect(54, 22, 91, 20))
+        self.label_pear.setGeometry(QtCore.QRect(62, 22, 91, 20))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -2749,7 +2795,7 @@ class Ui_MainWindow(object):
         self.label_pear.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(10)
+        font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
         self.label_pear.setFont(font)
@@ -2758,7 +2804,7 @@ class Ui_MainWindow(object):
 "color:#5A5A42")
         self.label_pear.setObjectName("label_pear")
         self.label_pear_size = QtWidgets.QLabel(parent=self.frame_drink_pear)
-        self.label_pear_size.setGeometry(QtCore.QRect(73, 40, 51, 16))
+        self.label_pear_size.setGeometry(QtCore.QRect(77, 46, 51, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
         font.setPointSize(9)
@@ -2770,7 +2816,7 @@ class Ui_MainWindow(object):
         self.label_pear_price.setGeometry(QtCore.QRect(27, 219, 81, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(8)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.label_pear_price.setFont(font)
@@ -2831,11 +2877,11 @@ class Ui_MainWindow(object):
 "background-color: transparent")
         self.label_drink_tira.setFrameShape(QtWidgets.QFrame.Shape.WinPanel)
         self.label_drink_tira.setText("")
-        self.label_drink_tira.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/tira_miss_u.png"))
+        self.label_drink_tira.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/tira_miss_u.png"))
         self.label_drink_tira.setScaledContents(True)
         self.label_drink_tira.setObjectName("label_drink_tira")
         self.label_tira = QtWidgets.QLabel(parent=self.frame_drink_tira)
-        self.label_tira.setGeometry(QtCore.QRect(44, 20, 101, 20))
+        self.label_tira.setGeometry(QtCore.QRect(48, 20, 101, 20))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -2843,7 +2889,7 @@ class Ui_MainWindow(object):
         self.label_tira.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(10)
+        font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
         self.label_tira.setFont(font)
@@ -2852,7 +2898,7 @@ class Ui_MainWindow(object):
 "color:#5A5A42")
         self.label_tira.setObjectName("label_tira")
         self.label_tira_size = QtWidgets.QLabel(parent=self.frame_drink_tira)
-        self.label_tira_size.setGeometry(QtCore.QRect(73, 40, 51, 16))
+        self.label_tira_size.setGeometry(QtCore.QRect(73, 42, 51, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
         font.setPointSize(9)
@@ -2864,7 +2910,7 @@ class Ui_MainWindow(object):
         self.label_tira_price.setGeometry(QtCore.QRect(28, 219, 81, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(8)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.label_tira_price.setFont(font)
@@ -2908,10 +2954,10 @@ class Ui_MainWindow(object):
         self.frame_drink_matcha.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_drink_matcha.setObjectName("frame_drink_matcha")
         self.label_matcha = QtWidgets.QLabel(parent=self.frame_drink_matcha)
-        self.label_matcha.setGeometry(QtCore.QRect(35, 18, 131, 20))
+        self.label_matcha.setGeometry(QtCore.QRect(48, 18, 131, 20))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(10)
+        font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
         self.label_matcha.setFont(font)
@@ -2928,11 +2974,11 @@ class Ui_MainWindow(object):
         self.label_drink_matcha.setStyleSheet("border:0px;\n"
 "background-color: transparent;")
         self.label_drink_matcha.setText("")
-        self.label_drink_matcha.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/matcha_smore.png"))
+        self.label_drink_matcha.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/matcha_smore.png"))
         self.label_drink_matcha.setScaledContents(True)
         self.label_drink_matcha.setObjectName("label_drink_matcha")
         self.label_matcha_size = QtWidgets.QLabel(parent=self.frame_drink_matcha)
-        self.label_matcha_size.setGeometry(QtCore.QRect(77, 37, 51, 16))
+        self.label_matcha_size.setGeometry(QtCore.QRect(81, 42, 51, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
         font.setPointSize(9)
@@ -2968,7 +3014,7 @@ class Ui_MainWindow(object):
         self.label_matcha_price.setGeometry(QtCore.QRect(26, 219, 61, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(8)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.label_matcha_price.setFont(font)
@@ -2988,10 +3034,10 @@ class Ui_MainWindow(object):
         self.frame_drink_choco.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_drink_choco.setObjectName("frame_drink_choco")
         self.label_choco_smore = QtWidgets.QLabel(parent=self.frame_drink_choco)
-        self.label_choco_smore.setGeometry(QtCore.QRect(43, 18, 131, 20))
+        self.label_choco_smore.setGeometry(QtCore.QRect(48, 18, 131, 20))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(10)
+        font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
         self.label_choco_smore.setFont(font)
@@ -3000,7 +3046,7 @@ class Ui_MainWindow(object):
 "color:#5A5A42")
         self.label_choco_smore.setObjectName("label_choco_smore")
         self.label_choco_smore_size = QtWidgets.QLabel(parent=self.frame_drink_choco)
-        self.label_choco_smore_size.setGeometry(QtCore.QRect(82, 37, 51, 16))
+        self.label_choco_smore_size.setGeometry(QtCore.QRect(82, 42, 51, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
         font.setPointSize(9)
@@ -3021,7 +3067,7 @@ class Ui_MainWindow(object):
         self.label_drink_choco.setStyleSheet("border:0px;\n"
 "background-color: transparent;")
         self.label_drink_choco.setText("")
-        self.label_drink_choco.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/choco_smore.png"))
+        self.label_drink_choco.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/choco_smore.png"))
         self.label_drink_choco.setScaledContents(True)
         self.label_drink_choco.setObjectName("label_drink_choco")
         self.pushButton_add27 = QtWidgets.QPushButton(parent=self.frame_drink_choco)
@@ -3052,7 +3098,7 @@ class Ui_MainWindow(object):
         self.label_choco_smore_price.setGeometry(QtCore.QRect(24, 220, 61, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(8)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.label_choco_smore_price.setFont(font)
@@ -3094,11 +3140,11 @@ class Ui_MainWindow(object):
 "background-color: transparent")
         self.label_drink_brew.setFrameShape(QtWidgets.QFrame.Shape.WinPanel)
         self.label_drink_brew.setText("")
-        self.label_drink_brew.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/bergamot_brew.png"))
+        self.label_drink_brew.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/bergamot_brew.png"))
         self.label_drink_brew.setScaledContents(True)
         self.label_drink_brew.setObjectName("label_drink_brew")
         self.label_brew = QtWidgets.QLabel(parent=self.frame_drink_brew)
-        self.label_brew.setGeometry(QtCore.QRect(35, 20, 141, 20))
+        self.label_brew.setGeometry(QtCore.QRect(48, 20, 121, 20))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -3106,7 +3152,7 @@ class Ui_MainWindow(object):
         self.label_brew.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(10)
+        font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
         self.label_brew.setFont(font)
@@ -3115,7 +3161,7 @@ class Ui_MainWindow(object):
 "color:#5A5A42")
         self.label_brew.setObjectName("label_brew")
         self.label_brew_size = QtWidgets.QLabel(parent=self.frame_drink_brew)
-        self.label_brew_size.setGeometry(QtCore.QRect(80, 39, 51, 16))
+        self.label_brew_size.setGeometry(QtCore.QRect(81, 43, 51, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
         font.setPointSize(9)
@@ -3127,7 +3173,7 @@ class Ui_MainWindow(object):
         self.label_brew_price.setGeometry(QtCore.QRect(22, 219, 81, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(8)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.label_brew_price.setFont(font)
@@ -3164,25 +3210,29 @@ class Ui_MainWindow(object):
         self.pushButton_Mousse = QtWidgets.QPushButton(parent=self.centralwidget)
         self.pushButton_Mousse.setGeometry(QtCore.QRect(84, 90, 102, 42))
         font = QtGui.QFont()
-        font.setPointSize(-1)
+        font.setFamily("Mongolian Baiti")
+        font.setPointSize(13)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
         self.pushButton_Mousse.setFont(font)
         self.pushButton_Mousse.setStyleSheet("QPushButton {\n"
-"    background-color: #E6D7B9; /* Màu nền mặc định */\n"
-"    color: #4A4A4A; /* Màu chữ */\n"
-"    border-radius: 10px; /* Bo góc mềm mại */\n"
-"    border: 2px solid #C5A673; /* Viền nhẹ */\n"
+"    background-color: #E6D7B9; \n"
+"    color: #4A4A4A; \n"
+"    border-radius: 10px; \n"
+"    border: 2px solid #C5A673; \n"
 "    padding: 10px;\n"
-"    font-size: 14px;\n"
+"    font: 13pt \"Mongolian Baiti\";\n"
 "}\n"
 "\n"
-"/* Khi hover chuột vào */\n"
+"\n"
 "QPushButton:hover {\n"
-"    background-color: #D9C9A7; /* Nhấn vào đổi màu nhẹ */\n"
+"    background-color: #D9C9A7;\n"
 "}\n"
 "\n"
-"/* Khi được chọn */\n"
+"\n"
 "QPushButton:checked {\n"
-"    background-color: #C5A673; /* Màu active */\n"
+"    background-color: #C5A673; \n"
 "    color: white;\n"
 "    border: 2px solid #A67C52;\n"
 "}\n"
@@ -3191,25 +3241,29 @@ class Ui_MainWindow(object):
         self.pushButton_Tart = QtWidgets.QPushButton(parent=self.centralwidget)
         self.pushButton_Tart.setGeometry(QtCore.QRect(222, 90, 102, 42))
         font = QtGui.QFont()
-        font.setPointSize(-1)
+        font.setFamily("Mongolian Baiti")
+        font.setPointSize(13)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
         self.pushButton_Tart.setFont(font)
         self.pushButton_Tart.setStyleSheet("QPushButton {\n"
-"    background-color: #E6D7B9; /* Màu nền mặc định */\n"
-"    color: #4A4A4A; /* Màu chữ */\n"
-"    border-radius: 10px; /* Bo góc mềm mại */\n"
-"    border: 2px solid #C5A673; /* Viền nhẹ */\n"
+"    background-color: #E6D7B9; \n"
+"    color: #4A4A4A; \n"
+"    border-radius: 10px; \n"
+"    border: 2px solid #C5A673; \n"
 "    padding: 10px;\n"
-"    font-size: 14px;\n"
+"    font: 13pt \"Mongolian Baiti\";\n"
 "}\n"
 "\n"
-"/* Khi hover chuột vào */\n"
+"\n"
 "QPushButton:hover {\n"
-"    background-color: #D9C9A7; /* Nhấn vào đổi màu nhẹ */\n"
+"    background-color: #D9C9A7;\n"
 "}\n"
 "\n"
-"/* Khi được chọn */\n"
+"\n"
 "QPushButton:checked {\n"
-"    background-color: #C5A673; /* Màu active */\n"
+"    background-color: #C5A673; \n"
 "    color: white;\n"
 "    border: 2px solid #A67C52;\n"
 "}\n"
@@ -3218,25 +3272,29 @@ class Ui_MainWindow(object):
         self.pushButton_Croissant = QtWidgets.QPushButton(parent=self.centralwidget)
         self.pushButton_Croissant.setGeometry(QtCore.QRect(359, 90, 102, 42))
         font = QtGui.QFont()
-        font.setPointSize(-1)
+        font.setFamily("Mongolian Baiti")
+        font.setPointSize(13)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
         self.pushButton_Croissant.setFont(font)
         self.pushButton_Croissant.setStyleSheet("QPushButton {\n"
-"    background-color: #E6D7B9; /* Màu nền mặc định */\n"
-"    color: #4A4A4A; /* Màu chữ */\n"
-"    border-radius: 10px; /* Bo góc mềm mại */\n"
-"    border: 2px solid #C5A673; /* Viền nhẹ */\n"
+"    background-color: #E6D7B9; \n"
+"    color: #4A4A4A; \n"
+"    border-radius: 10px; \n"
+"    border: 2px solid #C5A673; \n"
 "    padding: 10px;\n"
-"    font-size: 14px;\n"
+"    font: 13pt \"Mongolian Baiti\";\n"
 "}\n"
 "\n"
-"/* Khi hover chuột vào */\n"
+"\n"
 "QPushButton:hover {\n"
-"    background-color: #D9C9A7; /* Nhấn vào đổi màu nhẹ */\n"
+"    background-color: #D9C9A7;\n"
 "}\n"
 "\n"
-"/* Khi được chọn */\n"
+"\n"
 "QPushButton:checked {\n"
-"    background-color: #C5A673; /* Màu active */\n"
+"    background-color: #C5A673; \n"
 "    color: white;\n"
 "    border: 2px solid #A67C52;\n"
 "}\n"
@@ -3245,25 +3303,29 @@ class Ui_MainWindow(object):
         self.pushButton_Cookies = QtWidgets.QPushButton(parent=self.centralwidget)
         self.pushButton_Cookies.setGeometry(QtCore.QRect(498, 90, 102, 42))
         font = QtGui.QFont()
-        font.setPointSize(-1)
+        font.setFamily("Mongolian Baiti")
+        font.setPointSize(13)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
         self.pushButton_Cookies.setFont(font)
         self.pushButton_Cookies.setStyleSheet("QPushButton {\n"
-"    background-color: #E6D7B9; /* Màu nền mặc định */\n"
-"    color: #4A4A4A; /* Màu chữ */\n"
-"    border-radius: 10px; /* Bo góc mềm mại */\n"
-"    border: 2px solid #C5A673; /* Viền nhẹ */\n"
+"    background-color: #E6D7B9; \n"
+"    color: #4A4A4A; \n"
+"    border-radius: 10px; \n"
+"    border: 2px solid #C5A673; \n"
 "    padding: 10px;\n"
-"    font-size: 14px;\n"
+"    font: 13pt \"Mongolian Baiti\";\n"
 "}\n"
 "\n"
-"/* Khi hover chuột vào */\n"
+"\n"
 "QPushButton:hover {\n"
-"    background-color: #D9C9A7; /* Nhấn vào đổi màu nhẹ */\n"
+"    background-color: #D9C9A7;\n"
 "}\n"
 "\n"
-"/* Khi được chọn */\n"
+"\n"
 "QPushButton:checked {\n"
-"    background-color: #C5A673; /* Màu active */\n"
+"    background-color: #C5A673; \n"
 "    color: white;\n"
 "    border: 2px solid #A67C52;\n"
 "}\n"
@@ -3272,25 +3334,29 @@ class Ui_MainWindow(object):
         self.pushButton_Drinks = QtWidgets.QPushButton(parent=self.centralwidget)
         self.pushButton_Drinks.setGeometry(QtCore.QRect(630, 90, 102, 42))
         font = QtGui.QFont()
-        font.setPointSize(-1)
+        font.setFamily("Mongolian Baiti")
+        font.setPointSize(13)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
         self.pushButton_Drinks.setFont(font)
         self.pushButton_Drinks.setStyleSheet("QPushButton {\n"
-"    background-color: #E6D7B9; /* Màu nền mặc định */\n"
-"    color: #4A4A4A; /* Màu chữ */\n"
-"    border-radius: 10px; /* Bo góc mềm mại */\n"
-"    border: 2px solid #C5A673; /* Viền nhẹ */\n"
+"    background-color: #E6D7B9; \n"
+"    color: #4A4A4A; \n"
+"    border-radius: 10px; \n"
+"    border: 2px solid #C5A673; \n"
 "    padding: 10px;\n"
-"    font-size: 14px;\n"
+"    font: 13pt \"Mongolian Baiti\";\n"
 "}\n"
 "\n"
-"/* Khi hover chuột vào */\n"
+"\n"
 "QPushButton:hover {\n"
-"    background-color: #D9C9A7; /* Nhấn vào đổi màu nhẹ */\n"
+"    background-color: #D9C9A7;\n"
 "}\n"
 "\n"
-"/* Khi được chọn */\n"
+"\n"
 "QPushButton:checked {\n"
-"    background-color: #C5A673; /* Màu active */\n"
+"    background-color: #C5A673; \n"
 "    color: white;\n"
 "    border: 2px solid #A67C52;\n"
 "}\n"
@@ -3331,10 +3397,10 @@ class Ui_MainWindow(object):
         self.pushButton_Back.setText("◀")
         self.pushButton_Back.setObjectName("pushButton_Back")
         self.label_Choosemenu = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label_Choosemenu.setGeometry(QtCore.QRect(80, 54, 151, 16))
+        self.label_Choosemenu.setGeometry(QtCore.QRect(80, 54, 184, 16))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(10)
+        font.setPointSize(15)
         font.setBold(True)
         font.setWeight(75)
         self.label_Choosemenu.setFont(font)
@@ -3361,7 +3427,7 @@ class Ui_MainWindow(object):
         font.setWeight(50)
         self.label_order.setFont(font)
         self.label_order.setStyleSheet("QLabel#orderTitleLabel { \n"
-"    color: #4A4A4A;\n"
+"    color: rgb(107, 45, 15);\n"
 "    font-family: Arial;\n"
 "    font-size: 16px;\n"
 "    font-weight: bold;\n"
@@ -3377,22 +3443,92 @@ class Ui_MainWindow(object):
         self.scrollAreaWidgetContents_2.setObjectName("scrollAreaWidgetContents_2")
         self.tableWidget_order = QtWidgets.QTableWidget(parent=self.scrollAreaWidgetContents_2)
         self.tableWidget_order.setGeometry(QtCore.QRect(0, 0, 341, 341))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        self.tableWidget_order.setFont(font)
+        self.tableWidget_order.setStyleSheet("QTableWidget#orderDetailsTable {\n"
+"    background-color: #FEFEFE; \n"
+"    border: 2px solid #E8D5B9; \n"
+"    border-radius: 15px;\n"
+"    gridline-color: #E8D5B9; \n"
+"    color: rgb(107, 45, 15);\n"
+"    alternate-background-color: #FFF5E6; \n"
+"}\n"
+"\n"
+"QHeaderView::section {\n"
+"    background-color:  rgb(245, 245, 220); \n"
+"    color: rgb(107, 45, 15); \n"
+"    padding: 5px;\n"
+"    border: 1px solid #C4A484; \n"
+"\n"
+"}\n"
+"\n"
+"QHeaderView::section:hover {\n"
+"    background-color: #FFF9C4; \n"
+"}\n"
+"\n"
+"QTableWidget#orderDetailsTable::item {\n"
+"    background-color: #FEFEFE; \n"
+"    border: 1px solid #E8D5B9; \n"
+"    padding: 5px;\n"
+"}\n"
+"\n"
+"QTableWidget#orderDetailsTable::item:selected {\n"
+"    background-color: #FFF9C4;\n"
+"    color: rgb(107, 45, 15); \n"
+"}\n"
+"\n"
+"QTableWidget#orderDetailsTable::item:hover {\n"
+"    background-color: #FFF5E6; \n"
+"}\n"
+"\n"
+"QTableWidget#orderDetailsTable::item:focus {\n"
+"    border: none;\n"
+"}")
         self.tableWidget_order.setObjectName("tableWidget_order")
         self.tableWidget_order.setColumnCount(5)
         self.tableWidget_order.setRowCount(2)
         item = QtWidgets.QTableWidgetItem()
+        font = QtGui.QFont()
+        font.setFamily("Mongolian Baiti")
+        font.setPointSize(10)
+        item.setFont(font)
         self.tableWidget_order.setVerticalHeaderItem(0, item)
         item = QtWidgets.QTableWidgetItem()
+        font = QtGui.QFont()
+        font.setFamily("Mongolian Baiti")
+        font.setPointSize(10)
+        item.setFont(font)
         self.tableWidget_order.setVerticalHeaderItem(1, item)
         item = QtWidgets.QTableWidgetItem()
+        font = QtGui.QFont()
+        font.setFamily("Mongolian Baiti")
+        font.setPointSize(10)
+        item.setFont(font)
         self.tableWidget_order.setHorizontalHeaderItem(0, item)
         item = QtWidgets.QTableWidgetItem()
+        font = QtGui.QFont()
+        font.setFamily("Mongolian Baiti")
+        font.setPointSize(11)
+        item.setFont(font)
         self.tableWidget_order.setHorizontalHeaderItem(1, item)
         item = QtWidgets.QTableWidgetItem()
+        font = QtGui.QFont()
+        font.setFamily("Mongolian Baiti")
+        font.setPointSize(11)
+        item.setFont(font)
         self.tableWidget_order.setHorizontalHeaderItem(2, item)
         item = QtWidgets.QTableWidgetItem()
+        font = QtGui.QFont()
+        font.setFamily("Mongolian Baiti")
+        font.setPointSize(10)
+        item.setFont(font)
         self.tableWidget_order.setHorizontalHeaderItem(3, item)
         item = QtWidgets.QTableWidgetItem()
+        font = QtGui.QFont()
+        font.setFamily("Mongolian Baiti")
+        font.setPointSize(8)
+        item.setFont(font)
         self.tableWidget_order.setHorizontalHeaderItem(4, item)
         self.groupBox = QtWidgets.QGroupBox(parent=self.scrollAreaWidgetContents_2)
         self.groupBox.setGeometry(QtCore.QRect(0, 350, 341, 71))
@@ -3400,6 +3536,7 @@ class Ui_MainWindow(object):
         font.setFamily("Mongolian Baiti")
         font.setPointSize(12)
         self.groupBox.setFont(font)
+        self.groupBox.setTitle("")
         self.groupBox.setObjectName("groupBox")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.groupBox)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
@@ -3407,35 +3544,71 @@ class Ui_MainWindow(object):
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.pushButtonEdit = QtWidgets.QPushButton(parent=self.groupBox)
         font = QtGui.QFont()
-        font.setFamily("Mongolian Baiti")
-        font.setPointSize(12)
+        font.setPointSize(-1)
         self.pushButtonEdit.setFont(font)
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/ic_meoshock.webp"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pushButtonEdit.setIcon(icon)
-        self.pushButtonEdit.setIconSize(QtCore.QSize(30, 30))
+        self.pushButtonEdit.setStyleSheet("QPushButton {\n"
+"    background-color:rgb(245, 245, 220);\n"
+"    color:rgb(112, 61, 31);\n"
+"    border: 2px solid #C2A87E;\n"
+"    border-radius: 10px;\n"
+"    padding: 9px 9px;\n"
+"    font-size: 16px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #F7F3EF;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #E6D5C3;\n"
+"}\n"
+"")
         self.pushButtonEdit.setObjectName("pushButtonEdit")
         self.horizontalLayout.addWidget(self.pushButtonEdit)
         self.pushButtonNewOrder = QtWidgets.QPushButton(parent=self.groupBox)
         font = QtGui.QFont()
-        font.setFamily("Mongolian Baiti")
-        font.setPointSize(12)
+        font.setPointSize(-1)
         self.pushButtonNewOrder.setFont(font)
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/ic_meochanhcho.webp"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pushButtonNewOrder.setIcon(icon1)
-        self.pushButtonNewOrder.setIconSize(QtCore.QSize(30, 30))
+        self.pushButtonNewOrder.setStyleSheet("QPushButton {\n"
+"    background-color:rgb(245, 245, 220);\n"
+"    color:rgb(112, 61, 31);\n"
+"    border: 2px solid #C2A87E;\n"
+"    border-radius: 10px;\n"
+"    padding: 9px 9px;\n"
+"    font-size: 16px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #F7F3EF;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #E6D5C3;\n"
+"}\n"
+"")
         self.pushButtonNewOrder.setObjectName("pushButtonNewOrder")
         self.horizontalLayout.addWidget(self.pushButtonNewOrder)
         self.pushButtonDelete = QtWidgets.QPushButton(parent=self.groupBox)
         font = QtGui.QFont()
-        font.setFamily("Mongolian Baiti")
-        font.setPointSize(12)
+        font.setPointSize(-1)
         self.pushButtonDelete.setFont(font)
-        icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/ic_meokhoc.webp"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pushButtonDelete.setIcon(icon2)
-        self.pushButtonDelete.setIconSize(QtCore.QSize(30, 30))
+        self.pushButtonDelete.setStyleSheet("QPushButton {\n"
+"    background-color:rgb(245, 245, 220);\n"
+"    color:rgb(112, 61, 31);\n"
+"    border: 2px solid #C2A87E;\n"
+"    border-radius: 10px;\n"
+"    padding: 9px 9px;\n"
+"    font-size: 16px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #F7F3EF;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #E6D5C3;\n"
+"}\n"
+"")
         self.pushButtonDelete.setObjectName("pushButtonDelete")
         self.horizontalLayout.addWidget(self.pushButtonDelete)
         self.horizontalLayout_2.addLayout(self.horizontalLayout)
@@ -3443,7 +3616,7 @@ class Ui_MainWindow(object):
         self.lineEdit_total.setGeometry(QtCore.QRect(60, 430, 271, 31))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
-        font.setPointSize(9)
+        font.setPointSize(12)
         self.lineEdit_total.setFont(font)
         self.lineEdit_total.setStyleSheet("bakground-color:transparent")
         self.lineEdit_total.setObjectName("lineEdit_total")
@@ -3480,29 +3653,25 @@ class Ui_MainWindow(object):
 "    border: 2px solid #A67C52;\n"
 "}\n"
 "")
-        icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/ic_meoheart.webp"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pushButtonProceed.setIcon(icon3)
-        self.pushButtonProceed.setIconSize(QtCore.QSize(35, 35))
         self.pushButtonProceed.setObjectName("pushButtonProceed")
         self.scrollArea_order.raise_()
         self.label_order.raise_()
         self.label_total.raise_()
         self.pushButtonProceed.raise_()
         self.label_logo = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label_logo.setGeometry(QtCore.QRect(870, 10, 181, 71))
+        self.label_logo.setGeometry(QtCore.QRect(960, 20, 181, 71))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
         self.label_logo.setFont(font)
         self.label_logo.setStyleSheet("background-color:transparent;")
         self.label_logo.setText("")
-        self.label_logo.setPixmap(QtGui.QPixmap("E:\\Git_TDLT\\FinalProject\\Ui\\../images/cadty_logo.png"))
+        self.label_logo.setPixmap(QtGui.QPixmap("D:\\FinalProject\\Ui\\../images/cadty_logo.png"))
         self.label_logo.setScaledContents(True)
         self.label_logo.setObjectName("label_logo")
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(2)
+        self.stackedWidget.setCurrentIndex(3)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -3670,8 +3839,7 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "Quantity"))
         item = self.tableWidget_order.horizontalHeaderItem(4)
         item.setText(_translate("MainWindow", "Subtotal"))
-        self.groupBox.setTitle(_translate("MainWindow", "Edit"))
-        self.pushButtonEdit.setText(_translate("MainWindow", "Edit"))
+        self.pushButtonEdit.setText(_translate("MainWindow", "Edit Quantity"))
         self.pushButtonNewOrder.setText(_translate("MainWindow", "New Order"))
         self.pushButtonDelete.setText(_translate("MainWindow", "Delete"))
         self.label_total.setText(_translate("MainWindow", "Total:"))

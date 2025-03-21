@@ -12,8 +12,8 @@ class WarehouseManagementExt(Ui_WarehouseManagementMainWindow):
         self.data_connector = DataConnector()
         # Khởi tạo DataConnector sẽ tự động đọc dữ liệu khách hàng
         self.customers = self.data_connector.get_all_customers()
-        # Đọc dữ liệu orders trực tiếp từ file JSON
-        self.orders = self.read_orders_from_json()
+        # Đọc dữ liệu orders ban đầu
+        self.orders = []
         
     def read_orders_from_json(self):
         try:
@@ -37,9 +37,9 @@ class WarehouseManagementExt(Ui_WarehouseManagementMainWindow):
         # Thiết lập sự kiện
         self.setupSignals()
         
-        # Nạp dữ liệu khách hàng
+        # Nạp dữ liệu khách hàng và orders
         self.loadCustomers()
-
+        
     def setupTableHeaders(self):
         # Thiết lập tiêu đề cho bảng sản phẩm
         headers = ["Product ID", "Product Name", "Price", "Quantity", "Subtotal"]
@@ -94,6 +94,12 @@ class WarehouseManagementExt(Ui_WarehouseManagementMainWindow):
         self.lineEditOrderID.setReadOnly(True)
 
     def displayCustomerOrders(self, customer_id):
+        # Đọc lại dữ liệu orders mới nhất
+        self.orders = self.read_orders_from_json()
+        # Tiếp tục xử lý hiển thị như bình thường
+        if not customer_id:
+            return
+            
         # Xóa dữ liệu cũ trong bảng
         self.tableWidgetProduct.setRowCount(0)
         
@@ -414,6 +420,9 @@ class WarehouseManagementExt(Ui_WarehouseManagementMainWindow):
                             item['price'] = price
                             item['quantity'] = quantity
                             item['subtotal'] = subtotal
+                            break
+                    # Cập nhật tổng giá trị của đơn hàng
+                    order['total_amount'] = total
                     break
             
             # Lưu orders vào file
@@ -429,4 +438,10 @@ class WarehouseManagementExt(Ui_WarehouseManagementMainWindow):
             self.displayCustomerOrders(self.lineEditCustomerID.text())
 
     def showWindow(self):
+        # Đọc lại dữ liệu orders mới nhất trước khi hiển thị
+        self.orders = self.read_orders_from_json()
+        # Nạp lại danh sách khách hàng
+        self.customers = self.data_connector.get_all_customers()
+        # Cập nhật lại giao diện
+        self.loadCustomers()
         self.MainWindow.show()

@@ -1,5 +1,6 @@
+from PyQt6.QtCore import Qt
 from PyQt6.QtWidgets import QMainWindow, QMessageBox, QPushButton, QHBoxLayout, QLabel, QLineEdit, QButtonGroup
-from PyQt6 import QtCore
+from PyQt6 import QtCore, QtGui
 import os
 import re
 
@@ -22,6 +23,20 @@ class CheckoutExt(QMainWindow, Ui_CheckoutWindow):
         self.data_connector = DataConnector()
         self.parent = parent
 
+        # Cấu hình QTextEdit
+        self.order_summary_content.setReadOnly(True)
+        self.order_summary_content.setMinimumHeight(200)
+        self.order_summary_content.setMaximumHeight(200)
+        self.order_summary_content.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOn)
+        
+        # Thiết lập font mặc định
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.order_summary_content.setFont(font)
+        
+        # Hiển thị order summary ngay khi khởi tạo
+        self.display_order_summary()
+        
         # Chuyển đổi bố cục từ dọc sang ngang
         self.setupCustomLayout()
 
@@ -383,6 +398,18 @@ class CheckoutExt(QMainWindow, Ui_CheckoutWindow):
 
     def display_order_summary(self):
         """Display the order summary in the text edit"""
+        # Cấu hình QTextEdit trước khi đặt nội dung
+        self.order_summary_content.setReadOnly(True)
+        self.order_summary_content.setMinimumHeight(200)
+        self.order_summary_content.setMaximumHeight(200)
+        self.order_summary_content.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOn)
+        
+        # Thiết lập font và style để dễ đọc
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.order_summary_content.setFont(font)
+        
+        # Tạo nội dung
         summary = "=== ORDER SUMMARY ===\n\n"
         total = 0
 
@@ -401,14 +428,21 @@ class CheckoutExt(QMainWindow, Ui_CheckoutWindow):
             summary += "\n"
 
         summary += f"Total: {total:,} VNĐ"
-
-        # Set the summary text and total
-        self.order_summary_content.setText(summary)
+        
+        # Đặt nội dung và di chuyển con trỏ lên đầu
+        self.order_summary_content.setPlainText(summary)
+        self.order_summary_content.moveCursor(QtGui.QTextCursor.MoveOperation.Start)
+        
+        # Cập nhật total
         self.lineEditTotal.setText(f"{total:,} VNĐ")
         self.lineEditTotal.setReadOnly(True)
+        
+        # Đảm bảo QTextEdit được cập nhật
+        self.order_summary_content.update()
 
     def reset_customer_info(self):
         """Reset all customer information fields"""
+        # Reset các trường nhập liệu
         self.lineEditName.clear()
         self.lineEditPhone.clear() 
         self.lineEditEmail.clear()
@@ -421,6 +455,14 @@ class CheckoutExt(QMainWindow, Ui_CheckoutWindow):
         
         # Reset payment method về mặc định (cash)
         self.radioButton_cash.setChecked(True)
+        
+        # Reset trạng thái các nút
+        self.pushButtonNext.setVisible(True)
+        self.pushButtonDone.setVisible(False)
+        self.pushButtonPrevious.setVisible(False)
+        
+        # Hiển thị lại trường nhập liệu đầu tiên
+        self.show_current_input_field()
 
     def process_order(self):
         """Xử lý đơn hàng khi nhấn nút Done"""
@@ -519,7 +561,8 @@ class CheckoutExt(QMainWindow, Ui_CheckoutWindow):
                     name=item.name,
                     price=item.price,
                     quantity=item.quantity,
-                    notes=notes
+                    notes=notes,
+                    subtotal=item.price * item.quantity  # Thêm subtotal
                 )
                 order_details.append(detail)
             print(f"Added {len(order_details)} order details")

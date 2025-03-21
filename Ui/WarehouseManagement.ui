@@ -13,12 +13,16 @@
   <property name="windowTitle">
    <string>Warehouse Management</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:#FFF8E7;</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayoutMain">
     <item>
      <widget class="QLabel" name="labelTitle">
       <property name="styleSheet">
-       <string>font: 20pt &quot;MS Shell Dlg 2&quot;;</string>
+       <string notr="true">color:#3C2F2F;
+font: 20pt &quot;Mongolian Baiti&quot;;</string>
       </property>
       <property name="text">
        <string>CADTY Order Management</string>
@@ -32,6 +36,17 @@
      <layout class="QHBoxLayout" name="horizontalLayoutContent">
       <item>
        <widget class="QGroupBox" name="groupBoxCustomers">
+        <property name="styleSheet">
+         <string notr="true">QGroupBox {
+    border: 2px solid #C7A17A;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    font-weight: bold;
+    color: #4E342E;	
+	font: 12pt &quot;Mongolian Baiti&quot;;
+}</string>
+        </property>
         <property name="title">
          <string>List of Customers</string>
         </property>
@@ -44,24 +59,71 @@
              <height>500</height>
             </size>
            </property>
+           <property name="styleSheet">
+            <string notr="true">QHeaderView::section {
+    background-color: #F5E8C7; 
+    color: #3C2F2F;
+    padding: 5px;
+    border: 1px solid #C7A17A; 
+    font-weight: bold;
+	font: 11pt &quot;Mongolian Baiti&quot;;
+}
+
+
+QHeaderView::section:hover {
+    background-color: #FFC1CC; 
+	font: 11pt &quot;Mongolian Baiti&quot;;
+}
+
+QTableWidget#productsTable::item {
+    background-color: #FEFEFE; 
+    border: 1px solid #C7A17A; 
+	font: 11pt &quot;Mongolian Baiti&quot;;
+    padding: 5px;
+}</string>
+           </property>
            <item>
             <property name="text">
              <string>D1</string>
+            </property>
+            <property name="font">
+             <font>
+              <family>Mongolian Baiti</family>
+              <pointsize>11</pointsize>
+             </font>
             </property>
            </item>
            <item>
             <property name="text">
              <string>D2</string>
             </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>D3</string>
+            <property name="font">
+             <font>
+              <family>Mongolian Baiti</family>
+              <pointsize>11</pointsize>
+             </font>
             </property>
            </item>
            <item>
             <property name="text">
              <string>D3</string>
+            </property>
+            <property name="font">
+             <font>
+              <family>Mongolian Baiti</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>D3</string>
+            </property>
+            <property name="font">
+             <font>
+              <family>Mongolian Baiti</family>
+              <pointsize>11</pointsize>
+             </font>
             </property>
            </item>
           </widget>
@@ -76,6 +138,36 @@
              <layout class="QHBoxLayout" name="horizontalLayout">
               <item>
                <widget class="QPushButton" name="pushButtonRemoveCustomer">
+                <property name="font">
+                 <font>
+                  <family>Arial,sans-serif</family>
+                  <pointsize>-1</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">
+QPushButton {
+    background-color: #F5E8C7;
+    color: #8B4513; 
+    padding: 8px 16px;
+    border: none;
+    border-radius: 15px;
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+QPushButton:hover {
+    background-color: #FFD700; 
+}
+
+QPushButton:pressed {
+    background-color: #D2B48C;
+}</string>
+                </property>
                 <property name="text">
                  <string>Remove Customers</string>
                 </property>
@@ -93,12 +185,46 @@
        <layout class="QVBoxLayout" name="verticalLayout1">
         <item>
          <widget class="QGroupBox" name="groupBoxProductList">
+          <property name="styleSheet">
+           <string notr="true">QGroupBox {
+    border: 2px solid #C7A17A;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    font-weight: bold;
+    color: #3C2F2F;
+	font: 12pt &quot;Mongolian Baiti&quot;;
+}</string>
+          </property>
           <property name="title">
            <string>List of Products</string>
           </property>
           <layout class="QVBoxLayout" name="verticalLayoutProductList">
            <item>
             <widget class="QTableWidget" name="tableWidgetProduct">
+             <property name="styleSheet">
+              <string notr="true">QHeaderView::section {
+    background-color: #F5E8C7; 
+    color: #3C2F2F;
+    padding: 5px;
+    border: 1px solid #C7A17A; 
+    font-weight: bold;
+	font: 11pt &quot;Mongolian Baiti&quot;;
+}
+
+
+QHeaderView::section:hover {
+    background-color: #FFC1CC; 
+	font: 11pt &quot;Mongolian Baiti&quot;;
+}
+
+QTableWidget#productsTable::item {
+    background-color: #FEFEFE; 
+    border: 1px solid #C7A17A; 
+    padding: 5px;
+	font: 11pt &quot;Mongolian Baiti&quot;;
+}</string>
+             </property>
              <property name="rowCount">
               <number>0</number>
              </property>
@@ -112,65 +238,276 @@
         </item>
         <item>
          <widget class="QGroupBox" name="groupBoxProductDetail">
+          <property name="styleSheet">
+           <string notr="true">QGroupBox {
+    border: 2px solid #C7A17A;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    font-weight: bold;
+    color: #4E342E;	
+	font: 12pt &quot;Mongolian Baiti&quot;;
+}</string>
+          </property>
           <property name="title">
            <string>Customer Detail</string>
           </property>
           <layout class="QGridLayout" name="gridLayoutProductManageDetail">
-           <item row="0" column="1">
-            <widget class="QLineEdit" name="lineEditOrderID"/>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="lineEditCustomerID">
+             <property name="styleSheet">
+              <string notr="true">QLineEdit {
+    background-color: #FEFEFE; 
+    border: 1px solid #D2B48C; 
+    border-radius: 10px;
+    padding: 5px;
+	font: 75 10pt &quot;Georgia&quot;;
+    color: #8B4513; 
+}
+
+QLineEdit:focus {
+    border: 2px solid #FFD700; 
+}</string>
+             </property>
+            </widget>
            </item>
-           <item row="0" column="0">
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="lineEditOrderID">
+             <property name="styleSheet">
+              <string notr="true">QLineEdit {
+    background-color: #FEFEFE; 
+    border: 1px solid #D2B48C; 
+    border-radius: 10px;
+    padding: 5px;
+	font: 75 10pt &quot;Georgia&quot;;
+    color: #8B4513; 
+}
+
+QLineEdit:focus {
+    border: 2px solid #FFD700; 
+}</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
             <widget class="QLabel" name="label2">
+             <property name="styleSheet">
+              <string notr="true">font: 11pt &quot;Mongolian Baiti&quot;;</string>
+             </property>
              <property name="text">
               <string>Order ID:</string>
              </property>
             </widget>
            </item>
-           <item row="0" column="2">
+           <item row="1" column="2">
             <widget class="QLabel" name="label3">
+             <property name="styleSheet">
+              <string notr="true">font: 11pt &quot;Mongolian Baiti&quot;;</string>
+             </property>
              <property name="text">
               <string>Customer Name:</string>
              </property>
             </widget>
            </item>
-           <item row="1" column="1">
-            <widget class="QLineEdit" name="lineEditCustomerID"/>
-           </item>
-           <item row="0" column="3">
-            <widget class="QLineEdit" name="lineEditCustomerName"/>
-           </item>
-           <item row="1" column="3">
+           <item row="2" column="3">
             <widget class="QLineEdit" name="lineEditPhone">
+             <property name="styleSheet">
+              <string notr="true">QLineEdit {
+    background-color: #FEFEFE; 
+    border: 1px solid #D2B48C; 
+    border-radius: 10px;
+    padding: 5px;
+	font: 75 10pt &quot;Georgia&quot;;
+    color: #8B4513; 
+}
+
+QLineEdit:focus {
+    border: 2px solid #FFD700; 
+}</string>
+             </property>
              <property name="echoMode">
               <enum>QLineEdit::Normal</enum>
              </property>
             </widget>
            </item>
-           <item row="1" column="2">
+           <item row="1" column="3">
+            <widget class="QLineEdit" name="lineEditCustomerName">
+             <property name="styleSheet">
+              <string notr="true">QLineEdit {
+    background-color: #FEFEFE; 
+    border: 1px solid #D2B48C; 
+    border-radius: 10px;
+    padding: 5px;
+	font: 75 10pt &quot;Georgia&quot;;
+    color: #8B4513; 
+}
+
+QLineEdit:focus {
+    border: 2px solid #FFD700; 
+}</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
             <widget class="QLabel" name="label5">
+             <property name="styleSheet">
+              <string notr="true">font: 11pt &quot;Mongolian Baiti&quot;;</string>
+             </property>
              <property name="text">
               <string>Customer Phone:</string>
              </property>
             </widget>
            </item>
-           <item row="1" column="0">
+           <item row="2" column="0">
             <widget class="QLabel" name="label6">
+             <property name="styleSheet">
+              <string notr="true">font: 11pt &quot;Mongolian Baiti&quot;;</string>
+             </property>
              <property name="text">
               <string>Customer ID:</string>
              </property>
             </widget>
            </item>
-           <item row="5" column="0" colspan="4">
+           <item row="3" column="1">
+            <widget class="QLineEdit" name="lineEditAddress">
+             <property name="styleSheet">
+              <string notr="true">QLineEdit {
+    background-color: #FEFEFE; 
+    border: 1px solid #D2B48C; 
+    border-radius: 10px;
+    padding: 5px;
+	font: 75 10pt &quot;Georgia&quot;;
+    color: #8B4513; 
+}
+
+QLineEdit:focus {
+    border: 2px solid #FFD700; 
+}</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="3">
+            <widget class="QLineEdit" name="lineEditTotalValue">
+             <property name="styleSheet">
+              <string notr="true">QLineEdit {
+    background-color: #FEFEFE; 
+    border: 1px solid #D2B48C; 
+    border-radius: 10px;
+    padding: 5px;
+	font: 75 10pt &quot;Georgia&quot;;
+    color: #8B4513; 
+}
+
+QLineEdit:focus {
+    border: 2px solid #FFD700; 
+}</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QLabel" name="label">
+             <property name="styleSheet">
+              <string notr="true">font: 11pt &quot;Mongolian Baiti&quot;;</string>
+             </property>
+             <property name="text">
+              <string>Total Value:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label6_2">
+             <property name="styleSheet">
+              <string notr="true">font: 11pt &quot;Mongolian Baiti&quot;;</string>
+             </property>
+             <property name="text">
+              <string>Customer Address:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>35</width>
+               <height>9</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="8" column="0" colspan="4">
             <layout class="QHBoxLayout" name="horizontalLayoutButtons">
              <item>
               <widget class="QPushButton" name="pushButtonClear">
+               <property name="font">
+                <font>
+                 <family>Arial,sans-serif</family>
+                 <pointsize>-1</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">
+QPushButton {
+    background-color: #F5E8C7;
+    color: #8B4513; 
+    padding: 8px 16px;
+    border: none;
+    border-radius: 15px;
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+QPushButton:hover {
+    background-color: #FFD700; 
+}
+
+QPushButton:pressed {
+    background-color: #D2B48C;
+}</string>
+               </property>
                <property name="text">
-                <string>Renew</string>
+                <string>Refresh</string>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QPushButton" name="pushButtonSaveUpdate">
+               <property name="font">
+                <font>
+                 <family>Arial,sans-serif</family>
+                 <pointsize>-1</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">
+QPushButton {
+    background-color: #F5E8C7;
+    color: #8B4513; 
+    padding: 8px 16px;
+    border: none;
+    border-radius: 15px;
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+QPushButton:hover {
+    background-color: #FFD700; 
+}
+
+QPushButton:pressed {
+    background-color: #D2B48C;
+}</string>
+               </property>
                <property name="text">
                 <string>Save Update</string>
                </property>
@@ -178,6 +515,36 @@
              </item>
              <item>
               <widget class="QPushButton" name="pushButtonDelete">
+               <property name="font">
+                <font>
+                 <family>Arial,sans-serif</family>
+                 <pointsize>-1</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">
+QPushButton {
+    background-color: #F5E8C7;
+    color: #8B4513; 
+    padding: 8px 16px;
+    border: none;
+    border-radius: 15px;
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+QPushButton:hover {
+    background-color: #FFD700; 
+}
+
+QPushButton:pressed {
+    background-color: #D2B48C;
+}</string>
+               </property>
                <property name="text">
                 <string>Delete Product</string>
                </property>
@@ -185,6 +552,36 @@
              </item>
              <item>
               <widget class="QPushButton" name="pushButtonInvoiceReporting">
+               <property name="font">
+                <font>
+                 <family>Arial,sans-serif</family>
+                 <pointsize>-1</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">
+QPushButton {
+    background-color: #F5E8C7;
+    color: #8B4513; 
+    padding: 8px 16px;
+    border: none;
+    border-radius: 15px;
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+QPushButton:hover {
+    background-color: #FFD700; 
+}
+
+QPushButton:pressed {
+    background-color: #D2B48C;
+}</string>
+               </property>
                <property name="text">
                 <string>Invoice Reporting</string>
                </property>
@@ -192,25 +589,18 @@
              </item>
             </layout>
            </item>
-           <item row="2" column="1">
-            <widget class="QLineEdit" name="lineEditAddress"/>
-           </item>
-           <item row="2" column="3">
-            <widget class="QLineEdit" name="lineEditTotalValue"/>
-           </item>
-           <item row="2" column="2">
-            <widget class="QLabel" name="label">
-             <property name="text">
-              <string>Total Value:</string>
+           <item row="5" column="2">
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
              </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="label6_2">
-             <property name="text">
-              <string>Customer Address:</string>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
              </property>
-            </widget>
+            </spacer>
            </item>
           </layout>
          </widget>

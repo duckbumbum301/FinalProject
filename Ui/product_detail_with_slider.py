@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'E:\Git_TDLT\FinalProject\Ui\product_detail_with_slider.ui'
+# Form implementation generated from reading ui file 'D:\FinalProject\Ui\product_detail_with_slider.ui'
 #
 # Created by: PyQt6 UI code generator 6.7.1
 #
@@ -58,10 +58,6 @@ class Ui_ProductDetailDialog(object):
         self.label_title.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_title.setObjectName("label_title")
         self.verticalLayout.addWidget(self.label_title)
-        self.label_size = QtWidgets.QLabel(parent=ProductDetailDialog)
-        self.label_size.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.label_size.setObjectName("label_size")
-        self.verticalLayout.addWidget(self.label_size)
         self.layout_slider_btn = QtWidgets.QHBoxLayout()
         self.layout_slider_btn.setObjectName("layout_slider_btn")
         self.btn_prev_image = QtWidgets.QPushButton(parent=ProductDetailDialog)
@@ -71,10 +67,6 @@ class Ui_ProductDetailDialog(object):
         self.btn_next_image.setObjectName("btn_next_image")
         self.layout_slider_btn.addWidget(self.btn_next_image)
         self.verticalLayout.addLayout(self.layout_slider_btn)
-        self.label_description = QtWidgets.QLabel(parent=ProductDetailDialog)
-        self.label_description.setWordWrap(True)
-        self.label_description.setObjectName("label_description")
-        self.verticalLayout.addWidget(self.label_description)
         self.label_price = QtWidgets.QLabel(parent=ProductDetailDialog)
         self.label_price.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_price.setObjectName("label_price")
@@ -92,10 +84,8 @@ class Ui_ProductDetailDialog(object):
     def retranslateUi(self, ProductDetailDialog):
         _translate = QtCore.QCoreApplication.translate
         self.label_title.setText(_translate("ProductDetailDialog", "Product Title"))
-        self.label_size.setText(_translate("ProductDetailDialog", "12cm / 18cm"))
         self.btn_prev_image.setText(_translate("ProductDetailDialog", "< Prev"))
         self.btn_next_image.setText(_translate("ProductDetailDialog", "Next >"))
-        self.label_description.setText(_translate("ProductDetailDialog", "Mô tả sản phẩm..."))
         self.label_price.setText(_translate("ProductDetailDialog", "480.000 VND"))
         self.note_input.setPlaceholderText(_translate("ProductDetailDialog", "Ghi chú thêm (tuỳ chọn)..."))
         self.btn_back_to_cart.setText(_translate("ProductDetailDialog", "Back to Cart +"))

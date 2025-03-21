@@ -27,7 +27,8 @@ class SelfOrderExt(Ui_MainWindow):
             # Không cho phép chỉnh sửa trực tiếp
             self.lineEdit_total.setReadOnly(True)
 
-        self.tableWidget_order.cellDoubleClicked.connect(self.showProductDetail)
+        # Thay thế kết nối trực tiếp bằng kết nối tới hàm xử lý có điều kiện
+        self.tableWidget_order.cellDoubleClicked.connect(self.handleCellDoubleClick)
         self.pushButtonProceed.clicked.connect(self.openCheckout)
 
     def setupSignalsAndSlots(self):
@@ -486,4 +487,19 @@ class SelfOrderExt(Ui_MainWindow):
         
     def addBergamotToOrder(self):
         self.addProductToOrder("CB29", "Bergamot Brew", 60000)
+
+    def handleCellDoubleClick(self, row, column):
+        """Xử lý sự kiện double click với điều kiện - bỏ qua cột Quantity"""
+        try:
+            # Nếu double click vào cột Quantity, không làm gì cả
+            if column == 3:
+                print(f"Double clicked on Quantity column (row {row}) - ignored")
+                return
+            
+            # Các cột khác thì hiển thị ProductDetailDialog
+            self.showProductDetail(row, column)
+        except Exception as e:
+            print(f"Error handling double click: {str(e)}")
+            import traceback
+            traceback.print_exc()
        

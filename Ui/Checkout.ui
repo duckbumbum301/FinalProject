@@ -27,9 +27,15 @@
     <rect>
      <x>340</x>
      <y>10</y>
-     <width>401</width>
+     <width>440</width>
      <height>191</height>
     </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color:rgb(253, 253, 234)</string>
@@ -122,7 +128,7 @@ QRadioButton::indicator:checked {
    <widget class="QFrame" name="frame_3">
     <property name="geometry">
      <rect>
-      <x>210</x>
+      <x>190</x>
       <y>30</y>
       <width>151</width>
       <height>131</height>
@@ -209,7 +215,7 @@ QRadioButton::indicator:checked {
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>10</y>
+     <y>14</y>
      <width>25</width>
      <height>25</height>
     </rect>
@@ -278,7 +284,7 @@ QPushButton:hover {
      <x>40</x>
      <y>190</y>
      <width>1051</width>
-     <height>631</height>
+     <height>651</height>
     </rect>
    </property>
    <property name="widgetResizable">
@@ -290,7 +296,7 @@ QPushButton:hover {
       <x>0</x>
       <y>0</y>
       <width>1049</width>
-      <height>629</height>
+      <height>649</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="scrollLayout">
@@ -331,6 +337,19 @@ border-radius:20px;</string>
         <property name="bottomMargin">
          <number>10</number>
         </property>
+        <item>
+         <spacer name="horizontalSpacer_5">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
         <item>
          <widget class="QLabel" name="label_order_summary">
           <property name="styleSheet">
@@ -376,13 +395,19 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1009</width>
-             <height>312</height>
+             <width>1001</width>
+             <height>210</height>
             </rect>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout">
             <item>
              <widget class="QTextEdit" name="order_summary_content">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="styleSheet">
                <string>background-color: #fdfae6; border: 1px solid #d8c49c; border-radius: 8px; padding: 6px; font-size: 13px; color: #5b4c2b;</string>
               </property>
@@ -397,6 +422,19 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
            </layout>
           </widget>
          </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_6">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
         </item>
         <item>
          <widget class="QLabel" name="label_total">
@@ -414,6 +452,19 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
          </widget>
         </item>
         <item>
+         <spacer name="horizontalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
          <widget class="QLabel" name="label_2">
           <property name="font">
            <font>
@@ -427,6 +478,19 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
            <string>Customer Name:</string>
           </property>
          </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
         </item>
         <item>
          <widget class="QLabel" name="label_3">
@@ -444,6 +508,19 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
          </widget>
         </item>
         <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
          <widget class="QLabel" name="label_5">
           <property name="font">
            <font>
@@ -457,6 +534,19 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
            <string>Customer Email:</string>
           </property>
          </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
         </item>
         <item>
          <widget class="QLabel" name="label_6">
@@ -478,12 +568,18 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
         </item>
         <item>
          <widget class="QPushButton" name="pushButtonDone">
+          <property name="font">
+           <font>
+            <pointsize>-1</pointsize>
+           </font>
+          </property>
           <property name="styleSheet">
            <string notr="true">
 QPushButton {
             background-color:rgb(253, 253, 234);
             color: rgb(91, 76, 43);
             border-radius: 20px;
+			border: 5px solid transparent ; 
             padding: 10px;
             font-size: 16px;
         }
@@ -493,16 +589,6 @@ QPushButton {
           </property>
           <property name="text">
            <string>Done</string>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>../images/ic_meochumo.webp</normaloff>../images/ic_meochumo.webp</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>35</width>
-            <height>35</height>
-           </size>
           </property>
          </widget>
         </item>

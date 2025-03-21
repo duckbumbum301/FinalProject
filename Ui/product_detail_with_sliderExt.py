@@ -28,43 +28,73 @@ class ProductDetailDialog(QDialog, Ui_ProductDetailDialog):
 
     def load_product_details(self):
         """Load the details of the current product"""
-        if self.total_rows == 0 or self.current_row >= self.total_rows:
-            self.reject()  # Close dialog if no valid row
-            return
+        try:
+            if not self.table_widget or self.table_widget.rowCount() == 0:
+                print("Table widget is empty or not available")
+                self.reject()
+                return
+            
+            if self.current_row < 0 or self.current_row >= self.table_widget.rowCount():
+                print(f"Invalid row index: {self.current_row}, total rows: {self.table_widget.rowCount()}")
+                self.current_row = 0  # Reset to first row if invalid
+            
+            # Make sure items exist at this row
+            for col in range(4):  # Check first 4 columns (id, name, price, quantity)
+                if not self.table_widget.item(self.current_row, col):
+                    print(f"Missing item at row {self.current_row}, column {col}")
+                    self.reject()
+                    return
 
-        # Get product data from the selected row
-        product_id = self.table_widget.item(self.current_row, 0).text()
-        product_name = self.table_widget.item(self.current_row, 1).text()
-        product_price = float(self.table_widget.item(self.current_row, 2).text())
-        product_quantity = int(self.table_widget.item(self.current_row, 3).text())
+            # Get product data safely
+            product_id = self.table_widget.item(self.current_row, 0).text()
+            product_name = self.table_widget.item(self.current_row, 1).text()
+            
+            print(f"Loading details for product: {product_id} - {product_name}")
+            
+            # Chuyển đổi an toàn
+            try:
+                price_text = self.table_widget.item(self.current_row, 2).text()
+                quantity_text = self.table_widget.item(self.current_row, 3).text()
+                
+                # Xử lý dấu phẩy trong định dạng số nếu có
+                price_text = price_text.replace(',', '')
+                product_price = float(price_text)
+                product_quantity = int(quantity_text)
+            except ValueError as e:
+                print(f"Error converting price '{price_text}' or quantity '{quantity_text}': {str(e)}")
+                product_price = 0
+                product_quantity = 1
 
-        # Set product details in the UI
-        self.label_title.setText(product_name)
-        self.label_price.setText(f"{int(product_price):,} VNĐ")
+            # Set product details in the UI
+            self.label_title.setText(product_name)
+            self.label_price.setText(f"{int(product_price):,} VNĐ")
 
-        # Find product in order_data to get description
-        product = None
-        for item in self.order_data:
-            if item.product_id == product_id:
-                product = item
-                break
+            # Find product in order_data to get description
+            product = None
+            if self.order_data:
+                for item in self.order_data:
+                    if hasattr(item, 'product_id') and item.product_id == product_id:
+                        product = item
+                        break
 
-        # Set description and notes
-        if product and hasattr(product, 'description') and product.description:
-            self.label_description.setText(product.description)
-        else:
-            self.label_description.setText(self.get_product_description(product_id))
+            # Set notes if they exist
+            if product and hasattr(product, 'notes'):
+                self.note_input.setText(product.notes)
+            else:
+                self.note_input.clear()
 
-        # Set notes if they exist
-        if product and hasattr(product, 'notes'):
-            self.note_input.setText(product.notes)
-
-        # Set window title
-        self.setWindowTitle(f"Product Details - {product_name}")
+            # Set window title
+            self.setWindowTitle(f"Product Details - {product_name}")
+            
+        except Exception as e:
+            import traceback
+            print(f"Error in load_product_details: {str(e)}")
+            traceback.print_exc()
 
     def get_product_description(self, product_id):
-        """Get the description for a product"""
-        # This would ideally come from a database
+        """Phương thức này vẫn được giữ lại nhưng có thể không được sử dụng nữa"""
+        # Không cần thiết nếu không còn hiển thị description
+        # Có thể giữ lại cho các tính năng trong tương lai
         descriptions = {
             "CB1": "Romance Blossom - A delicate mousse cake with layers of rose-infused cream and raspberry compote.",
             "CB2": "Royal Nut Harmony - A luxurious blend of premium nuts and caramel on a buttery base.",
@@ -80,21 +110,61 @@ class ProductDetailDialog(QDialog, Ui_ProductDetailDialog):
         }
         return descriptions.get(product_id, "No description available for this product.")
 
-
-
     def show_prev_product(self):
         """Show the previous product in the table"""
-        if self.total_rows > 1:
-            self.current_row = (self.current_row - 1) % self.total_rows
-            self.load_product_details()
-            self.update_navigation_buttons()
+        try:
+            if self.total_rows > 1:
+                # Lưu ghi chú của sản phẩm hiện tại trước khi chuyển
+                self.save_current_product_notes()
+                
+                # Tính toán chỉ mục trước đó một cách chính xác
+                self.current_row = (self.current_row - 1) if self.current_row > 0 else (self.total_rows - 1)
+                
+                print(f"Switching to previous product, new row index: {self.current_row}")
+                self.load_product_details()
+                self.update_navigation_buttons()
+        except Exception as e:
+            print(f"Error in show_prev_product: {str(e)}")
+            import traceback
+            traceback.print_exc()
 
     def show_next_product(self):
         """Show the next product in the table"""
-        if self.total_rows > 1:
-            self.current_row = (self.current_row + 1) % self.total_rows
-            self.load_product_details()
-            self.update_navigation_buttons()
+        try:
+            if self.total_rows > 1:
+                # Lưu ghi chú của sản phẩm hiện tại trước khi chuyển
+                self.save_current_product_notes()
+                
+                # Tính toán chỉ mục tiếp theo một cách chính xác
+                self.current_row = (self.current_row + 1) % self.total_rows
+                
+                print(f"Switching to next product, new row index: {self.current_row}")
+                self.load_product_details()
+                self.update_navigation_buttons()
+        except Exception as e:
+            print(f"Error in show_next_product: {str(e)}")
+            import traceback
+            traceback.print_exc()
+
+    def save_current_product_notes(self):
+        """Lưu ghi chú của sản phẩm hiện tại"""
+        try:
+            if self.total_rows > 0 and 0 <= self.current_row < self.total_rows:
+                if not self.table_widget.item(self.current_row, 0):
+                    return
+                
+                product_id = self.table_widget.item(self.current_row, 0).text()
+                notes = self.note_input.toPlainText()
+
+                # Cập nhật ghi chú trong order_data
+                if self.order_data:
+                    for item in self.order_data:
+                        if hasattr(item, 'product_id') and item.product_id == product_id:
+                            item.notes = notes
+                            print(f"Saved notes for product {product_id}: {notes}")
+                            break
+        except Exception as e:
+            print(f"Error saving notes: {str(e)}")
 
     def update_navigation_buttons(self):
         """Update the state of navigation buttons"""
@@ -105,15 +175,23 @@ class ProductDetailDialog(QDialog, Ui_ProductDetailDialog):
 
     def accept(self):
         """Override accept to save notes before closing"""
-        # Save notes to the product
-        if self.total_rows > 0:
-            product_id = self.table_widget.item(self.current_row, 0).text()
-            notes = self.note_input.toPlainText()
+        try:
+            # Save notes to the product
+            if self.total_rows > 0 and self.current_row < self.total_rows:
+                if not self.table_widget.item(self.current_row, 0):
+                    super().accept()
+                    return
+                
+                product_id = self.table_widget.item(self.current_row, 0).text()
+                notes = self.note_input.toPlainText()
 
-            # Update notes in order_data
-            for item in self.order_data:
-                if item.product_id == product_id:
-                    item.notes = notes
-                    break
-
+                # Update notes in order_data
+                if self.order_data:
+                    for item in self.order_data:
+                        if hasattr(item, 'product_id') and item.product_id == product_id:
+                            item.notes = notes
+                            break
+        except Exception as e:
+            print(f"Error in accept method: {str(e)}")
+        
         super().accept()

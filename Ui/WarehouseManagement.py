@@ -13,30 +13,79 @@ class Ui_WarehouseManagementMainWindow(object):
     def setupUi(self, WarehouseManagementMainWindow):
         WarehouseManagementMainWindow.setObjectName("WarehouseManagementMainWindow")
         WarehouseManagementMainWindow.resize(1049, 710)
+        WarehouseManagementMainWindow.setStyleSheet("background-color:#FFF8E7;")
         self.centralwidget = QtWidgets.QWidget(parent=WarehouseManagementMainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayoutMain = QtWidgets.QVBoxLayout(self.centralwidget)
         self.verticalLayoutMain.setObjectName("verticalLayoutMain")
         self.labelTitle = QtWidgets.QLabel(parent=self.centralwidget)
+        self.labelTitle.setStyleSheet("color:#3C2F2F;\n"
+"font: 20pt \"Mongolian Baiti\";")
         self.labelTitle.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.labelTitle.setObjectName("labelTitle")
         self.verticalLayoutMain.addWidget(self.labelTitle)
         self.horizontalLayoutContent = QtWidgets.QHBoxLayout()
         self.horizontalLayoutContent.setObjectName("horizontalLayoutContent")
         self.groupBoxCustomers = QtWidgets.QGroupBox(parent=self.centralwidget)
+        self.groupBoxCustomers.setStyleSheet("QGroupBox {\n"
+"    border: 2px solid #C7A17A;\n"
+"    border-radius: 10px;\n"
+"    margin-top: 10px;\n"
+"    padding: 10px;\n"
+"    font-weight: bold;\n"
+"    color: #4E342E;    \n"
+"    font: 12pt \"Mongolian Baiti\";\n"
+"}")
         self.groupBoxCustomers.setObjectName("groupBoxCustomers")
         self.verticalLayoutWarehouse = QtWidgets.QVBoxLayout(self.groupBoxCustomers)
         self.verticalLayoutWarehouse.setObjectName("verticalLayoutWarehouse")
         self.listWidgetWarehouse = QtWidgets.QListWidget(parent=self.groupBoxCustomers)
         self.listWidgetWarehouse.setMaximumSize(QtCore.QSize(16777215, 500))
+        self.listWidgetWarehouse.setStyleSheet("QHeaderView::section {\n"
+"    background-color: #F5E8C7; \n"
+"    color: #3C2F2F;\n"
+"    padding: 5px;\n"
+"    border: 1px solid #C7A17A; \n"
+"    font-weight: bold;\n"
+"    font: 11pt \"Mongolian Baiti\";\n"
+"}\n"
+"\n"
+"\n"
+"QHeaderView::section:hover {\n"
+"    background-color: #FFC1CC; \n"
+"    font: 11pt \"Mongolian Baiti\";\n"
+"}\n"
+"\n"
+"QTableWidget#productsTable::item {\n"
+"    background-color: #FEFEFE; \n"
+"    border: 1px solid #C7A17A; \n"
+"    font: 11pt \"Mongolian Baiti\";\n"
+"    padding: 5px;\n"
+"}")
         self.listWidgetWarehouse.setObjectName("listWidgetWarehouse")
         item = QtWidgets.QListWidgetItem()
+        font = QtGui.QFont()
+        font.setFamily("Mongolian Baiti")
+        font.setPointSize(11)
+        item.setFont(font)
         self.listWidgetWarehouse.addItem(item)
         item = QtWidgets.QListWidgetItem()
+        font = QtGui.QFont()
+        font.setFamily("Mongolian Baiti")
+        font.setPointSize(11)
+        item.setFont(font)
         self.listWidgetWarehouse.addItem(item)
         item = QtWidgets.QListWidgetItem()
+        font = QtGui.QFont()
+        font.setFamily("Mongolian Baiti")
+        font.setPointSize(11)
+        item.setFont(font)
         self.listWidgetWarehouse.addItem(item)
         item = QtWidgets.QListWidgetItem()
+        font = QtGui.QFont()
+        font.setFamily("Mongolian Baiti")
+        font.setPointSize(11)
+        item.setFont(font)
         self.listWidgetWarehouse.addItem(item)
         self.verticalLayoutWarehouse.addWidget(self.listWidgetWarehouse)
         self.groupBox = QtWidgets.QGroupBox(parent=self.groupBoxCustomers)
@@ -46,6 +95,32 @@ class Ui_WarehouseManagementMainWindow(object):
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.pushButtonRemoveCustomer = QtWidgets.QPushButton(parent=self.groupBox)
+        font = QtGui.QFont()
+        font.setFamily("Arial,sans-serif")
+        font.setPointSize(-1)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButtonRemoveCustomer.setFont(font)
+        self.pushButtonRemoveCustomer.setStyleSheet("\n"
+"QPushButton {\n"
+"    background-color: #F5E8C7;\n"
+"    color: #8B4513; \n"
+"    padding: 8px 16px;\n"
+"    border: none;\n"
+"    border-radius: 15px;\n"
+"    font-family: \'Arial\', sans-serif;\n"
+"    font-size: 12px;\n"
+"    font-weight: bold;\n"
+"    text-transform: uppercase;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #FFD700; \n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #D2B48C;\n"
+"}")
         self.pushButtonRemoveCustomer.setObjectName("pushButtonRemoveCustomer")
         self.horizontalLayout.addWidget(self.pushButtonRemoveCustomer)
         self.horizontalLayout_2.addLayout(self.horizontalLayout)
@@ -54,71 +129,296 @@ class Ui_WarehouseManagementMainWindow(object):
         self.verticalLayout1 = QtWidgets.QVBoxLayout()
         self.verticalLayout1.setObjectName("verticalLayout1")
         self.groupBoxProductList = QtWidgets.QGroupBox(parent=self.centralwidget)
+        self.groupBoxProductList.setStyleSheet("QGroupBox {\n"
+"    border: 2px solid #C7A17A;\n"
+"    border-radius: 10px;\n"
+"    margin-top: 10px;\n"
+"    padding: 10px;\n"
+"    font-weight: bold;\n"
+"    color: #3C2F2F;\n"
+"    font: 12pt \"Mongolian Baiti\";\n"
+"}")
         self.groupBoxProductList.setObjectName("groupBoxProductList")
         self.verticalLayoutProductList = QtWidgets.QVBoxLayout(self.groupBoxProductList)
         self.verticalLayoutProductList.setObjectName("verticalLayoutProductList")
         self.tableWidgetProduct = QtWidgets.QTableWidget(parent=self.groupBoxProductList)
+        self.tableWidgetProduct.setStyleSheet("QHeaderView::section {\n"
+"    background-color: #F5E8C7; \n"
+"    color: #3C2F2F;\n"
+"    padding: 5px;\n"
+"    border: 1px solid #C7A17A; \n"
+"    font-weight: bold;\n"
+"    font: 11pt \"Mongolian Baiti\";\n"
+"}\n"
+"\n"
+"\n"
+"QHeaderView::section:hover {\n"
+"    background-color: #FFC1CC; \n"
+"    font: 11pt \"Mongolian Baiti\";\n"
+"}\n"
+"\n"
+"QTableWidget#productsTable::item {\n"
+"    background-color: #FEFEFE; \n"
+"    border: 1px solid #C7A17A; \n"
+"    padding: 5px;\n"
+"    font: 11pt \"Mongolian Baiti\";\n"
+"}")
         self.tableWidgetProduct.setRowCount(0)
         self.tableWidgetProduct.setColumnCount(0)
         self.tableWidgetProduct.setObjectName("tableWidgetProduct")
         self.verticalLayoutProductList.addWidget(self.tableWidgetProduct)
         self.verticalLayout1.addWidget(self.groupBoxProductList)
         self.groupBoxProductDetail = QtWidgets.QGroupBox(parent=self.centralwidget)
+        self.groupBoxProductDetail.setStyleSheet("QGroupBox {\n"
+"    border: 2px solid #C7A17A;\n"
+"    border-radius: 10px;\n"
+"    margin-top: 10px;\n"
+"    padding: 10px;\n"
+"    font-weight: bold;\n"
+"    color: #4E342E;    \n"
+"    font: 12pt \"Mongolian Baiti\";\n"
+"}")
         self.groupBoxProductDetail.setObjectName("groupBoxProductDetail")
         self.gridLayoutProductManageDetail = QtWidgets.QGridLayout(self.groupBoxProductDetail)
         self.gridLayoutProductManageDetail.setObjectName("gridLayoutProductManageDetail")
-        self.lineEditOrderID = QtWidgets.QLineEdit(parent=self.groupBoxProductDetail)
-        self.lineEditOrderID.setObjectName("lineEditOrderID")
-        self.gridLayoutProductManageDetail.addWidget(self.lineEditOrderID, 0, 1, 1, 1)
-        self.label2 = QtWidgets.QLabel(parent=self.groupBoxProductDetail)
-        self.label2.setObjectName("label2")
-        self.gridLayoutProductManageDetail.addWidget(self.label2, 0, 0, 1, 1)
-        self.label3 = QtWidgets.QLabel(parent=self.groupBoxProductDetail)
-        self.label3.setObjectName("label3")
-        self.gridLayoutProductManageDetail.addWidget(self.label3, 0, 2, 1, 1)
         self.lineEditCustomerID = QtWidgets.QLineEdit(parent=self.groupBoxProductDetail)
+        self.lineEditCustomerID.setStyleSheet("QLineEdit {\n"
+"    background-color: #FEFEFE; \n"
+"    border: 1px solid #D2B48C; \n"
+"    border-radius: 10px;\n"
+"    padding: 5px;\n"
+"    font: 75 10pt \"Georgia\";\n"
+"    color: #8B4513; \n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    border: 2px solid #FFD700; \n"
+"}")
         self.lineEditCustomerID.setObjectName("lineEditCustomerID")
-        self.gridLayoutProductManageDetail.addWidget(self.lineEditCustomerID, 1, 1, 1, 1)
-        self.lineEditCustomerName = QtWidgets.QLineEdit(parent=self.groupBoxProductDetail)
-        self.lineEditCustomerName.setObjectName("lineEditCustomerName")
-        self.gridLayoutProductManageDetail.addWidget(self.lineEditCustomerName, 0, 3, 1, 1)
+        self.gridLayoutProductManageDetail.addWidget(self.lineEditCustomerID, 2, 1, 1, 1)
+        self.lineEditOrderID = QtWidgets.QLineEdit(parent=self.groupBoxProductDetail)
+        self.lineEditOrderID.setStyleSheet("QLineEdit {\n"
+"    background-color: #FEFEFE; \n"
+"    border: 1px solid #D2B48C; \n"
+"    border-radius: 10px;\n"
+"    padding: 5px;\n"
+"    font: 75 10pt \"Georgia\";\n"
+"    color: #8B4513; \n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    border: 2px solid #FFD700; \n"
+"}")
+        self.lineEditOrderID.setObjectName("lineEditOrderID")
+        self.gridLayoutProductManageDetail.addWidget(self.lineEditOrderID, 1, 1, 1, 1)
+        self.label2 = QtWidgets.QLabel(parent=self.groupBoxProductDetail)
+        self.label2.setStyleSheet("font: 11pt \"Mongolian Baiti\";")
+        self.label2.setObjectName("label2")
+        self.gridLayoutProductManageDetail.addWidget(self.label2, 1, 0, 1, 1)
+        self.label3 = QtWidgets.QLabel(parent=self.groupBoxProductDetail)
+        self.label3.setStyleSheet("font: 11pt \"Mongolian Baiti\";")
+        self.label3.setObjectName("label3")
+        self.gridLayoutProductManageDetail.addWidget(self.label3, 1, 2, 1, 1)
         self.lineEditPhone = QtWidgets.QLineEdit(parent=self.groupBoxProductDetail)
+        self.lineEditPhone.setStyleSheet("QLineEdit {\n"
+"    background-color: #FEFEFE; \n"
+"    border: 1px solid #D2B48C; \n"
+"    border-radius: 10px;\n"
+"    padding: 5px;\n"
+"    font: 75 10pt \"Georgia\";\n"
+"    color: #8B4513; \n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    border: 2px solid #FFD700; \n"
+"}")
         self.lineEditPhone.setEchoMode(QtWidgets.QLineEdit.EchoMode.Normal)
         self.lineEditPhone.setObjectName("lineEditPhone")
-        self.gridLayoutProductManageDetail.addWidget(self.lineEditPhone, 1, 3, 1, 1)
+        self.gridLayoutProductManageDetail.addWidget(self.lineEditPhone, 2, 3, 1, 1)
+        self.lineEditCustomerName = QtWidgets.QLineEdit(parent=self.groupBoxProductDetail)
+        self.lineEditCustomerName.setStyleSheet("QLineEdit {\n"
+"    background-color: #FEFEFE; \n"
+"    border: 1px solid #D2B48C; \n"
+"    border-radius: 10px;\n"
+"    padding: 5px;\n"
+"    font: 75 10pt \"Georgia\";\n"
+"    color: #8B4513; \n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    border: 2px solid #FFD700; \n"
+"}")
+        self.lineEditCustomerName.setObjectName("lineEditCustomerName")
+        self.gridLayoutProductManageDetail.addWidget(self.lineEditCustomerName, 1, 3, 1, 1)
         self.label5 = QtWidgets.QLabel(parent=self.groupBoxProductDetail)
+        self.label5.setStyleSheet("font: 11pt \"Mongolian Baiti\";")
         self.label5.setObjectName("label5")
-        self.gridLayoutProductManageDetail.addWidget(self.label5, 1, 2, 1, 1)
+        self.gridLayoutProductManageDetail.addWidget(self.label5, 2, 2, 1, 1)
         self.label6 = QtWidgets.QLabel(parent=self.groupBoxProductDetail)
+        self.label6.setStyleSheet("font: 11pt \"Mongolian Baiti\";")
         self.label6.setObjectName("label6")
-        self.gridLayoutProductManageDetail.addWidget(self.label6, 1, 0, 1, 1)
+        self.gridLayoutProductManageDetail.addWidget(self.label6, 2, 0, 1, 1)
+        self.lineEditAddress = QtWidgets.QLineEdit(parent=self.groupBoxProductDetail)
+        self.lineEditAddress.setStyleSheet("QLineEdit {\n"
+"    background-color: #FEFEFE; \n"
+"    border: 1px solid #D2B48C; \n"
+"    border-radius: 10px;\n"
+"    padding: 5px;\n"
+"    font: 75 10pt \"Georgia\";\n"
+"    color: #8B4513; \n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    border: 2px solid #FFD700; \n"
+"}")
+        self.lineEditAddress.setObjectName("lineEditAddress")
+        self.gridLayoutProductManageDetail.addWidget(self.lineEditAddress, 3, 1, 1, 1)
+        self.lineEditTotalValue = QtWidgets.QLineEdit(parent=self.groupBoxProductDetail)
+        self.lineEditTotalValue.setStyleSheet("QLineEdit {\n"
+"    background-color: #FEFEFE; \n"
+"    border: 1px solid #D2B48C; \n"
+"    border-radius: 10px;\n"
+"    padding: 5px;\n"
+"    font: 75 10pt \"Georgia\";\n"
+"    color: #8B4513; \n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    border: 2px solid #FFD700; \n"
+"}")
+        self.lineEditTotalValue.setObjectName("lineEditTotalValue")
+        self.gridLayoutProductManageDetail.addWidget(self.lineEditTotalValue, 3, 3, 1, 1)
+        self.label = QtWidgets.QLabel(parent=self.groupBoxProductDetail)
+        self.label.setStyleSheet("font: 11pt \"Mongolian Baiti\";")
+        self.label.setObjectName("label")
+        self.gridLayoutProductManageDetail.addWidget(self.label, 3, 2, 1, 1)
+        self.label6_2 = QtWidgets.QLabel(parent=self.groupBoxProductDetail)
+        self.label6_2.setStyleSheet("font: 11pt \"Mongolian Baiti\";")
+        self.label6_2.setObjectName("label6_2")
+        self.gridLayoutProductManageDetail.addWidget(self.label6_2, 3, 0, 1, 1)
+        spacerItem = QtWidgets.QSpacerItem(35, 9, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
+        self.gridLayoutProductManageDetail.addItem(spacerItem, 0, 1, 1, 1)
         self.horizontalLayoutButtons = QtWidgets.QHBoxLayout()
         self.horizontalLayoutButtons.setObjectName("horizontalLayoutButtons")
         self.pushButtonClear = QtWidgets.QPushButton(parent=self.groupBoxProductDetail)
+        font = QtGui.QFont()
+        font.setFamily("Arial,sans-serif")
+        font.setPointSize(-1)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButtonClear.setFont(font)
+        self.pushButtonClear.setStyleSheet("\n"
+"QPushButton {\n"
+"    background-color: #F5E8C7;\n"
+"    color: #8B4513; \n"
+"    padding: 8px 16px;\n"
+"    border: none;\n"
+"    border-radius: 15px;\n"
+"    font-family: \'Arial\', sans-serif;\n"
+"    font-size: 12px;\n"
+"    font-weight: bold;\n"
+"    text-transform: uppercase;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #FFD700; \n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #D2B48C;\n"
+"}")
         self.pushButtonClear.setObjectName("pushButtonClear")
         self.horizontalLayoutButtons.addWidget(self.pushButtonClear)
         self.pushButtonSaveUpdate = QtWidgets.QPushButton(parent=self.groupBoxProductDetail)
+        font = QtGui.QFont()
+        font.setFamily("Arial,sans-serif")
+        font.setPointSize(-1)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButtonSaveUpdate.setFont(font)
+        self.pushButtonSaveUpdate.setStyleSheet("\n"
+"QPushButton {\n"
+"    background-color: #F5E8C7;\n"
+"    color: #8B4513; \n"
+"    padding: 8px 16px;\n"
+"    border: none;\n"
+"    border-radius: 15px;\n"
+"    font-family: \'Arial\', sans-serif;\n"
+"    font-size: 12px;\n"
+"    font-weight: bold;\n"
+"    text-transform: uppercase;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #FFD700; \n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #D2B48C;\n"
+"}")
         self.pushButtonSaveUpdate.setObjectName("pushButtonSaveUpdate")
         self.horizontalLayoutButtons.addWidget(self.pushButtonSaveUpdate)
         self.pushButtonDelete = QtWidgets.QPushButton(parent=self.groupBoxProductDetail)
+        font = QtGui.QFont()
+        font.setFamily("Arial,sans-serif")
+        font.setPointSize(-1)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButtonDelete.setFont(font)
+        self.pushButtonDelete.setStyleSheet("\n"
+"QPushButton {\n"
+"    background-color: #F5E8C7;\n"
+"    color: #8B4513; \n"
+"    padding: 8px 16px;\n"
+"    border: none;\n"
+"    border-radius: 15px;\n"
+"    font-family: \'Arial\', sans-serif;\n"
+"    font-size: 12px;\n"
+"    font-weight: bold;\n"
+"    text-transform: uppercase;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #FFD700; \n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #D2B48C;\n"
+"}")
         self.pushButtonDelete.setObjectName("pushButtonDelete")
         self.horizontalLayoutButtons.addWidget(self.pushButtonDelete)
         self.pushButtonInvoiceReporting = QtWidgets.QPushButton(parent=self.groupBoxProductDetail)
+        font = QtGui.QFont()
+        font.setFamily("Arial,sans-serif")
+        font.setPointSize(-1)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButtonInvoiceReporting.setFont(font)
+        self.pushButtonInvoiceReporting.setStyleSheet("\n"
+"QPushButton {\n"
+"    background-color: #F5E8C7;\n"
+"    color: #8B4513; \n"
+"    padding: 8px 16px;\n"
+"    border: none;\n"
+"    border-radius: 15px;\n"
+"    font-family: \'Arial\', sans-serif;\n"
+"    font-size: 12px;\n"
+"    font-weight: bold;\n"
+"    text-transform: uppercase;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #FFD700; \n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #D2B48C;\n"
+"}")
         self.pushButtonInvoiceReporting.setObjectName("pushButtonInvoiceReporting")
         self.horizontalLayoutButtons.addWidget(self.pushButtonInvoiceReporting)
-        self.gridLayoutProductManageDetail.addLayout(self.horizontalLayoutButtons, 5, 0, 1, 4)
-        self.lineEditAddress = QtWidgets.QLineEdit(parent=self.groupBoxProductDetail)
-        self.lineEditAddress.setObjectName("lineEditAddress")
-        self.gridLayoutProductManageDetail.addWidget(self.lineEditAddress, 2, 1, 1, 1)
-        self.lineEditTotalValue = QtWidgets.QLineEdit(parent=self.groupBoxProductDetail)
-        self.lineEditTotalValue.setObjectName("lineEditTotalValue")
-        self.gridLayoutProductManageDetail.addWidget(self.lineEditTotalValue, 2, 3, 1, 1)
-        self.label = QtWidgets.QLabel(parent=self.groupBoxProductDetail)
-        self.label.setObjectName("label")
-        self.gridLayoutProductManageDetail.addWidget(self.label, 2, 2, 1, 1)
-        self.label6_2 = QtWidgets.QLabel(parent=self.groupBoxProductDetail)
-        self.label6_2.setObjectName("label6_2")
-        self.gridLayoutProductManageDetail.addWidget(self.label6_2, 2, 0, 1, 1)
+        self.gridLayoutProductManageDetail.addLayout(self.horizontalLayoutButtons, 8, 0, 1, 4)
+        spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
+        self.gridLayoutProductManageDetail.addItem(spacerItem1, 5, 2, 1, 1)
         self.verticalLayout1.addWidget(self.groupBoxProductDetail)
         self.horizontalLayoutContent.addLayout(self.verticalLayout1)
         self.verticalLayoutMain.addLayout(self.horizontalLayoutContent)
@@ -137,7 +437,6 @@ class Ui_WarehouseManagementMainWindow(object):
     def retranslateUi(self, WarehouseManagementMainWindow):
         _translate = QtCore.QCoreApplication.translate
         WarehouseManagementMainWindow.setWindowTitle(_translate("WarehouseManagementMainWindow", "Warehouse Management"))
-        self.labelTitle.setStyleSheet(_translate("WarehouseManagementMainWindow", "font: 20pt \"MS Shell Dlg 2\";"))
         self.labelTitle.setText(_translate("WarehouseManagementMainWindow", "CADTY Order Management"))
         self.groupBoxCustomers.setTitle(_translate("WarehouseManagementMainWindow", "List of Customers"))
         __sortingEnabled = self.listWidgetWarehouse.isSortingEnabled()
@@ -159,9 +458,9 @@ class Ui_WarehouseManagementMainWindow(object):
         self.label3.setText(_translate("WarehouseManagementMainWindow", "Customer Name:"))
         self.label5.setText(_translate("WarehouseManagementMainWindow", "Customer Phone:"))
         self.label6.setText(_translate("WarehouseManagementMainWindow", "Customer ID:"))
-        self.pushButtonClear.setText(_translate("WarehouseManagementMainWindow", "Renew"))
+        self.label.setText(_translate("WarehouseManagementMainWindow", "Total Value:"))
+        self.label6_2.setText(_translate("WarehouseManagementMainWindow", "Customer Address:"))
+        self.pushButtonClear.setText(_translate("WarehouseManagementMainWindow", "Refresh"))
         self.pushButtonSaveUpdate.setText(_translate("WarehouseManagementMainWindow", "Save Update"))
         self.pushButtonDelete.setText(_translate("WarehouseManagementMainWindow", "Delete Product"))
         self.pushButtonInvoiceReporting.setText(_translate("WarehouseManagementMainWindow", "Invoice Reporting"))
-        self.label.setText(_translate("WarehouseManagementMainWindow", "Total Value:"))
-        self.label6_2.setText(_translate("WarehouseManagementMainWindow", "Customer Address:"))
