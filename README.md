@@ -31,7 +31,7 @@ Username & Password for Management System
 - Username: ilovetranduythanh
 - Password: 10diem10diem
 
-Installion
+Installation
 
 pip install requests
 pip install seaborn
