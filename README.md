@@ -24,7 +24,12 @@ Technologies Used
 - Python
 - PyQt for GUI
 - JSON for data storage
-- Git for version controli
+- Git for version controling
+
+Username & Password for Management System
+
+- Username: ilovetranduythanh
+- Password: 10diem10diem
 
 Installion
 
